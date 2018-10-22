@@ -1,0 +1,1004 @@
+ID,Gender,Marital Status,Work Status,Education,Annual Income (x1000 $),Age,Location,Purchasing Decision-maker,Purchasing Location,Monthly Electronics Spend,Monthly Household Spend,Purchasing Frequency (every x months),Technology Adoption,TV Viewing (hours/day),Favorite feature
+1,male,married,professional,none,49,30,Florida,family,mass-consumer electronics,35,150,13,late,2,saving favorite shows to watch as a family
+2,male,single,none,none,46,36,Alabama,single,mass-consumer electronics,35,163,26,late,10,saving favorite shows to watch as a family
+3,male,married,professional,BA,58,66,Massachusetts,family,specialty stores,64,103,13,early,0,time shifting
+4,male,married,none,PhD,51,78,New York,family,mass-consumer electronics,33,154,22,late,5,saving favorite shows to watch as a family
+5,female,single,none,none,46,52,Montana,single,mass-consumer electronics,45,161,47,late,2,saving favorite shows to watch as a family
+6,female,married,none,BA,31,72,New Jersey,single,retail,14,21,32,early,1,time shifting
+7,male,married,professional,none,33,62,California,single,discount,18,40,41,early,0,cool gadget
+8,male,married,none,none,29,30,New Hampshire,single,retail,23,75,9,early,1,schedule control
+9,male,married,professional,none,57,60,Massachusetts,family,specialty stores,74,358,1,early,0,schedule control
+10,female,married,professional,none,30,59,Idaho,family,discount,16,78,25,early,0,schedule control
+11,female,single,professional,PhD,29,25,Florida,single,discount,38,66,2,early,6,programming/interactive features
+12,female,married,none,none,49,57,Florida,family,mass-consumer electronics,46,225,20,late,5,saving favorite shows to watch as a family
+13,male,married,professional,BA,64,80,New Jersey,family,specialty stores,53,257,10,early,1,cool gadget
+14,female,married,none,none,27,36,Nevada,single,discount,16,48,8,early,2,schedule control
+15,male,single,professional,none,27,61,California,family,retail,14,60,39,early,1,cool gadget
+16,female,married,professional,none,33,54,Illinois,family,retail,14,24,16,early,0,cool gadget
+17,male,married,professional,BA,31,58,Idaho,single,discount,16,44,14,early,1,cool gadget
+18,female,married,professional,none,28,30,Maine,family,discount,14,66,8,early,2,cool gadget
+19,female,single,professional,PhD,29,25,Alaska,single,retail,24,101,11,early,5,programming/interactive features
+20,female,married,professional,none,28,58,South Dakota,family,retail,17,83,16,early,0,time shifting
+21,female,married,none,MA,50,75,Colorado,family,mass-consumer electronics,47,172,17,late,8,saving favorite shows to watch as a family
+22,male,single,professional,none,31,47,New Hampshire,single,discount,16,20,15,early,1,cool gadget
+23,female,married,none,none,49,52,Hawaii,family,mass-consumer electronics,38,168,37,late,5,saving favorite shows to watch as a family
+24,male,married,none,none,48,35,Washington,family,mass-consumer electronics,51,242,43,late,8,saving favorite shows to watch as a family
+25,male,single,professional,BA,26,25,Idaho,single,retail,31,117,16,early,6,programming/interactive features
+26,male,single,none,none,28,74,Alaska,family,discount,18,73,29,early,2,schedule control
+27,male,single,none,none,35,75,Montana,family,retail,14,56,32,early,2,cool gadget
+28,male,married,professional,none,28,33,Idaho,family,discount,17,45,44,early,1,schedule control
+29,female,married,professional,none,46,31,California,family,mass-consumer electronics,42,154,43,late,2,saving favorite shows to watch as a family
+30,female,married,none,none,25,35,Delaware,family,retail,15,27,8,early,1,time shifting
+31,female,single,professional,BA,56,46,Wyoming,single,specialty stores,67,259,1,early,1,cool gadget
+32,female,married,none,none,32,67,Rhode Island,single,retail,19,24,17,early,0,cool gadget
+33,male,single,professional,BA,33,69,Pennsylvania,family,retail,18,40,5,early,1,cool gadget
+34,female,married,professional,none,30,44,Tennessee,family,retail,12,16,47,early,1,cool gadget
+35,male,married,professional,none,42,60,Hawaii,family,mass-consumer electronics,43,64,22,late,4,saving favorite shows to watch as a family
+36,female,single,professional,PhD,46,64,Missouri,single,mass-consumer electronics,41,177,34,late,11,saving favorite shows to watch as a family
+37,male,married,none,none,24,61,Delaware,single,retail,13,50,38,early,1,cool gadget
+38,female,married,professional,none,28,24,Florida,single,retail,17,40,31,early,0,time shifting
+39,male,single,professional,PhD,29,20,Hawaii,single,web (ebay),30,145,45,early,5,programming/interactive features
+40,male,married,none,none,35,66,Hawaii,family,retail,20,25,34,early,1,schedule control
+41,female,single,professional,MA,30,20,New York,single,web (ebay),32,90,43,early,2,programming/interactive features
+42,female,married,professional,BA,54,43,Vermont,family,specialty stores,44,114,12,early,0,schedule control
+43,female,married,none,none,24,46,Idaho,single,retail,19,78,34,early,1,time shifting
+44,female,single,none,none,32,69,New Jersey,single,discount,13,55,26,early,0,schedule control
+45,female,married,professional,none,26,38,New York,single,retail,12,22,21,early,0,schedule control
+46,male,single,none,none,33,40,Maine,family,discount,20,61,25,early,1,time shifting
+47,female,married,professional,BA,59,63,Vermont,family,specialty stores,26,74,15,early,2,cool gadget
+48,male,married,professional,BA,48,22,New York,family,specialty stores,51,185,1,early,1,cool gadget
+49,female,single,professional,BA,28,29,Oregon,single,web (ebay),35,136,9,early,2,programming/interactive features
+50,male,married,none,none,28,61,Massachusetts,single,retail,19,77,4,early,0,cool gadget
+51,male,married,none,none,26,36,Vermont,family,retail,14,31,11,early,1,schedule control
+52,male,married,none,none,28,58,Connecticut,family,discount,19,72,15,early,1,schedule control
+53,male,married,none,none,31,70,New Jersey,single,retail,16,59,36,early,1,cool gadget
+54,male,single,professional,none,33,20,North Carolina,single,discount,32,56,5,early,4,programming/interactive features
+55,female,married,none,BA,31,45,California,single,discount,19,30,39,early,2,schedule control
+56,female,single,none,MA,36,56,Rhode Island,single,retail,15,46,22,early,1,schedule control
+57,male,single,none,none,29,29,Illinois,single,discount,19,93,2,early,1,cool gadget
+58,female,married,none,BA,27,33,Nevada,family,retail,20,49,40,early,1,time shifting
+59,male,married,professional,BA,49,43,Hawaii,family,mass-consumer electronics,45,153,46,late,4,saving favorite shows to watch as a family
+60,male,married,professional,MA,45,22,Maryland,family,specialty stores,60,119,9,early,2,time shifting
+61,female,single,professional,none,29,51,Idaho,family,discount,13,53,16,early,2,cool gadget
+62,male,married,none,PhD,46,52,Illinois,family,mass-consumer electronics,44,93,33,late,2,saving favorite shows to watch as a family
+63,male,married,professional,PhD,53,50,Rhode Island,family,mass-consumer electronics,35,108,15,late,4,saving favorite shows to watch as a family
+64,female,married,none,none,26,25,Illinois,family,retail,13,50,44,early,2,cool gadget
+65,male,single,professional,BA,27,25,Nebraska,single,web (ebay),27,124,16,early,1,programming/interactive features
+66,male,single,professional,MA,34,23,Georgia,single,web (ebay),34,165,3,early,0,programming/interactive features
+67,female,single,professional,none,28,28,Arkansas,single,web (ebay),36,117,40,early,2,programming/interactive features
+68,male,married,professional,PhD,32,74,Pennsylvania,single,discount,12,20,35,early,1,time shifting
+69,female,married,professional,none,28,48,Maryland,family,discount,10,17,20,early,1,schedule control
+70,male,married,professional,none,28,61,North Carolina,family,retail,21,45,37,early,1,schedule control
+71,male,married,none,BA,29,63,Hawaii,single,discount,18,79,21,early,2,schedule control
+72,female,married,none,none,31,30,Connecticut,family,retail,19,40,15,early,2,cool gadget
+73,female,married,professional,none,53,65,Tennessee,family,specialty stores,78,334,14,early,2,time shifting
+74,male,married,professional,none,30,64,New York,family,discount,22,46,8,early,0,time shifting
+75,female,married,none,none,55,73,Delaware,family,mass-consumer electronics,44,208,40,late,7,saving favorite shows to watch as a family
+76,female,married,professional,MA,45,40,Florida,family,mass-consumer electronics,46,114,29,late,6,saving favorite shows to watch as a family
+77,male,single,professional,BA,55,68,Colorado,single,specialty stores,50,94,4,early,2,time shifting
+78,male,single,none,none,25,41,Maine,family,retail,18,38,14,early,0,cool gadget
+79,male,married,professional,BA,64,80,New Jersey,family,specialty stores,60,211,7,early,1,cool gadget
+80,female,single,professional,BA,32,19,Nevada,single,retail,34,101,1,early,3,programming/interactive features
+81,male,single,professional,none,31,64,Vermont,family,retail,13,33,44,early,1,cool gadget
+82,male,married,none,none,28,80,Maine,single,discount,21,92,28,early,1,time shifting
+83,male,married,professional,none,33,40,Illinois,single,retail,17,58,41,early,2,schedule control
+84,female,married,professional,BA,49,33,Colorado,family,specialty stores,60,195,7,early,1,cool gadget
+85,female,married,none,none,30,31,Idaho,single,retail,16,75,11,early,1,time shifting
+86,female,married,professional,MA,31,35,Arizona,single,discount,16,36,7,early,2,cool gadget
+87,male,married,professional,MA,51,29,Georgia,family,mass-consumer electronics,47,191,36,late,13,saving favorite shows to watch as a family
+88,male,married,none,none,28,32,Illinois,single,retail,16,65,18,early,1,schedule control
+89,female,single,professional,none,30,41,Massachusetts,single,discount,21,55,22,early,1,cool gadget
+90,female,single,none,none,27,66,Pennsylvania,family,retail,18,60,30,early,1,schedule control
+91,female,married,none,BA,49,55,New Hampshire,family,mass-consumer electronics,37,52,43,late,13,saving favorite shows to watch as a family
+92,male,single,none,none,26,50,Massachusetts,single,discount,19,25,8,early,1,time shifting
+93,male,single,professional,none,32,56,Washington,family,retail,17,54,21,early,1,cool gadget
+94,female,single,professional,PhD,35,26,Colorado,single,retail,34,141,38,early,3,programming/interactive features
+95,male,married,professional,PhD,54,43,Washington,family,specialty stores,75,356,7,early,1,time shifting
+96,male,married,none,BA,47,54,Pennsylvania,family,mass-consumer electronics,45,73,33,late,6,saving favorite shows to watch as a family
+97,female,single,none,MA,49,57,Wyoming,single,mass-consumer electronics,47,156,28,late,12,saving favorite shows to watch as a family
+98,male,single,professional,none,29,26,Iowa,single,discount,30,88,47,early,1,programming/interactive features
+99,male,married,professional,none,30,58,Arizona,family,retail,20,23,8,early,1,schedule control
+100,male,married,none,BA,55,57,Hawaii,family,mass-consumer electronics,39,95,18,late,0,saving favorite shows to watch as a family
+101,male,single,professional,BA,56,62,California,single,specialty stores,53,92,3,early,1,time shifting
+102,female,single,professional,MA,46,79,Missouri,single,mass-consumer electronics,41,173,43,late,13,saving favorite shows to watch as a family
+103,male,married,professional,none,55,47,Maine,family,specialty stores,65,151,6,early,2,schedule control
+104,female,married,professional,none,27,58,Illinois,family,discount,22,70,30,early,1,schedule control
+105,male,married,none,none,30,57,Nevada,family,discount,20,35,48,early,1,schedule control
+106,male,single,none,none,28,52,Maryland,single,discount,18,63,30,early,0,cool gadget
+107,female,married,professional,BA,30,28,New Jersey,single,retail,12,26,34,early,1,cool gadget
+108,male,married,none,none,32,55,Tennessee,family,discount,13,48,18,early,0,time shifting
+109,male,married,professional,BA,54,45,Maine,family,specialty stores,57,216,7,early,2,schedule control
+110,female,single,none,none,27,63,Idaho,single,discount,18,73,4,early,2,schedule control
+111,male,married,none,none,31,25,Montana,single,retail,17,49,17,early,1,schedule control
+112,male,single,professional,BA,54,23,Georgia,single,specialty stores,67,96,8,early,2,time shifting
+113,female,married,none,none,27,63,Florida,family,retail,20,40,16,early,0,schedule control
+114,male,married,professional,BA,33,32,Idaho,single,discount,15,70,45,early,1,cool gadget
+115,male,married,none,none,32,73,Vermont,single,retail,18,31,37,early,0,schedule control
+116,female,married,none,none,54,73,Tennessee,family,mass-consumer electronics,51,221,37,late,11,saving favorite shows to watch as a family
+117,male,married,none,MA,47,48,Maine,family,mass-consumer electronics,34,109,27,late,8,saving favorite shows to watch as a family
+118,female,married,professional,PhD,55,67,Hawaii,family,specialty stores,41,205,9,early,1,schedule control
+119,male,married,none,none,29,44,Washington,single,discount,18,26,6,early,2,time shifting
+120,female,married,none,none,28,42,Florida,family,retail,16,46,16,early,1,schedule control
+121,female,married,professional,MA,31,24,Maine,single,retail,24,37,38,early,1,schedule control
+122,male,married,none,none,32,48,Connecticut,family,retail,18,88,28,early,0,time shifting
+123,female,single,professional,PhD,33,29,Pennsylvania,single,retail,30,34,41,early,5,programming/interactive features
+124,female,married,none,none,49,47,California,family,mass-consumer electronics,35,145,35,late,13,saving favorite shows to watch as a family
+125,female,married,professional,none,32,70,Georgia,single,discount,17,73,45,early,1,cool gadget
+126,male,married,professional,BA,55,46,Hawaii,family,specialty stores,50,225,13,early,2,schedule control
+127,male,married,none,MA,46,49,Colorado,family,mass-consumer electronics,43,62,36,late,5,saving favorite shows to watch as a family
+128,male,married,none,none,34,67,Delaware,family,discount,16,43,29,early,1,time shifting
+129,female,single,none,none,26,72,Washington,family,discount,16,34,21,early,2,cool gadget
+130,male,married,professional,none,30,78,Kansas,family,retail,20,85,32,early,1,time shifting
+131,female,single,none,none,32,62,Colorado,family,discount,12,34,9,early,2,schedule control
+132,female,single,professional,none,33,25,Idaho,single,web (ebay),31,145,1,early,0,programming/interactive features
+133,male,married,none,none,29,58,Washington,single,retail,16,29,14,early,1,cool gadget
+134,male,married,professional,BA,53,39,California,family,specialty stores,67,143,3,early,1,schedule control
+135,male,married,none,none,26,80,California,family,discount,19,32,4,early,1,schedule control
+136,female,married,none,MA,45,66,Maryland,family,mass-consumer electronics,34,56,34,late,1,saving favorite shows to watch as a family
+137,female,married,none,none,24,41,Idaho,single,discount,14,63,38,early,0,cool gadget
+138,male,married,professional,MA,48,51,Connecticut,family,mass-consumer electronics,43,145,37,late,3,saving favorite shows to watch as a family
+139,male,married,professional,none,49,22,Washington,family,specialty stores,51,166,13,early,2,time shifting
+140,male,married,professional,BA,51,72,California,family,mass-consumer electronics,44,74,40,late,6,saving favorite shows to watch as a family
+141,male,married,none,MA,54,60,Illinois,family,mass-consumer electronics,41,182,31,late,10,saving favorite shows to watch as a family
+142,female,married,professional,none,30,33,Connecticut,family,discount,16,57,29,early,2,schedule control
+143,female,married,professional,none,31,64,Ohio,family,discount,16,40,46,early,1,cool gadget
+144,male,single,professional,BA,46,30,Louisiana,single,mass-consumer electronics,36,112,28,late,10,saving favorite shows to watch as a family
+145,male,married,professional,none,34,65,Vermont,single,discount,22,59,10,early,2,cool gadget
+146,male,single,professional,PhD,32,28,Maryland,single,retail,38,54,9,early,5,programming/interactive features
+147,female,married,professional,BA,52,37,Pennsylvania,family,specialty stores,65,133,6,early,1,time shifting
+148,male,married,professional,BA,54,43,Vermont,family,specialty stores,52,83,2,early,2,schedule control
+149,female,single,none,none,27,77,Hawaii,single,discount,17,31,10,early,2,cool gadget
+150,female,married,professional,none,31,47,Illinois,family,discount,13,27,21,early,2,time shifting
+151,male,single,none,none,34,67,Rhode Island,single,discount,18,50,42,early,1,cool gadget
+152,male,married,professional,BA,56,55,New York,family,specialty stores,55,72,2,early,1,schedule control
+153,female,married,professional,none,44,75,New Jersey,family,mass-consumer electronics,45,208,36,late,1,saving favorite shows to watch as a family
+154,female,married,none,PhD,46,59,Maine,family,mass-consumer electronics,42,201,42,late,5,saving favorite shows to watch as a family
+155,male,married,professional,BA,55,49,Massachusetts,family,specialty stores,47,142,8,early,1,schedule control
+156,female,single,professional,PhD,29,19,New Hampshire,single,retail,34,103,11,early,5,programming/interactive features
+157,female,single,professional,none,29,18,Tennessee,single,discount,36,88,22,early,6,programming/interactive features
+158,female,married,professional,PhD,51,78,Arizona,family,mass-consumer electronics,35,162,13,late,12,saving favorite shows to watch as a family
+159,male,married,professional,BA,48,22,Massachusetts,family,specialty stores,54,138,6,early,2,cool gadget
+160,female,married,professional,none,29,72,North Dakota,family,discount,20,31,38,early,1,cool gadget
+161,female,single,professional,none,55,77,North Carolina,single,specialty stores,72,299,5,early,0,schedule control
+162,female,married,none,none,29,78,Idaho,family,retail,14,37,18,early,2,time shifting
+163,female,married,none,none,32,23,Pennsylvania,single,discount,17,35,29,early,2,time shifting
+164,male,married,none,none,31,66,California,single,retail,14,38,22,early,0,schedule control
+165,male,single,none,none,27,62,Arizona,family,discount,16,24,41,early,0,time shifting
+166,female,married,professional,none,57,45,Delaware,family,specialty stores,79,128,11,early,0,cool gadget
+167,female,married,none,none,55,31,Pennsylvania,family,mass-consumer electronics,43,206,36,late,5,saving favorite shows to watch as a family
+168,male,married,none,BA,49,54,Colorado,family,mass-consumer electronics,48,232,28,late,11,saving favorite shows to watch as a family
+169,male,married,none,none,29,71,Pennsylvania,single,discount,15,51,30,early,0,cool gadget
+170,male,married,none,MA,43,69,Maryland,family,mass-consumer electronics,47,63,37,late,5,saving favorite shows to watch as a family
+171,male,married,professional,MA,47,48,Idaho,family,mass-consumer electronics,39,79,20,late,10,saving favorite shows to watch as a family
+172,male,married,professional,none,54,45,Delaware,family,specialty stores,58,144,5,early,1,cool gadget
+173,male,married,professional,BA,55,50,Tennessee,family,specialty stores,55,237,11,early,2,schedule control
+174,male,married,professional,BA,29,21,Kentucky,single,web (ebay),38,45,24,early,2,programming/interactive features
+175,female,married,professional,BA,29,37,Nevada,family,retail,12,16,39,early,1,cool gadget
+176,male,married,none,none,31,61,Maine,family,discount,13,23,3,early,1,time shifting
+177,female,married,none,none,51,37,Connecticut,family,mass-consumer electronics,40,146,33,late,13,saving favorite shows to watch as a family
+178,male,married,none,none,28,50,Massachusetts,single,retail,19,76,11,early,0,cool gadget
+179,male,married,none,BA,50,64,Vermont,family,mass-consumer electronics,48,175,46,late,13,saving favorite shows to watch as a family
+180,male,single,professional,PhD,30,29,New Mexico,single,retail,35,101,10,early,5,programming/interactive features
+181,female,married,none,none,32,67,Maryland,family,retail,20,65,43,early,1,cool gadget
+182,female,married,professional,MA,26,47,North Dakota,family,discount,20,46,7,early,2,schedule control
+183,female,married,professional,none,50,78,Delaware,family,mass-consumer electronics,40,161,43,late,11,saving favorite shows to watch as a family
+184,female,married,professional,none,36,54,Illinois,single,discount,12,23,3,early,2,schedule control
+185,male,single,professional,none,36,27,Vermont,single,discount,30,114,30,early,0,programming/interactive features
+186,female,single,none,none,31,70,New York,single,retail,14,26,11,early,0,time shifting
+187,male,married,none,BA,37,49,Florida,single,retail,16,41,19,early,1,cool gadget
+188,male,married,professional,BA,50,30,New York,family,specialty stores,48,170,2,early,1,time shifting
+189,male,married,professional,BA,57,61,Vermont,family,specialty stores,67,278,3,early,1,cool gadget
+190,female,married,none,BA,32,62,Tennessee,family,discount,23,33,19,early,1,cool gadget
+191,female,single,professional,MA,29,25,Louisiana,single,retail,33,156,2,early,4,programming/interactive features
+192,female,married,none,none,47,79,Pennsylvania,family,mass-consumer electronics,44,182,14,late,13,saving favorite shows to watch as a family
+193,female,single,professional,PhD,30,24,Vermont,single,retail,32,96,16,early,2,programming/interactive features
+194,female,single,professional,MA,27,19,Texas,single,retail,27,76,22,early,3,programming/interactive features
+195,female,married,none,none,27,70,Massachusetts,family,retail,17,49,43,early,2,cool gadget
+196,male,single,none,none,32,66,Delaware,family,discount,15,35,33,early,1,schedule control
+197,female,married,professional,none,25,52,Hawaii,family,retail,20,62,26,early,0,schedule control
+198,male,married,professional,MA,58,65,Pennsylvania,family,specialty stores,55,171,3,early,2,schedule control
+199,female,married,none,MA,45,43,Vermont,family,mass-consumer electronics,41,176,41,late,11,saving favorite shows to watch as a family
+200,female,married,professional,none,34,67,Vermont,family,discount,13,55,40,early,1,schedule control
+201,male,married,professional,MA,51,76,Colorado,family,mass-consumer electronics,37,134,22,late,3,saving favorite shows to watch as a family
+202,male,married,none,none,32,50,California,family,retail,19,49,12,early,1,schedule control
+203,female,married,professional,none,25,63,Texas,single,retail,21,90,9,early,0,time shifting
+204,male,married,professional,MA,55,50,Tennessee,family,specialty stores,57,182,15,early,1,time shifting
+205,female,married,professional,BA,52,37,Connecticut,family,specialty stores,33,82,8,early,0,schedule control
+206,female,married,professional,none,28,67,Colorado,single,retail,18,86,31,early,2,cool gadget
+207,male,married,professional,none,29,64,New York,single,retail,14,64,39,early,1,time shifting
+208,male,married,professional,MA,45,24,Vermont,family,specialty stores,65,211,15,early,1,cool gadget
+209,male,married,none,none,27,74,Connecticut,family,discount,22,78,39,early,1,time shifting
+210,male,married,none,none,26,74,Maryland,single,retail,16,55,41,early,1,cool gadget
+211,male,single,professional,PhD,28,19,Delaware,single,web (ebay),39,75,9,early,3,programming/interactive features
+212,female,married,professional,none,27,38,Washington,single,discount,16,37,30,early,2,cool gadget
+213,male,single,professional,none,31,67,New Hampshire,family,discount,15,45,34,early,1,cool gadget
+214,male,married,none,BA,25,33,Idaho,family,retail,19,38,29,early,2,cool gadget
+215,male,single,professional,none,28,75,Missouri,family,discount,22,97,9,early,1,schedule control
+216,female,married,none,BA,49,39,Nevada,family,mass-consumer electronics,45,84,43,late,2,saving favorite shows to watch as a family
+217,female,married,none,none,28,27,South Carolina,single,retail,16,32,14,early,2,schedule control
+218,female,married,professional,BA,51,57,Colorado,family,specialty stores,43,76,7,early,2,time shifting
+219,female,single,professional,none,32,70,Alabama,single,discount,13,26,29,early,0,cool gadget
+220,male,single,professional,PhD,35,26,Connecticut,single,retail,33,93,45,early,5,programming/interactive features
+221,female,married,professional,BA,55,40,Pennsylvania,family,specialty stores,47,109,3,early,0,schedule control
+222,male,married,professional,none,27,69,New Jersey,single,retail,18,85,18,early,1,time shifting
+223,female,married,none,none,28,44,Washington,single,retail,20,56,9,early,1,time shifting
+224,female,married,professional,none,33,53,Maryland,single,discount,15,28,37,early,1,cool gadget
+225,male,married,professional,MA,58,67,Hawaii,family,specialty stores,74,343,12,early,2,cool gadget
+226,female,married,none,BA,34,34,Washington,single,discount,14,69,34,early,1,time shifting
+227,female,married,none,none,47,58,Pennsylvania,family,mass-consumer electronics,45,127,30,late,2,saving favorite shows to watch as a family
+228,female,single,professional,none,33,18,Utah,single,web (ebay),29,45,12,early,3,programming/interactive features
+229,female,single,professional,BA,47,29,Michigan,single,mass-consumer electronics,44,93,24,late,13,saving favorite shows to watch as a family
+230,male,married,professional,BA,44,47,Illinois,family,mass-consumer electronics,44,119,23,late,12,saving favorite shows to watch as a family
+231,male,single,professional,BA,26,22,New Mexico,single,web (ebay),32,110,21,early,5,programming/interactive features
+232,male,married,professional,none,33,76,New York,family,discount,13,28,47,early,0,time shifting
+233,female,married,professional,BA,47,61,Arizona,family,mass-consumer electronics,35,121,16,late,10,saving favorite shows to watch as a family
+234,female,married,professional,BA,54,74,Pennsylvania,family,mass-consumer electronics,41,159,34,late,7,saving favorite shows to watch as a family
+235,female,married,none,none,29,23,Florida,family,retail,21,42,29,early,1,schedule control
+236,male,married,professional,BA,44,44,Illinois,family,mass-consumer electronics,35,55,17,late,5,saving favorite shows to watch as a family
+237,female,married,none,none,49,61,Maryland,family,mass-consumer electronics,38,86,33,late,5,saving favorite shows to watch as a family
+238,female,single,professional,MA,34,30,Kentucky,single,retail,32,75,4,early,1,programming/interactive features
+239,male,married,professional,none,33,50,Florida,family,discount,17,47,27,early,0,schedule control
+240,female,married,none,MA,49,28,Maryland,family,mass-consumer electronics,40,124,15,late,9,saving favorite shows to watch as a family
+241,male,married,none,none,35,32,Arkansas,family,discount,16,23,12,early,1,time shifting
+242,female,single,none,none,29,51,New Hampshire,single,retail,21,45,32,early,1,schedule control
+243,female,married,professional,BA,55,23,New Hampshire,family,specialty stores,61,258,16,early,1,time shifting
+244,male,married,professional,BA,56,56,Vermont,family,specialty stores,71,87,10,early,1,schedule control
+245,male,single,professional,BA,57,68,New York,single,specialty stores,66,312,14,early,1,time shifting
+246,female,married,none,none,24,51,West Virginia,family,discount,18,72,46,early,0,schedule control
+247,female,married,professional,MA,55,38,Idaho,family,specialty stores,38,115,16,early,1,schedule control
+248,female,married,none,none,26,38,California,single,retail,17,58,11,early,1,cool gadget
+249,male,married,none,BA,51,36,Colorado,family,mass-consumer electronics,50,102,42,late,5,saving favorite shows to watch as a family
+250,female,married,none,none,26,31,Maryland,single,retail,18,53,11,early,0,schedule control
+251,female,single,professional,BA,34,29,Hawaii,single,discount,34,166,36,early,2,programming/interactive features
+252,male,married,professional,none,46,77,Vermont,family,mass-consumer electronics,45,146,43,late,0,saving favorite shows to watch as a family
+253,female,married,professional,none,29,51,Colorado,single,discount,14,44,9,early,1,schedule control
+254,female,single,professional,MA,55,33,North Dakota,single,specialty stores,82,165,15,early,1,time shifting
+255,female,married,none,none,26,59,Wisconsin,family,discount,12,37,44,early,2,time shifting
+256,male,single,professional,none,33,24,Missouri,single,web (ebay),37,131,23,early,4,programming/interactive features
+257,male,married,professional,BA,50,26,Rhode Island,family,specialty stores,71,267,11,early,2,time shifting
+258,female,married,professional,none,28,72,Arizona,family,retail,20,53,27,early,1,time shifting
+259,male,married,none,BA,49,60,Nevada,family,mass-consumer electronics,38,97,23,late,11,saving favorite shows to watch as a family
+260,male,married,professional,none,51,30,New Hampshire,family,specialty stores,76,377,9,early,1,schedule control
+261,female,single,professional,PhD,54,50,North Dakota,single,specialty stores,46,58,11,early,0,cool gadget
+262,male,single,professional,BA,59,69,Delaware,single,specialty stores,84,383,7,early,0,schedule control
+263,male,married,professional,none,30,57,Indiana,single,retail,19,89,40,early,2,schedule control
+264,female,married,none,none,46,77,Rhode Island,family,mass-consumer electronics,33,139,26,late,1,saving favorite shows to watch as a family
+265,female,married,none,none,34,49,New York,single,retail,14,21,17,early,1,time shifting
+266,male,married,professional,none,36,33,Massachusetts,single,discount,16,34,2,early,2,time shifting
+267,female,married,professional,none,53,64,Delaware,family,mass-consumer electronics,35,85,21,late,12,saving favorite shows to watch as a family
+268,female,married,professional,BA,23,45,Maryland,family,discount,18,68,3,early,1,time shifting
+269,female,single,professional,MA,30,21,Nevada,single,web (ebay),28,46,37,early,3,programming/interactive features
+270,male,married,professional,none,28,42,Rhode Island,single,discount,17,67,47,early,1,cool gadget
+271,male,married,professional,BA,55,49,Hawaii,family,specialty stores,49,75,7,early,1,cool gadget
+272,female,married,none,BA,28,54,Delaware,family,discount,20,73,8,early,0,time shifting
+273,female,married,professional,none,29,60,Massachusetts,single,retail,15,46,12,early,1,cool gadget
+274,female,married,professional,none,30,34,Colorado,family,retail,9,38,19,early,2,schedule control
+275,male,single,professional,BA,51,40,Arkansas,single,mass-consumer electronics,37,144,18,late,7,saving favorite shows to watch as a family
+276,female,married,professional,PhD,44,47,New York,family,mass-consumer electronics,43,199,30,late,4,saving favorite shows to watch as a family
+277,female,married,professional,none,36,74,Georgia,single,discount,19,87,6,early,0,time shifting
+278,female,married,professional,none,25,35,California,family,retail,21,51,47,early,0,schedule control
+279,female,single,none,BA,29,76,Illinois,family,retail,24,92,40,early,0,schedule control
+280,male,married,professional,BA,56,56,Delaware,family,specialty stores,71,133,11,early,2,time shifting
+281,female,single,none,none,30,42,Maryland,single,retail,14,18,19,early,1,schedule control
+282,female,married,none,none,30,67,North Dakota,family,retail,15,61,16,early,0,schedule control
+283,female,married,professional,none,56,75,Massachusetts,family,mass-consumer electronics,31,95,21,late,2,saving favorite shows to watch as a family
+284,male,married,none,none,28,33,New Hampshire,family,retail,20,60,35,early,1,time shifting
+285,male,married,none,none,49,60,Tennessee,family,mass-consumer electronics,40,186,30,late,2,saving favorite shows to watch as a family
+286,male,single,professional,MA,48,41,Oregon,single,mass-consumer electronics,43,150,21,late,9,saving favorite shows to watch as a family
+287,male,married,professional,none,33,76,Washington,family,discount,14,50,26,early,1,time shifting
+288,female,married,none,BA,34,43,Pennsylvania,family,discount,18,81,40,early,2,schedule control
+289,female,married,none,MA,50,47,Florida,family,mass-consumer electronics,47,200,45,late,8,saving favorite shows to watch as a family
+290,male,married,professional,BA,34,65,Connecticut,family,retail,19,64,28,early,2,cool gadget
+291,male,married,professional,PhD,45,48,Rhode Island,family,mass-consumer electronics,29,53,35,late,2,saving favorite shows to watch as a family
+292,male,married,professional,none,28,76,Rhode Island,single,discount,19,39,40,early,1,cool gadget
+293,male,married,professional,PhD,52,34,Washington,family,specialty stores,67,306,4,early,1,cool gadget
+294,female,single,professional,PhD,52,25,Virginia,single,specialty stores,25,31,14,early,1,schedule control
+295,female,single,none,none,33,69,New Jersey,single,retail,20,61,48,early,1,cool gadget
+296,male,single,professional,none,29,27,New Hampshire,single,discount,33,58,12,early,5,programming/interactive features
+297,female,single,professional,none,24,27,Tennessee,single,retail,32,158,17,early,3,programming/interactive features
+298,male,married,professional,none,28,38,Maryland,single,retail,19,74,28,early,2,schedule control
+299,male,married,professional,PhD,29,65,Arizona,single,discount,16,49,25,early,1,cool gadget
+300,female,single,professional,BA,31,19,Connecticut,single,discount,26,77,23,early,2,programming/interactive features
+301,male,single,professional,none,30,77,Texas,family,retail,19,26,44,early,2,time shifting
+302,female,married,none,PhD,44,37,Maryland,family,mass-consumer electronics,47,177,16,late,9,saving favorite shows to watch as a family
+303,female,married,none,none,27,56,Massachusetts,family,discount,10,13,24,early,1,cool gadget
+304,female,married,professional,MA,50,48,New Jersey,family,mass-consumer electronics,34,47,46,late,2,saving favorite shows to watch as a family
+305,male,single,professional,MA,54,41,Maine,single,specialty stores,88,276,8,early,0,cool gadget
+306,female,married,professional,MA,55,61,New Hampshire,family,specialty stores,52,77,12,early,2,time shifting
+307,male,married,none,none,21,67,North Dakota,family,retail,19,82,32,early,1,schedule control
+308,female,married,professional,none,31,58,Colorado,single,discount,23,99,23,early,1,cool gadget
+309,female,single,professional,BA,55,71,Texas,single,specialty stores,51,200,10,early,0,schedule control
+310,female,single,professional,BA,27,26,New Hampshire,single,retail,35,59,46,early,6,programming/interactive features
+311,male,married,professional,none,35,49,New Hampshire,single,retail,16,59,36,early,0,schedule control
+312,female,married,none,BA,46,65,New York,family,mass-consumer electronics,43,135,36,late,2,saving favorite shows to watch as a family
+313,female,married,professional,none,37,47,Washington,single,retail,20,98,27,early,0,time shifting
+314,female,married,professional,none,34,27,Connecticut,single,discount,26,95,31,early,1,cool gadget
+315,female,married,none,none,28,26,New York,family,discount,11,47,10,early,1,time shifting
+316,male,married,professional,PhD,26,72,Maryland,single,discount,16,46,33,early,2,schedule control
+317,female,married,none,none,28,38,New York,single,discount,19,53,20,early,2,schedule control
+318,female,single,professional,none,29,51,New Hampshire,family,retail,14,61,5,early,0,schedule control
+319,male,single,professional,MA,30,22,California,single,retail,38,55,34,early,4,programming/interactive features
+320,female,single,professional,BA,29,76,Idaho,family,retail,13,22,29,early,1,time shifting
+321,female,married,none,none,50,50,Hawaii,family,mass-consumer electronics,36,64,41,late,0,saving favorite shows to watch as a family
+322,male,married,none,none,26,36,Pennsylvania,family,retail,17,45,11,early,1,time shifting
+323,female,single,professional,BA,53,44,Kentucky,single,specialty stores,83,361,3,early,1,cool gadget
+324,female,married,professional,MA,34,44,Massachusetts,family,discount,17,72,1,early,0,time shifting
+325,male,married,none,BA,49,76,Washington,family,mass-consumer electronics,35,47,21,late,1,saving favorite shows to watch as a family
+326,male,single,professional,MA,48,27,Oregon,single,mass-consumer electronics,37,99,19,late,5,saving favorite shows to watch as a family
+327,male,single,none,none,28,79,Tennessee,single,retail,14,45,17,early,2,schedule control
+328,male,married,none,none,35,45,Arizona,family,discount,13,36,26,early,2,schedule control
+329,male,married,professional,MA,48,22,Nevada,family,specialty stores,55,202,3,early,0,cool gadget
+330,female,married,professional,none,24,53,Georgia,single,retail,20,71,42,early,2,cool gadget
+331,male,single,professional,none,31,28,Oregon,single,discount,34,77,39,early,3,programming/interactive features
+332,female,married,professional,none,26,60,Colorado,single,retail,16,45,25,early,1,cool gadget
+333,male,single,professional,none,27,54,New Jersey,single,retail,19,23,7,early,1,schedule control
+334,male,single,none,none,34,63,New Jersey,single,discount,15,75,40,early,1,time shifting
+335,female,single,professional,BA,53,39,Mississippi,single,specialty stores,39,69,14,early,1,cool gadget
+336,male,single,professional,BA,32,25,Delaware,single,discount,31,47,6,early,2,programming/interactive features
+337,female,single,professional,BA,56,37,Oregon,single,specialty stores,46,118,6,early,1,time shifting
+338,male,married,professional,none,58,64,Delaware,family,specialty stores,54,102,5,early,2,time shifting
+339,female,married,none,none,36,51,Pennsylvania,single,discount,21,64,31,early,1,time shifting
+340,female,married,none,none,45,57,Maine,family,mass-consumer electronics,50,122,13,late,11,saving favorite shows to watch as a family
+341,female,married,professional,none,35,26,Illinois,family,retail,15,73,23,early,1,cool gadget
+342,male,single,professional,BA,30,25,Washington,single,discount,35,165,48,early,0,programming/interactive features
+343,male,married,professional,none,60,80,New York,family,specialty stores,72,94,14,early,1,schedule control
+344,female,single,professional,BA,34,32,Vermont,family,discount,19,76,46,early,2,schedule control
+345,male,married,none,none,25,34,New Hampshire,single,retail,15,33,39,early,2,cool gadget
+346,male,married,professional,BA,46,61,Pennsylvania,family,mass-consumer electronics,47,130,46,late,2,saving favorite shows to watch as a family
+347,male,single,professional,none,30,32,Colorado,single,retail,12,39,43,early,1,time shifting
+348,male,married,none,none,30,55,Arizona,single,retail,18,86,5,early,1,cool gadget
+349,male,single,professional,none,54,71,New Hampshire,single,specialty stores,60,164,13,early,1,time shifting
+350,female,single,professional,none,34,23,Indiana,single,retail,37,183,30,early,2,programming/interactive features
+351,male,married,professional,BA,26,60,Hawaii,single,discount,18,41,40,early,1,cool gadget
+352,male,married,professional,none,58,63,New York,family,specialty stores,58,223,8,early,1,cool gadget
+353,male,single,professional,BA,30,21,Utah,single,discount,32,119,5,early,2,programming/interactive features
+354,female,married,none,PhD,55,64,Vermont,family,mass-consumer electronics,40,129,37,late,3,saving favorite shows to watch as a family
+355,female,married,professional,none,42,51,California,family,mass-consumer electronics,38,146,28,late,2,saving favorite shows to watch as a family
+356,male,single,professional,none,30,52,Alabama,single,discount,14,52,44,early,1,schedule control
+357,female,married,professional,BA,60,48,Vermont,family,specialty stores,42,76,10,early,1,time shifting
+358,male,married,professional,none,28,67,Idaho,single,discount,18,29,12,early,1,cool gadget
+359,male,married,professional,BA,28,59,Georgia,family,retail,17,85,10,early,0,cool gadget
+360,male,married,professional,BA,62,80,Maine,family,specialty stores,67,119,11,early,2,schedule control
+361,female,married,professional,none,27,69,New York,single,discount,20,25,13,early,2,cool gadget
+362,male,married,professional,MA,45,66,Idaho,family,specialty stores,55,181,14,early,2,time shifting
+363,male,single,professional,none,29,20,Louisiana,single,web (ebay),34,155,13,early,5,programming/interactive features
+364,female,married,professional,none,29,67,Arizona,family,discount,17,64,14,early,1,time shifting
+365,female,single,professional,none,35,54,Tennessee,single,retail,19,36,18,early,1,cool gadget
+366,male,single,professional,none,31,73,Connecticut,single,retail,17,44,4,early,1,schedule control
+367,male,married,professional,BA,28,49,Colorado,family,retail,20,58,34,early,2,time shifting
+368,female,married,professional,MA,61,48,Connecticut,family,specialty stores,45,222,12,early,2,time shifting
+369,male,married,professional,PhD,51,72,California,family,mass-consumer electronics,34,59,24,late,11,saving favorite shows to watch as a family
+370,male,married,professional,BA,53,38,Vermont,family,specialty stores,54,240,4,early,1,schedule control
+371,female,married,professional,none,31,63,Maine,family,discount,15,55,20,early,1,cool gadget
+372,female,married,none,none,31,25,Rhode Island,single,discount,15,39,48,early,2,time shifting
+373,female,single,none,none,33,40,Wisconsin,family,retail,19,36,33,early,0,time shifting
+374,male,married,none,none,40,72,Maryland,family,mass-consumer electronics,46,128,46,late,1,saving favorite shows to watch as a family
+375,female,single,professional,none,27,24,New York,family,discount,16,48,29,early,0,cool gadget
+376,female,single,professional,MA,30,21,Nevada,single,web (ebay),33,52,13,early,5,programming/interactive features
+377,male,single,professional,BA,30,21,South Carolina,single,retail,35,119,33,early,6,programming/interactive features
+378,male,married,professional,BA,25,29,California,single,retail,15,30,17,early,1,schedule control
+379,female,single,professional,BA,55,48,Georgia,single,specialty stores,71,185,9,early,0,cool gadget
+380,male,single,professional,MA,32,26,Pennsylvania,single,retail,28,95,14,early,1,programming/interactive features
+381,female,married,professional,BA,26,41,Colorado,single,retail,15,32,17,early,2,time shifting
+382,male,married,none,BA,29,53,Delaware,single,discount,15,34,28,early,1,time shifting
+383,female,single,professional,BA,31,25,North Dakota,single,retail,39,137,10,early,6,programming/interactive features
+384,male,married,none,none,34,33,Tennessee,single,discount,17,37,5,early,0,cool gadget
+385,female,single,professional,none,52,59,Montana,single,specialty stores,69,298,6,early,0,time shifting
+386,male,married,professional,BA,54,43,Illinois,family,specialty stores,71,351,12,early,2,schedule control
+387,male,married,none,none,36,60,Tennessee,single,retail,18,72,5,early,1,schedule control
+388,male,single,none,BA,45,57,Missouri,single,mass-consumer electronics,51,125,32,late,11,saving favorite shows to watch as a family
+389,female,married,professional,none,27,26,New Jersey,single,retail,18,61,40,early,0,time shifting
+390,male,married,professional,BA,55,47,Illinois,family,specialty stores,58,89,11,early,1,time shifting
+391,male,married,professional,MA,28,25,Montana,single,discount,27,126,29,early,2,programming/interactive features
+392,female,married,professional,BA,33,44,Illinois,single,retail,20,91,29,early,2,cool gadget
+393,female,single,none,PhD,35,63,Hawaii,family,retail,18,78,41,early,2,cool gadget
+394,male,married,professional,BA,57,62,California,family,specialty stores,60,128,15,early,1,cool gadget
+395,male,single,professional,BA,28,24,North Dakota,single,retail,36,124,23,early,5,programming/interactive features
+396,male,married,none,BA,27,35,Nevada,single,retail,18,22,32,early,1,cool gadget
+397,female,married,professional,BA,49,28,Delaware,family,mass-consumer electronics,40,111,44,late,11,saving favorite shows to watch as a family
+398,female,married,professional,none,29,68,California,family,discount,18,42,9,early,1,schedule control
+399,female,married,professional,none,26,55,Maine,single,retail,16,28,2,early,2,cool gadget
+400,male,married,professional,MA,58,64,Pennsylvania,family,specialty stores,76,137,12,early,0,cool gadget
+401,female,married,professional,none,36,74,New Mexico,single,retail,16,44,41,early,0,schedule control
+402,female,single,professional,PhD,28,27,Nevada,single,web (ebay),28,42,24,early,3,programming/interactive features
+403,male,married,none,none,24,35,Delaware,family,retail,22,76,43,early,1,cool gadget
+404,female,single,none,none,49,41,Mississippi,single,mass-consumer electronics,36,106,38,late,2,saving favorite shows to watch as a family
+405,male,married,professional,PhD,47,50,Tennessee,family,mass-consumer electronics,43,165,24,late,11,saving favorite shows to watch as a family
+406,male,single,professional,BA,28,24,Alabama,single,retail,32,123,32,early,1,programming/interactive features
+407,female,single,professional,MA,27,20,Minnesota,single,discount,31,112,25,early,5,programming/interactive features
+408,male,married,professional,PhD,28,36,Georgia,family,retail,22,28,5,early,1,time shifting
+409,male,married,professional,PhD,48,76,Maryland,family,mass-consumer electronics,44,61,15,late,11,saving favorite shows to watch as a family
+410,female,single,none,BA,33,48,Colorado,single,discount,17,40,7,early,2,schedule control
+411,female,single,professional,BA,60,50,West Virginia,single,specialty stores,65,207,12,early,2,time shifting
+412,male,single,none,none,30,47,Massachusetts,single,retail,17,63,46,early,0,cool gadget
+413,male,married,none,none,34,39,California,family,retail,19,52,27,early,0,schedule control
+414,male,married,professional,BA,58,64,Arizona,family,specialty stores,60,258,2,early,2,schedule control
+415,female,married,none,none,23,54,New York,single,discount,16,63,18,early,0,schedule control
+416,female,married,professional,none,46,80,Washington,family,mass-consumer electronics,35,171,42,late,4,saving favorite shows to watch as a family
+417,female,single,professional,BA,60,43,Virginia,single,specialty stores,39,124,7,early,1,time shifting
+418,female,married,professional,none,29,77,Georgia,family,discount,17,41,39,early,1,cool gadget
+419,male,married,professional,BA,35,33,New York,family,discount,16,25,35,early,1,schedule control
+420,male,married,professional,PhD,46,22,New York,family,specialty stores,73,255,3,early,1,time shifting
+421,female,married,professional,none,33,56,Rhode Island,single,discount,14,58,24,early,2,schedule control
+422,male,married,professional,none,28,56,Kansas,family,retail,17,47,14,early,1,cool gadget
+423,female,married,professional,none,31,50,Delaware,family,retail,18,27,34,early,0,time shifting
+424,male,married,professional,PhD,58,65,Maine,family,specialty stores,85,182,9,early,1,schedule control
+425,male,married,professional,none,31,65,Pennsylvania,single,retail,13,23,16,early,1,schedule control
+426,female,single,professional,PhD,29,19,New Jersey,single,web (ebay),33,73,42,early,3,programming/interactive features
+427,female,single,professional,MA,31,22,Idaho,single,discount,35,99,24,early,1,programming/interactive features
+428,male,married,professional,BA,50,24,New Hampshire,family,specialty stores,54,171,7,early,1,schedule control
+429,female,single,professional,MA,28,23,New Jersey,single,discount,33,96,38,early,6,programming/interactive features
+430,female,married,none,MA,51,53,Arizona,family,mass-consumer electronics,44,199,27,late,1,saving favorite shows to watch as a family
+431,male,married,professional,none,28,55,Connecticut,single,discount,17,54,3,early,1,time shifting
+432,male,married,none,none,33,59,Pennsylvania,family,discount,16,77,34,early,2,time shifting
+433,female,single,professional,BA,34,26,Arizona,single,web (ebay),34,122,2,early,4,programming/interactive features
+434,female,married,none,none,28,55,Nevada,single,retail,12,59,41,early,0,schedule control
+435,male,married,professional,none,50,33,Arizona,family,mass-consumer electronics,47,96,34,late,1,saving favorite shows to watch as a family
+436,female,married,none,none,32,28,Massachusetts,family,retail,21,79,33,early,1,cool gadget
+437,male,married,professional,MA,55,53,Pennsylvania,family,mass-consumer electronics,37,83,30,late,8,saving favorite shows to watch as a family
+438,male,married,professional,none,39,79,Tennessee,family,retail,14,53,1,early,1,time shifting
+439,female,married,none,none,43,75,California,family,mass-consumer electronics,42,161,13,late,1,saving favorite shows to watch as a family
+440,female,married,none,BA,43,72,Massachusetts,family,mass-consumer electronics,39,54,14,late,13,saving favorite shows to watch as a family
+441,male,married,professional,BA,730,80,Nevada,family,specialty stores,65,137,14,early,1,schedule control
+442,male,married,professional,none,59,70,New York,family,specialty stores,50,99,5,early,1,time shifting
+443,male,married,professional,none,32,50,Florida,family,discount,16,60,19,early,1,cool gadget
+444,female,married,professional,MA,49,71,Hawaii,family,mass-consumer electronics,46,203,41,late,4,saving favorite shows to watch as a family
+445,male,married,professional,BA,56,52,New York,family,specialty stores,63,154,2,early,2,cool gadget
+446,female,married,professional,none,32,42,Idaho,family,discount,18,75,16,early,2,cool gadget
+447,male,married,professional,BA,54,45,New Hampshire,family,specialty stores,59,221,12,early,1,schedule control
+448,female,single,professional,MA,29,20,Michigan,single,web (ebay),31,35,44,early,2,programming/interactive features
+449,male,single,professional,PhD,33,27,New York,single,discount,34,118,24,early,3,programming/interactive features
+450,female,single,professional,none,32,23,Colorado,family,discount,18,47,4,early,2,schedule control
+451,female,married,professional,BA,53,28,California,family,mass-consumer electronics,40,187,18,late,6,saving favorite shows to watch as a family
+452,male,single,professional,BA,27,63,Connecticut,family,retail,19,21,31,early,2,schedule control
+453,male,single,professional,MA,30,39,California,single,retail,19,56,27,early,1,cool gadget
+454,female,married,none,BA,29,26,Connecticut,single,retail,17,47,11,early,0,schedule control
+455,male,married,professional,PhD,51,38,Pennsylvania,family,mass-consumer electronics,40,116,33,late,0,saving favorite shows to watch as a family
+456,male,married,professional,BA,52,32,Arizona,family,specialty stores,52,214,4,early,1,time shifting
+457,female,single,professional,BA,29,22,Kentucky,single,retail,35,83,8,early,4,programming/interactive features
+458,female,married,professional,MA,47,35,Rhode Island,family,mass-consumer electronics,50,209,46,late,7,saving favorite shows to watch as a family
+459,male,married,none,none,32,49,Delaware,single,retail,15,45,26,early,0,schedule control
+460,male,married,professional,none,24,53,Washington,single,discount,14,18,45,early,1,cool gadget
+461,male,single,none,none,29,56,Vermont,single,discount,23,42,21,early,2,schedule control
+462,male,single,professional,BA,24,27,North Carolina,single,web (ebay),32,126,17,early,3,programming/interactive features
+463,female,married,none,MA,49,47,Arizona,family,mass-consumer electronics,47,139,14,late,4,saving favorite shows to watch as a family
+464,male,married,none,PhD,48,64,New Hampshire,family,mass-consumer electronics,39,67,40,late,10,saving favorite shows to watch as a family
+465,female,married,professional,none,61,32,New Jersey,family,specialty stores,48,117,3,early,1,schedule control
+466,female,married,professional,BA,46,62,New Hampshire,family,mass-consumer electronics,38,132,24,late,0,saving favorite shows to watch as a family
+467,male,married,professional,MA,52,36,Delaware,family,specialty stores,60,111,7,early,1,schedule control
+468,male,single,professional,none,29,80,Tennessee,single,retail,14,56,17,early,1,time shifting
+469,male,single,none,none,26,67,Minnesota,family,discount,22,46,21,early,2,cool gadget
+470,male,married,professional,BA,59,69,Tennessee,family,specialty stores,61,286,14,early,2,cool gadget
+471,male,single,professional,none,29,30,Washington,single,discount,18,39,46,early,1,time shifting
+472,male,married,professional,PhD,29,67,Oklahoma,single,retail,18,74,25,early,1,cool gadget
+473,male,married,professional,BA,30,55,Hawaii,single,retail,19,35,17,early,2,time shifting
+474,female,married,none,PhD,49,75,Rhode Island,family,mass-consumer electronics,36,80,35,late,6,saving favorite shows to watch as a family
+475,male,married,professional,none,32,48,Maryland,family,retail,19,28,44,early,1,time shifting
+476,male,married,none,none,26,75,Tennessee,family,discount,14,47,24,early,1,cool gadget
+477,female,married,professional,none,29,23,Washington,family,retail,21,80,31,early,0,cool gadget
+478,male,single,professional,none,23,29,Montana,single,web (ebay),35,114,17,early,3,programming/interactive features
+479,male,married,professional,BA,53,40,California,family,specialty stores,65,180,14,early,2,cool gadget
+480,female,single,professional,none,30,55,Maine,family,retail,15,55,46,early,2,cool gadget
+481,male,married,professional,BA,33,78,Idaho,single,retail,18,66,41,early,2,cool gadget
+482,female,married,professional,BA,51,28,Rhode Island,family,specialty stores,75,282,5,early,1,cool gadget
+483,male,married,professional,PhD,46,56,Pennsylvania,family,mass-consumer electronics,54,194,17,late,5,saving favorite shows to watch as a family
+484,female,married,none,BA,44,57,Maryland,family,mass-consumer electronics,36,173,26,late,9,saving favorite shows to watch as a family
+485,female,married,none,BA,49,57,Pennsylvania,family,mass-consumer electronics,42,81,47,late,5,saving favorite shows to watch as a family
+486,male,married,professional,none,29,24,Colorado,single,retail,13,51,37,early,0,cool gadget
+487,female,married,professional,none,31,62,Pennsylvania,family,retail,19,39,10,early,0,schedule control
+488,male,married,none,BA,52,48,Washington,family,mass-consumer electronics,39,62,27,late,1,saving favorite shows to watch as a family
+489,male,single,professional,PhD,34,22,West Virginia,single,discount,34,118,27,early,2,programming/interactive features
+490,female,single,professional,PhD,49,62,North Carolina,single,mass-consumer electronics,43,123,37,late,2,saving favorite shows to watch as a family
+491,female,married,professional,none,30,31,Delaware,family,retail,24,70,38,early,1,cool gadget
+492,female,married,professional,PhD,45,67,Florida,family,mass-consumer electronics,39,144,21,late,7,saving favorite shows to watch as a family
+493,female,married,none,BA,28,65,New Mexico,single,retail,15,62,39,early,1,cool gadget
+494,female,married,none,PhD,33,34,Delaware,family,retail,18,45,44,early,1,time shifting
+495,male,married,professional,BA,46,39,Pennsylvania,family,mass-consumer electronics,45,166,37,late,11,saving favorite shows to watch as a family
+496,male,married,professional,PhD,29,19,South Carolina,single,retail,40,109,21,early,1,programming/interactive features
+497,female,married,professional,BA,52,42,Connecticut,family,specialty stores,57,250,15,early,1,cool gadget
+498,female,married,professional,none,29,68,Massachusetts,family,discount,17,74,8,early,2,schedule control
+499,male,married,professional,BA,54,44,New Jersey,family,specialty stores,66,139,10,early,2,cool gadget
+500,male,married,professional,MA,55,46,Arizona,family,specialty stores,72,252,14,early,1,schedule control
+501,female,single,none,none,30,58,Georgia,single,discount,21,71,2,early,1,time shifting
+502,male,single,professional,none,24,56,Maine,family,retail,18,58,20,early,2,time shifting
+503,male,married,none,MA,29,73,Colorado,family,discount,19,86,30,early,2,cool gadget
+504,female,married,none,none,35,42,Idaho,family,discount,20,43,40,early,0,schedule control
+505,female,married,professional,BA,31,56,New Hampshire,family,discount,18,43,18,early,0,cool gadget
+506,female,married,professional,none,32,35,Massachusetts,single,retail,18,29,29,early,2,cool gadget
+507,male,single,professional,none,35,66,Texas,single,discount,15,72,43,early,1,time shifting
+508,male,married,professional,none,57,59,New Hampshire,family,specialty stores,61,221,14,early,1,schedule control
+509,female,married,none,MA,50,54,Pennsylvania,family,mass-consumer electronics,46,137,17,late,10,saving favorite shows to watch as a family
+510,male,married,professional,none,24,50,Arizona,single,discount,12,44,36,early,2,time shifting
+511,male,single,professional,none,30,27,Illinois,single,discount,29,94,46,early,4,programming/interactive features
+512,male,married,none,BA,25,66,Iowa,single,discount,20,73,46,early,0,cool gadget
+513,male,married,professional,none,49,24,Tennessee,family,specialty stores,49,158,16,early,2,cool gadget
+514,male,married,none,none,27,31,Idaho,single,discount,22,87,3,early,0,cool gadget
+515,female,single,professional,none,32,18,Alabama,single,discount,29,91,43,early,1,programming/interactive features
+516,male,married,none,none,28,30,Georgia,family,discount,17,85,10,early,2,schedule control
+517,female,married,none,none,47,60,Pennsylvania,family,mass-consumer electronics,34,67,32,late,1,saving favorite shows to watch as a family
+518,male,single,professional,BA,54,51,Colorado,single,specialty stores,54,82,9,early,1,time shifting
+519,male,married,professional,none,27,76,Illinois,family,discount,18,28,17,early,0,cool gadget
+520,male,married,none,none,29,61,Maine,family,discount,21,29,11,early,1,time shifting
+521,male,married,professional,none,34,38,Nevada,family,retail,22,59,34,early,1,cool gadget
+522,female,married,none,MA,46,74,New York,family,mass-consumer electronics,46,132,23,late,9,saving favorite shows to watch as a family
+523,male,married,none,none,34,72,Maine,family,retail,17,43,17,early,2,time shifting
+524,female,single,professional,BA,55,26,Virginia,single,specialty stores,75,306,5,early,0,schedule control
+525,male,single,professional,PhD,27,27,Connecticut,single,retail,36,128,9,early,1,programming/interactive features
+526,female,single,professional,BA,60,54,Illinois,single,specialty stores,47,194,1,early,1,time shifting
+527,female,married,none,BA,32,41,Florida,single,discount,23,109,38,early,0,cool gadget
+528,female,married,none,none,29,60,Vermont,single,discount,20,98,20,early,0,time shifting
+529,male,single,professional,PhD,31,29,Kentucky,single,web (ebay),31,58,22,early,5,programming/interactive features
+530,male,married,professional,MA,56,52,Colorado,family,specialty stores,44,73,2,early,2,time shifting
+531,male,single,professional,BA,28,23,Hawaii,family,discount,18,69,20,early,2,time shifting
+532,female,single,professional,none,28,22,Louisiana,single,web (ebay),34,50,32,early,4,programming/interactive features
+533,male,married,professional,BA,58,62,Arizona,family,specialty stores,54,171,7,early,0,cool gadget
+534,male,married,none,BA,32,37,Maryland,family,retail,18,58,34,early,1,time shifting
+535,female,married,none,none,31,69,Colorado,family,discount,14,63,19,early,1,cool gadget
+536,male,married,professional,none,60,78,Hawaii,family,specialty stores,61,183,4,early,0,time shifting
+537,female,married,none,none,50,52,Washington,family,mass-consumer electronics,33,87,19,late,8,saving favorite shows to watch as a family
+538,male,married,none,none,35,57,Connecticut,single,discount,15,56,41,early,0,time shifting
+539,male,married,professional,none,27,59,Florida,family,discount,19,76,12,early,1,cool gadget
+540,female,married,none,none,26,34,New Jersey,family,discount,17,54,31,early,0,time shifting
+541,male,married,professional,none,27,50,Wisconsin,single,retail,23,57,24,early,0,time shifting
+542,female,married,professional,none,33,36,New York,family,retail,18,31,19,early,1,time shifting
+543,female,married,none,none,48,34,Florida,family,mass-consumer electronics,39,133,17,late,5,saving favorite shows to watch as a family
+544,male,married,professional,none,24,76,Delaware,single,retail,19,41,10,early,1,time shifting
+545,female,single,professional,none,27,33,Tennessee,family,discount,15,20,37,early,2,time shifting
+546,male,married,professional,PhD,49,56,Florida,family,mass-consumer electronics,36,146,33,late,10,saving favorite shows to watch as a family
+547,female,married,none,none,34,41,Pennsylvania,single,retail,17,35,29,early,1,time shifting
+548,male,married,professional,none,34,56,Idaho,single,retail,16,46,35,early,1,cool gadget
+549,male,married,none,MA,49,69,New Hampshire,family,mass-consumer electronics,47,178,31,late,3,saving favorite shows to watch as a family
+550,female,married,professional,none,31,51,Washington,single,retail,16,41,6,early,1,schedule control
+551,male,single,professional,BA,26,77,Florida,single,retail,16,64,2,early,1,cool gadget
+552,female,single,professional,BA,30,30,Oregon,single,retail,34,90,6,early,5,programming/interactive features
+553,female,married,none,MA,33,28,Massachusetts,single,discount,18,68,41,early,0,time shifting
+554,male,married,none,none,31,40,Texas,single,discount,17,66,35,early,1,time shifting
+555,female,married,professional,none,45,72,Colorado,family,mass-consumer electronics,44,125,17,late,0,saving favorite shows to watch as a family
+556,female,single,professional,PhD,26,22,New Mexico,single,discount,37,44,45,early,4,programming/interactive features
+557,female,single,professional,MA,35,18,Florida,single,discount,35,84,27,early,0,programming/interactive features
+558,female,married,professional,MA,48,50,Delaware,family,mass-consumer electronics,43,119,36,late,11,saving favorite shows to watch as a family
+559,male,single,professional,none,28,21,Idaho,single,web (ebay),35,76,32,early,4,programming/interactive features
+560,female,married,professional,BA,56,69,California,family,specialty stores,47,88,4,early,1,schedule control
+561,female,married,professional,none,30,48,Hawaii,single,discount,22,95,8,early,1,cool gadget
+562,male,married,professional,BA,57,61,Georgia,family,specialty stores,69,192,12,early,1,time shifting
+563,female,single,none,none,28,55,Massachusetts,family,discount,15,69,31,early,1,time shifting
+564,female,married,professional,none,27,75,Nevada,single,discount,16,43,43,early,2,time shifting
+565,male,single,professional,none,54,64,California,single,specialty stores,26,107,13,early,2,cool gadget
+566,male,married,professional,none,30,68,Hawaii,family,discount,21,56,3,early,2,cool gadget
+567,female,married,professional,none,32,29,Ohio,single,retail,32,137,20,early,3,programming/interactive features
+568,female,married,professional,BA,58,35,Maine,family,specialty stores,45,183,7,early,1,cool gadget
+569,male,married,professional,PhD,48,28,Hawaii,family,mass-consumer electronics,51,132,27,late,6,saving favorite shows to watch as a family
+570,female,married,none,none,36,42,Delaware,family,retail,15,30,11,early,1,schedule control
+571,male,single,professional,MA,56,75,Pennsylvania,single,specialty stores,55,231,2,early,1,schedule control
+572,female,married,professional,none,29,80,Massachusetts,single,retail,18,87,5,early,2,cool gadget
+573,female,married,none,none,23,44,South Carolina,family,retail,18,43,25,early,0,schedule control
+574,male,married,none,none,27,48,Connecticut,single,discount,14,53,41,early,2,schedule control
+575,female,married,professional,none,27,78,North Carolina,single,discount,10,29,18,early,1,time shifting
+576,female,married,none,none,53,49,Colorado,family,mass-consumer electronics,38,166,14,late,5,saving favorite shows to watch as a family
+577,female,single,professional,MA,31,23,Kentucky,single,web (ebay),35,144,41,early,4,programming/interactive features
+578,male,married,none,MA,49,65,Idaho,family,mass-consumer electronics,40,71,35,late,11,saving favorite shows to watch as a family
+579,female,married,none,none,31,35,Tennessee,family,retail,14,63,37,early,1,time shifting
+580,male,married,professional,MA,54,52,Hawaii,family,mass-consumer electronics,39,194,27,late,4,saving favorite shows to watch as a family
+581,female,married,none,none,29,31,Washington,family,discount,10,32,17,early,2,cool gadget
+582,male,married,professional,none,31,32,Washington,single,discount,15,69,37,early,1,time shifting
+583,female,married,professional,BA,30,66,New Jersey,family,retail,18,62,34,early,1,time shifting
+584,male,married,professional,none,54,68,California,family,mass-consumer electronics,43,74,31,late,4,saving favorite shows to watch as a family
+585,female,married,none,MA,31,62,Colorado,single,discount,13,25,35,early,1,cool gadget
+586,female,single,professional,BA,30,45,Florida,family,discount,13,35,32,early,1,schedule control
+587,female,married,professional,MA,52,73,Arizona,family,mass-consumer electronics,42,169,19,late,10,saving favorite shows to watch as a family
+588,female,married,professional,BA,54,69,California,family,specialty stores,60,260,3,early,0,schedule control
+589,male,married,none,none,33,58,Oregon,single,retail,15,63,47,early,1,cool gadget
+590,female,married,professional,MA,51,27,Illinois,family,mass-consumer electronics,41,97,28,late,12,saving favorite shows to watch as a family
+591,male,married,none,none,45,78,Maryland,family,mass-consumer electronics,44,141,24,late,5,saving favorite shows to watch as a family
+592,female,single,professional,none,31,21,South Carolina,single,discount,33,48,12,early,4,programming/interactive features
+593,male,single,none,none,30,49,Vermont,single,discount,13,20,36,early,1,cool gadget
+594,male,married,none,none,26,69,New Jersey,family,discount,18,30,17,early,0,schedule control
+595,female,single,none,none,30,46,Florida,single,retail,18,68,37,early,2,time shifting
+596,male,married,professional,none,27,76,Georgia,family,discount,14,43,23,early,1,time shifting
+597,male,married,professional,BA,59,70,Maryland,family,specialty stores,66,122,12,early,1,cool gadget
+598,female,single,professional,PhD,50,32,Louisiana,single,mass-consumer electronics,40,122,31,late,3,saving favorite shows to watch as a family
+599,female,married,professional,MA,33,42,Delaware,family,discount,19,32,26,early,2,cool gadget
+600,female,married,none,none,32,67,Hawaii,single,retail,16,22,5,early,1,cool gadget
+601,female,married,professional,none,33,67,Washington,single,retail,15,67,8,early,0,time shifting
+602,male,married,professional,BA,29,64,Florida,family,discount,14,47,46,early,1,schedule control
+603,female,single,professional,BA,30,24,Wyoming,single,discount,34,161,42,early,2,programming/interactive features
+604,male,married,professional,none,33,63,Tennessee,single,retail,15,58,6,early,1,cool gadget
+605,female,married,none,none,32,38,Maryland,family,discount,15,51,15,early,1,schedule control
+606,female,married,professional,BA,28,69,Vermont,single,retail,17,73,34,early,0,schedule control
+607,female,married,none,none,37,25,Illinois,family,discount,12,55,36,early,1,time shifting
+608,female,married,none,none,28,53,New Hampshire,family,retail,17,85,7,early,1,cool gadget
+609,female,single,professional,BA,33,21,Arizona,single,web (ebay),32,36,21,early,2,programming/interactive features
+610,male,married,professional,BA,62,80,Arizona,family,specialty stores,55,247,10,early,1,schedule control
+611,female,married,none,none,46,66,Hawaii,family,mass-consumer electronics,34,119,31,late,2,saving favorite shows to watch as a family
+612,male,married,professional,MA,48,22,Vermont,family,specialty stores,49,244,3,early,1,cool gadget
+613,female,married,professional,none,28,37,California,family,retail,19,61,44,early,0,schedule control
+614,male,single,none,BA,28,43,Connecticut,family,retail,13,39,39,early,1,cool gadget
+615,male,married,professional,BA,63,80,Florida,family,specialty stores,77,326,8,early,1,schedule control
+616,male,married,professional,none,26,54,Arizona,single,discount,22,44,5,early,1,cool gadget
+617,female,married,none,none,36,53,Michigan,family,discount,18,55,47,early,0,cool gadget
+618,male,married,professional,none,30,66,Hawaii,family,retail,13,60,25,early,1,schedule control
+619,female,married,none,none,33,54,Idaho,family,retail,14,47,42,early,2,time shifting
+620,female,married,professional,BA,56,29,Arizona,family,specialty stores,51,225,15,early,0,cool gadget
+621,male,single,professional,none,34,74,Idaho,family,retail,18,72,10,early,2,schedule control
+622,female,single,professional,none,56,59,North Carolina,single,specialty stores,83,281,1,early,1,schedule control
+623,male,married,professional,BA,54,44,Vermont,family,specialty stores,60,124,7,early,1,cool gadget
+624,male,married,none,none,29,52,Illinois,family,discount,16,60,8,early,0,cool gadget
+625,male,married,none,none,27,63,Arizona,single,discount,15,22,45,early,1,cool gadget
+626,male,married,none,BA,36,48,Idaho,family,retail,17,61,36,early,1,time shifting
+627,female,married,none,none,51,34,Connecticut,family,mass-consumer electronics,37,137,21,late,3,saving favorite shows to watch as a family
+628,male,married,professional,none,30,39,Washington,single,discount,11,44,22,early,2,cool gadget
+629,female,single,professional,MA,55,60,Colorado,single,specialty stores,80,366,1,early,2,schedule control
+630,male,single,professional,none,34,28,Hawaii,single,discount,17,84,10,early,1,cool gadget
+631,male,married,none,none,25,37,Hawaii,single,discount,16,66,19,early,1,time shifting
+632,female,single,professional,MA,32,21,California,single,web (ebay),28,95,31,early,4,programming/interactive features
+633,female,married,professional,none,32,36,Vermont,single,discount,20,95,7,early,1,cool gadget
+634,female,married,professional,none,33,34,Tennessee,family,retail,14,48,47,early,1,cool gadget
+635,female,married,professional,PhD,46,63,Connecticut,family,mass-consumer electronics,31,37,22,late,9,saving favorite shows to watch as a family
+636,female,single,professional,BA,31,20,Arizona,single,discount,35,55,38,early,2,programming/interactive features
+637,male,married,professional,none,60,79,Pennsylvania,family,specialty stores,73,326,13,early,0,time shifting
+638,male,married,none,BA,32,42,Michigan,family,retail,21,63,13,early,2,time shifting
+639,female,single,none,none,31,44,Nevada,single,discount,15,66,37,early,2,schedule control
+640,female,married,professional,BA,51,63,Vermont,family,specialty stores,45,87,15,early,0,schedule control
+641,female,single,professional,PhD,34,24,Colorado,single,retail,28,92,33,early,2,programming/interactive features
+642,male,married,none,none,29,79,Oregon,family,retail,18,65,42,early,2,time shifting
+643,male,single,professional,MA,52,25,Delaware,single,specialty stores,67,83,6,early,2,cool gadget
+644,male,married,professional,BA,52,37,Washington,family,specialty stores,64,224,8,early,2,cool gadget
+645,male,married,professional,none,35,42,Nevada,family,discount,18,46,22,early,1,time shifting
+646,male,married,professional,BA,53,39,Maine,family,mass-consumer electronics,45,59,40,late,4,saving favorite shows to watch as a family
+647,female,married,professional,MA,46,51,Colorado,family,mass-consumer electronics,34,103,16,late,9,saving favorite shows to watch as a family
+648,male,married,professional,PhD,48,22,Massachusetts,family,specialty stores,43,80,2,early,2,cool gadget
+649,male,married,none,none,44,48,New Jersey,family,mass-consumer electronics,45,72,20,late,14,saving favorite shows to watch as a family
+650,male,married,professional,none,33,68,Delaware,single,discount,17,33,12,early,0,cool gadget
+651,male,married,professional,MA,52,63,California,family,mass-consumer electronics,40,67,31,late,10,saving favorite shows to watch as a family
+652,male,married,none,none,31,48,Vermont,family,discount,16,30,27,early,1,time shifting
+653,female,married,professional,BA,43,61,Hawaii,family,mass-consumer electronics,59,75,14,late,6,saving favorite shows to watch as a family
+654,male,married,none,none,26,30,Illinois,single,retail,15,54,40,early,1,schedule control
+655,female,married,professional,PhD,28,25,Texas,single,web (ebay),33,73,42,early,0,programming/interactive features
+656,male,single,professional,none,32,53,Florida,family,discount,18,58,45,early,2,schedule control
+657,male,married,professional,BA,30,31,Tennessee,single,discount,15,58,29,early,1,time shifting
+658,female,single,professional,MA,27,21,New Jersey,single,discount,32,98,46,early,4,programming/interactive features
+659,female,married,none,none,24,59,Washington,single,discount,14,45,2,early,1,time shifting
+660,male,married,professional,none,30,54,Nevada,family,retail,18,52,33,early,0,cool gadget
+661,male,married,professional,none,31,75,Arizona,family,retail,21,34,39,early,1,schedule control
+662,male,married,none,none,47,55,Georgia,family,mass-consumer electronics,30,91,25,late,0,saving favorite shows to watch as a family
+663,male,married,professional,BA,52,37,Nevada,family,specialty stores,43,191,5,early,1,cool gadget
+664,female,married,none,BA,32,67,California,family,discount,16,73,5,early,0,time shifting
+665,male,married,professional,MA,49,58,New York,family,mass-consumer electronics,44,95,23,late,8,saving favorite shows to watch as a family
+666,male,married,professional,MA,48,35,Vermont,family,mass-consumer electronics,31,60,24,late,11,saving favorite shows to watch as a family
+667,male,single,none,none,35,64,Massachusetts,family,discount,16,53,12,early,1,schedule control
+668,male,married,none,BA,28,77,Washington,family,retail,15,54,36,early,1,cool gadget
+669,female,married,none,none,27,51,Rhode Island,single,discount,11,30,16,early,1,cool gadget
+670,female,married,none,BA,45,46,Rhode Island,family,mass-consumer electronics,42,80,43,late,13,saving favorite shows to watch as a family
+671,male,married,professional,BA,56,56,Massachusetts,family,specialty stores,52,250,6,early,1,time shifting
+672,male,married,professional,none,34,47,Delaware,single,retail,11,16,27,early,0,cool gadget
+673,male,married,professional,none,26,76,Hawaii,single,discount,9,14,4,early,2,schedule control
+674,male,married,professional,BA,39,32,Washington,family,retail,19,32,2,early,0,schedule control
+675,male,married,professional,BA,60,76,Delaware,family,specialty stores,55,97,12,early,2,time shifting
+676,female,married,professional,PhD,48,76,Pennsylvania,family,mass-consumer electronics,32,113,26,late,13,saving favorite shows to watch as a family
+677,male,married,none,none,32,34,Alaska,family,retail,21,71,27,early,1,schedule control
+678,male,married,none,none,32,36,Georgia,family,discount,20,27,3,early,2,time shifting
+679,male,single,professional,MA,24,23,Maine,single,retail,31,147,19,early,3,programming/interactive features
+680,male,married,professional,BA,53,31,Arizona,family,mass-consumer electronics,51,202,26,late,13,saving favorite shows to watch as a family
+681,female,married,professional,PhD,56,69,Maryland,family,specialty stores,23,92,7,early,1,schedule control
+682,female,married,none,PhD,30,34,Arizona,family,discount,19,26,19,early,0,cool gadget
+683,female,married,none,none,30,26,Pennsylvania,family,discount,19,85,26,early,2,schedule control
+684,male,married,professional,BA,54,45,Massachusetts,family,specialty stores,65,309,10,early,0,time shifting
+685,female,married,none,none,22,30,Maine,single,discount,14,70,15,early,2,cool gadget
+686,male,single,none,PhD,45,61,Utah,single,mass-consumer electronics,38,170,48,late,11,saving favorite shows to watch as a family
+687,female,married,professional,none,27,68,Nevada,family,discount,19,80,32,early,0,cool gadget
+688,female,single,professional,none,26,40,New Hampshire,family,retail,14,44,44,early,0,cool gadget
+689,male,married,professional,none,27,26,Illinois,single,discount,14,26,21,early,2,schedule control
+690,female,married,none,BA,28,53,New York,single,discount,19,51,43,early,2,time shifting
+691,male,single,professional,BA,29,27,Massachusetts,single,discount,35,57,10,early,0,programming/interactive features
+692,male,married,none,none,25,36,Colorado,single,discount,14,18,20,early,2,time shifting
+693,female,single,professional,MA,45,80,Kansas,single,mass-consumer electronics,50,239,39,late,3,saving favorite shows to watch as a family
+694,male,married,none,none,31,33,Pennsylvania,single,retail,10,23,4,early,1,time shifting
+695,male,married,professional,none,32,80,Idaho,family,discount,20,46,23,early,1,time shifting
+696,female,single,professional,PhD,29,26,New York,single,discount,32,77,16,early,1,programming/interactive features
+697,female,married,none,none,30,42,Nevada,family,discount,15,44,4,early,2,time shifting
+698,male,married,professional,none,26,70,South Dakota,family,discount,15,55,42,early,1,cool gadget
+699,male,married,none,BA,31,29,Massachusetts,family,discount,17,21,45,early,0,time shifting
+700,male,married,professional,BA,53,41,Hawaii,family,specialty stores,81,356,11,early,1,schedule control
+701,male,married,professional,none,32,41,Colorado,family,discount,19,63,16,early,1,time shifting
+702,male,single,professional,PhD,57,61,Maine,single,specialty stores,43,191,3,early,2,cool gadget
+703,female,married,none,none,28,41,Maine,family,retail,22,55,5,early,1,time shifting
+704,female,married,professional,none,30,48,Idaho,single,retail,16,46,36,early,0,time shifting
+705,male,married,professional,BA,55,52,Vermont,family,specialty stores,64,84,11,early,0,cool gadget
+706,male,married,none,none,26,79,Rhode Island,single,retail,19,35,41,early,1,schedule control
+707,female,single,professional,none,28,70,Pennsylvania,family,discount,17,63,35,early,1,time shifting
+708,female,single,professional,none,34,20,Washington,single,discount,29,70,36,early,6,programming/interactive features
+709,female,married,professional,none,32,30,Nevada,single,retail,21,97,38,early,0,time shifting
+710,female,married,professional,PhD,50,72,Nevada,family,mass-consumer electronics,42,66,14,late,0,saving favorite shows to watch as a family
+711,male,married,professional,BA,56,58,Rhode Island,family,specialty stores,67,332,11,early,1,schedule control
+712,male,married,professional,none,34,69,Pennsylvania,single,discount,17,55,4,early,0,schedule control
+713,male,married,professional,MA,33,30,Oklahoma,single,discount,36,139,4,early,2,programming/interactive features
+714,female,married,professional,none,31,35,New Hampshire,family,retail,13,65,23,early,0,schedule control
+715,female,married,professional,none,29,25,Rhode Island,single,discount,18,41,25,early,1,schedule control
+716,female,married,none,none,31,69,Connecticut,family,discount,10,28,45,early,0,schedule control
+717,male,married,none,none,30,44,New Jersey,family,retail,16,47,21,early,1,schedule control
+718,female,single,professional,none,33,27,Montana,single,web (ebay),34,139,19,early,3,programming/interactive features
+719,male,married,none,none,26,74,Idaho,single,retail,27,116,33,early,2,cool gadget
+720,female,single,none,BA,30,37,Delaware,single,retail,17,26,27,early,0,schedule control
+721,female,married,none,none,28,55,Georgia,family,discount,16,29,47,early,1,time shifting
+722,female,married,professional,none,41,80,Delaware,family,mass-consumer electronics,30,76,37,late,11,saving favorite shows to watch as a family
+723,female,married,none,none,35,32,Delaware,family,retail,17,23,5,early,1,time shifting
+724,male,married,none,PhD,41,32,New Jersey,family,mass-consumer electronics,41,129,25,late,2,saving favorite shows to watch as a family
+725,female,married,none,none,30,58,Massachusetts,single,retail,20,49,29,early,2,schedule control
+726,male,single,none,none,31,60,Hawaii,family,retail,13,24,22,early,0,schedule control
+727,male,married,professional,none,31,76,Vermont,single,retail,19,37,46,early,0,cool gadget
+728,male,married,professional,none,35,44,Hawaii,single,discount,15,70,42,early,1,schedule control
+729,female,single,professional,none,29,26,Wisconsin,single,discount,32,120,26,early,2,programming/interactive features
+730,female,married,professional,BA,37,79,New Jersey,single,retail,15,44,2,early,1,cool gadget
+731,female,married,none,BA,28,67,Delaware,family,discount,23,108,24,early,1,cool gadget
+732,male,married,professional,PhD,52,36,Connecticut,family,specialty stores,61,92,4,early,0,time shifting
+733,female,married,professional,BA,49,44,Massachusetts,family,mass-consumer electronics,48,193,37,late,1,saving favorite shows to watch as a family
+734,male,married,professional,MA,49,67,Nevada,family,mass-consumer electronics,37,147,47,late,0,saving favorite shows to watch as a family
+735,female,married,professional,MA,49,28,Hawaii,family,mass-consumer electronics,46,152,40,late,4,saving favorite shows to watch as a family
+736,male,married,none,BA,36,40,Maryland,single,retail,17,31,47,early,1,time shifting
+737,female,single,professional,MA,30,28,Utah,single,retail,34,117,5,early,3,programming/interactive features
+738,female,single,none,none,25,52,Illinois,single,retail,17,39,41,early,0,time shifting
+739,female,married,none,PhD,47,42,Illinois,family,mass-consumer electronics,44,72,22,late,6,saving favorite shows to watch as a family
+740,female,married,professional,BA,58,69,New Hampshire,family,specialty stores,31,60,4,early,0,schedule control
+741,male,married,professional,PhD,53,72,Pennsylvania,family,mass-consumer electronics,36,166,38,late,4,saving favorite shows to watch as a family
+742,female,single,none,none,30,28,Colorado,family,discount,7,10,9,early,1,cool gadget
+743,male,married,professional,PhD,56,59,New Jersey,family,specialty stores,72,148,7,early,1,time shifting
+744,male,single,professional,PhD,27,18,Massachusetts,single,discount,35,46,17,early,5,programming/interactive features
+745,female,married,professional,none,46,40,California,family,mass-consumer electronics,36,102,32,late,5,saving favorite shows to watch as a family
+746,male,married,professional,BA,31,21,West Virginia,single,discount,33,39,29,early,2,programming/interactive features
+747,male,married,professional,none,53,33,Arizona,family,mass-consumer electronics,49,226,31,late,3,saving favorite shows to watch as a family
+748,male,married,professional,PhD,47,22,Massachusetts,family,specialty stores,42,79,2,early,2,time shifting
+749,female,married,professional,none,48,67,Hawaii,family,mass-consumer electronics,48,71,36,late,3,saving favorite shows to watch as a family
+750,male,married,none,BA,35,45,Tennessee,single,discount,18,42,25,early,0,cool gadget
+751,female,married,professional,BA,22,51,New Hampshire,family,retail,20,58,39,early,1,cool gadget
+752,male,married,professional,PhD,51,62,Hawaii,family,mass-consumer electronics,35,53,43,late,8,saving favorite shows to watch as a family
+753,female,married,professional,none,30,25,Illinois,family,retail,12,60,5,early,2,time shifting
+754,female,married,professional,none,26,29,Nevada,single,retail,17,41,22,early,1,cool gadget
+755,male,married,professional,BA,51,56,California,family,mass-consumer electronics,41,93,40,late,5,saving favorite shows to watch as a family
+756,female,married,professional,PhD,44,60,Hawaii,family,mass-consumer electronics,32,43,41,late,6,saving favorite shows to watch as a family
+757,female,married,professional,none,31,23,Washington,family,discount,16,37,45,early,0,cool gadget
+758,female,married,none,PhD,31,36,Indiana,family,discount,15,20,40,early,2,cool gadget
+759,male,married,none,PhD,50,49,Maine,family,mass-consumer electronics,54,166,27,late,1,saving favorite shows to watch as a family
+760,male,married,professional,BA,28,27,Hawaii,family,discount,19,78,10,early,1,time shifting
+761,male,single,professional,BA,30,30,Pennsylvania,single,retail,31,111,44,early,4,programming/interactive features
+762,male,single,professional,PhD,28,20,North Carolina,single,retail,35,51,43,early,0,programming/interactive features
+763,female,married,none,PhD,45,51,Washington,family,mass-consumer electronics,55,78,37,late,6,saving favorite shows to watch as a family
+764,female,married,none,BA,48,55,Arizona,family,mass-consumer electronics,35,145,13,late,4,saving favorite shows to watch as a family
+765,male,married,none,BA,28,65,Hawaii,single,discount,17,79,48,early,1,schedule control
+766,male,married,none,none,25,75,Pennsylvania,single,retail,14,45,20,early,2,schedule control
+767,female,married,professional,none,32,28,Washington,single,discount,16,25,41,early,1,cool gadget
+768,male,married,none,none,25,40,Georgia,single,retail,24,104,8,early,2,cool gadget
+769,female,married,none,MA,45,36,Massachusetts,family,mass-consumer electronics,52,126,24,late,14,saving favorite shows to watch as a family
+770,female,married,professional,BA,48,39,Nevada,family,mass-consumer electronics,36,81,41,late,0,saving favorite shows to watch as a family
+771,male,single,professional,none,33,60,Pennsylvania,family,discount,10,41,5,early,0,schedule control
+772,female,married,professional,none,29,26,California,family,retail,18,21,27,early,1,schedule control
+773,female,single,professional,BA,54,51,Missouri,single,specialty stores,54,70,15,early,0,time shifting
+774,female,married,none,none,34,33,Maine,family,retail,19,71,44,early,0,time shifting
+775,male,married,professional,BA,47,22,Idaho,family,specialty stores,62,215,9,early,1,cool gadget
+776,male,married,professional,BA,56,54,Vermont,family,specialty stores,60,190,9,early,0,time shifting
+777,female,single,none,none,34,65,Connecticut,family,retail,13,52,17,early,0,time shifting
+778,male,single,professional,none,49,37,Utah,single,mass-consumer electronics,37,143,20,late,2,saving favorite shows to watch as a family
+779,male,married,none,MA,30,59,Georgia,family,retail,19,79,25,early,1,schedule control
+780,male,married,none,PhD,48,65,Arizona,family,mass-consumer electronics,52,116,22,late,3,saving favorite shows to watch as a family
+781,male,single,professional,none,35,40,Florida,family,retail,21,80,12,early,1,schedule control
+782,male,married,none,PhD,44,71,Nevada,family,mass-consumer electronics,36,118,43,late,5,saving favorite shows to watch as a family
+783,female,married,professional,none,30,80,Tennessee,single,retail,20,53,19,early,2,schedule control
+784,male,married,professional,BA,57,61,Delaware,family,specialty stores,60,81,13,early,2,schedule control
+785,female,single,professional,PhD,24,20,Alaska,single,discount,31,129,7,early,4,programming/interactive features
+786,male,married,professional,MA,50,26,Georgia,family,specialty stores,49,119,15,early,0,cool gadget
+787,female,married,professional,none,56,38,Massachusetts,family,specialty stores,46,160,9,early,1,time shifting
+788,female,married,professional,MA,30,52,Pennsylvania,single,retail,16,64,4,early,2,time shifting
+789,male,married,none,none,27,37,Rhode Island,single,discount,21,32,1,early,1,time shifting
+790,male,single,professional,MA,26,26,Indiana,single,web (ebay),37,60,5,early,4,programming/interactive features
+791,female,single,professional,MA,56,57,Oregon,single,specialty stores,27,88,1,early,2,schedule control
+792,male,married,professional,none,30,70,Maine,single,retail,18,54,41,early,2,cool gadget
+793,female,married,professional,BA,53,40,New York,family,mass-consumer electronics,46,211,13,late,7,saving favorite shows to watch as a family
+794,male,married,professional,PhD,60,75,Tennessee,family,specialty stores,45,190,9,early,1,schedule control
+795,female,single,professional,PhD,32,20,Virginia,single,retail,31,123,21,early,2,programming/interactive features
+796,female,married,none,none,31,51,Florida,family,retail,11,15,10,early,2,cool gadget
+797,female,single,professional,none,26,39,North Dakota,single,discount,18,25,25,early,1,time shifting
+798,male,single,professional,BA,55,72,California,single,specialty stores,59,86,15,early,2,schedule control
+799,male,married,none,none,29,55,Connecticut,single,discount,20,85,15,early,1,schedule control
+800,male,single,professional,PhD,35,25,Washington,single,web (ebay),35,168,41,early,6,programming/interactive features
+801,male,married,professional,none,52,30,California,family,specialty stores,43,162,2,early,1,cool gadget
+802,male,single,professional,PhD,31,22,Missouri,single,retail,34,55,9,early,4,programming/interactive features
+803,male,married,professional,PhD,49,58,Rhode Island,family,mass-consumer electronics,39,153,32,late,2,saving favorite shows to watch as a family
+804,male,married,none,none,28,64,California,single,retail,16,25,6,early,1,schedule control
+805,female,married,professional,BA,32,46,Maine,family,retail,19,30,35,early,1,cool gadget
+806,male,single,professional,MA,30,21,Indiana,single,retail,34,123,5,early,4,programming/interactive features
+807,female,single,professional,none,27,23,Delaware,single,retail,31,74,41,early,0,programming/interactive features
+808,male,single,professional,BA,52,50,Pennsylvania,single,specialty stores,64,234,3,early,1,cool gadget
+809,male,married,none,BA,30,66,Maryland,family,discount,13,53,23,early,1,cool gadget
+810,female,single,professional,PhD,28,20,Maine,single,web (ebay),33,112,10,early,0,programming/interactive features
+811,male,married,professional,none,28,80,Washington,family,retail,15,60,9,early,0,time shifting
+812,male,married,professional,PhD,46,56,Georgia,family,mass-consumer electronics,44,89,33,late,4,saving favorite shows to watch as a family
+813,male,married,none,PhD,45,32,Idaho,family,mass-consumer electronics,40,159,30,late,12,saving favorite shows to watch as a family
+814,male,married,professional,PhD,27,23,South Dakota,single,retail,34,167,24,early,4,programming/interactive features
+815,male,married,professional,BA,56,53,Washington,family,specialty stores,48,216,4,early,1,time shifting
+816,female,married,none,none,27,76,Arizona,single,discount,25,36,4,early,2,time shifting
+817,male,married,professional,PhD,26,60,Colorado,single,retail,27,69,39,early,1,time shifting
+818,male,married,none,none,31,64,Nevada,family,retail,15,39,48,early,2,time shifting
+819,male,married,none,none,30,58,Delaware,family,retail,21,80,46,early,2,cool gadget
+820,male,married,professional,none,32,64,Alaska,family,retail,16,55,23,early,1,cool gadget
+821,male,married,none,none,31,77,Vermont,family,retail,21,88,48,early,2,time shifting
+822,male,single,none,MA,34,62,Maine,family,discount,17,44,2,early,1,cool gadget
+823,male,single,none,none,30,75,Washington,family,retail,12,23,4,early,2,time shifting
+824,male,single,professional,none,26,41,Connecticut,family,discount,20,29,33,early,2,schedule control
+825,male,married,professional,PhD,48,31,Florida,family,mass-consumer electronics,39,161,28,late,2,saving favorite shows to watch as a family
+826,female,married,professional,none,30,29,Connecticut,family,discount,19,37,33,early,0,cool gadget
+827,male,married,professional,MA,63,80,Connecticut,family,specialty stores,65,170,1,early,1,cool gadget
+828,male,married,professional,MA,47,39,Maine,family,mass-consumer electronics,36,118,47,late,9,saving favorite shows to watch as a family
+829,male,married,none,MA,52,43,California,family,mass-consumer electronics,48,96,18,late,10,saving favorite shows to watch as a family
+830,female,married,professional,PhD,46,31,Florida,family,mass-consumer electronics,48,173,12,late,3,saving favorite shows to watch as a family
+831,male,married,professional,PhD,51,77,Maine,family,mass-consumer electronics,39,117,21,late,1,saving favorite shows to watch as a family
+832,male,married,professional,BA,55,51,Washington,family,specialty stores,70,119,13,early,0,cool gadget
+833,male,single,professional,BA,27,24,Utah,single,retail,36,150,4,early,2,programming/interactive features
+834,female,single,professional,BA,29,27,Georgia,single,web (ebay),35,53,26,early,5,programming/interactive features
+835,male,single,professional,PhD,54,47,Georgia,single,specialty stores,46,104,15,early,1,cool gadget
+836,female,single,professional,BA,28,69,Connecticut,family,retail,19,39,19,early,1,schedule control
+837,male,single,professional,BA,50,76,Maryland,single,specialty stores,57,181,12,early,1,cool gadget
+838,male,married,professional,none,29,36,Idaho,family,discount,21,31,12,early,2,time shifting
+839,male,married,professional,BA,58,63,New York,family,specialty stores,62,167,9,early,1,time shifting
+840,female,married,professional,none,30,58,New Jersey,single,discount,17,26,45,early,2,schedule control
+841,male,single,professional,none,30,52,New York,single,retail,18,28,6,early,1,time shifting
+842,female,single,none,none,32,51,New York,single,retail,16,67,25,early,1,time shifting
+843,female,married,none,BA,27,72,Pennsylvania,single,retail,12,27,1,early,2,schedule control
+844,male,married,professional,none,30,75,Idaho,family,retail,13,45,36,early,2,cool gadget
+845,female,single,professional,PhD,45,43,Utah,single,mass-consumer electronics,38,185,35,late,13,saving favorite shows to watch as a family
+846,male,married,professional,MA,31,18,Michigan,single,web (ebay),37,104,48,early,0,programming/interactive features
+847,male,married,none,MA,49,49,Tennessee,family,mass-consumer electronics,47,180,18,late,7,saving favorite shows to watch as a family
+848,male,married,none,none,31,39,New York,single,discount,19,78,33,early,0,cool gadget
+849,male,married,professional,BA,54,44,New Jersey,family,specialty stores,62,173,11,early,1,cool gadget
+850,female,married,professional,none,32,28,Oregon,family,retail,18,66,17,early,1,schedule control
+851,male,married,professional,MA,42,53,Rhode Island,family,mass-consumer electronics,43,66,42,late,3,saving favorite shows to watch as a family
+852,male,married,none,PhD,47,67,Illinois,family,mass-consumer electronics,40,190,30,late,14,saving favorite shows to watch as a family
+853,male,married,none,none,24,72,West Virginia,single,retail,14,26,41,early,0,time shifting
+854,male,married,none,none,35,54,Maine,single,discount,15,33,21,early,2,schedule control
+855,male,married,professional,BA,32,38,Maryland,single,discount,16,68,32,early,1,schedule control
+856,female,married,professional,none,28,76,New Hampshire,single,retail,14,43,41,early,0,schedule control
+857,male,married,none,none,31,34,Pennsylvania,single,discount,18,74,45,early,2,schedule control
+858,female,single,professional,MA,32,23,Kansas,single,retail,33,88,23,early,0,programming/interactive features
+859,male,married,professional,MA,47,22,Washington,family,specialty stores,35,76,12,early,2,cool gadget
+860,male,married,none,none,29,54,Maryland,single,discount,15,19,30,early,1,schedule control
+861,male,married,professional,BA,26,54,Maine,family,retail,13,49,10,early,1,time shifting
+862,female,married,none,BA,42,48,Arizona,family,mass-consumer electronics,45,125,41,late,11,saving favorite shows to watch as a family
+863,female,married,professional,BA,47,74,Arizona,family,mass-consumer electronics,39,112,46,late,10,saving favorite shows to watch as a family
+864,female,married,none,none,26,24,Massachusetts,single,discount,15,53,25,early,1,schedule control
+865,female,married,professional,none,31,47,Massachusetts,single,discount,16,22,26,early,1,cool gadget
+866,male,single,professional,none,29,23,Vermont,single,discount,32,75,47,early,2,programming/interactive features
+867,male,single,professional,BA,52,68,New Hampshire,single,specialty stores,84,346,1,early,2,time shifting
+868,male,married,professional,BA,51,30,New Jersey,family,specialty stores,54,207,3,early,1,schedule control
+869,male,single,none,none,33,29,California,family,discount,20,32,46,early,1,time shifting
+870,female,married,professional,none,28,39,Florida,family,retail,17,28,5,early,1,schedule control
+871,female,married,none,BA,45,32,Connecticut,family,mass-consumer electronics,43,63,19,late,12,saving favorite shows to watch as a family
+872,female,married,professional,BA,49,32,Maryland,family,mass-consumer electronics,28,32,35,late,8,saving favorite shows to watch as a family
+873,male,married,professional,BA,47,33,Vermont,family,mass-consumer electronics,47,130,29,late,13,saving favorite shows to watch as a family
+874,male,single,professional,PhD,26,23,Florida,single,retail,35,128,36,early,1,programming/interactive features
+875,male,single,professional,none,30,27,Vermont,single,discount,35,138,9,early,1,programming/interactive features
+876,female,married,none,none,30,31,New Jersey,family,retail,17,54,31,early,1,cool gadget
+877,female,single,none,BA,45,51,West Virginia,single,mass-consumer electronics,41,63,37,late,4,saving favorite shows to watch as a family
+878,female,married,none,none,33,33,North Dakota,single,retail,14,50,15,early,0,time shifting
+879,female,married,professional,MA,51,68,Maryland,family,mass-consumer electronics,35,56,40,late,3,saving favorite shows to watch as a family
+880,female,married,professional,BA,50,31,Hawaii,family,specialty stores,52,85,3,early,0,schedule control
+881,male,married,none,MA,49,55,Maine,family,mass-consumer electronics,44,66,46,late,9,saving favorite shows to watch as a family
+882,male,single,professional,MA,26,30,Michigan,single,web (ebay),36,60,42,early,4,programming/interactive features
+883,male,married,none,none,34,73,Arizona,single,discount,15,27,19,early,2,schedule control
+884,male,married,professional,BA,61,80,Vermont,family,specialty stores,58,109,3,early,1,time shifting
+885,male,single,professional,BA,52,45,Pennsylvania,single,specialty stores,62,145,15,early,2,time shifting
+886,female,married,professional,PhD,47,67,Georgia,family,mass-consumer electronics,43,101,14,late,2,saving favorite shows to watch as a family
+887,male,single,none,none,37,35,Missouri,single,retail,18,36,34,early,1,schedule control
+888,male,single,professional,none,26,19,Ohio,single,web (ebay),33,69,33,early,4,programming/interactive features
+889,male,married,professional,BA,58,67,Vermont,family,specialty stores,85,390,3,early,1,time shifting
+890,female,single,professional,BA,33,23,Maryland,single,retail,36,139,14,early,5,programming/interactive features
+891,female,married,none,none,32,76,Nevada,family,discount,15,50,45,early,2,time shifting
+892,female,married,none,PhD,45,33,Maryland,family,mass-consumer electronics,50,91,25,late,2,saving favorite shows to watch as a family
+893,male,single,professional,BA,27,25,Washington,single,web (ebay),36,70,11,early,6,programming/interactive features
+894,male,married,professional,none,33,44,Nevada,family,retail,14,20,35,early,2,schedule control
+895,male,married,none,none,46,52,Nevada,family,mass-consumer electronics,42,196,20,late,11,saving favorite shows to watch as a family
+896,male,married,none,none,48,48,Florida,family,mass-consumer electronics,36,139,15,late,1,saving favorite shows to watch as a family
+897,female,single,professional,none,31,57,Connecticut,single,retail,17,56,47,early,1,time shifting
+898,female,married,none,BA,31,55,Maryland,single,retail,19,45,31,early,0,schedule control
+899,female,married,professional,MA,54,61,Delaware,family,specialty stores,57,100,8,early,1,schedule control
+900,male,single,professional,BA,52,55,Massachusetts,single,specialty stores,47,166,15,early,1,schedule control
+901,male,married,professional,none,32,30,Idaho,single,discount,22,109,25,early,2,schedule control
+902,female,single,professional,none,27,78,Utah,single,discount,18,32,31,early,2,cool gadget
+903,female,single,professional,BA,59,50,Alabama,single,specialty stores,80,169,13,early,2,cool gadget
+904,male,married,professional,none,27,63,New York,single,retail,11,30,30,early,1,time shifting
+905,male,married,professional,BA,52,36,Arizona,family,specialty stores,69,96,10,early,1,time shifting
+906,male,single,professional,none,32,26,Oklahoma,single,retail,29,110,22,early,4,programming/interactive features
+907,male,single,none,none,27,46,Rhode Island,family,retail,14,38,2,early,0,cool gadget
+908,female,single,professional,none,34,58,New Jersey,family,retail,19,94,18,early,0,schedule control
+909,male,single,professional,PhD,28,25,Wyoming,single,discount,32,86,27,early,2,programming/interactive features
+910,female,married,none,none,26,48,Georgia,family,retail,17,60,11,early,0,cool gadget
+911,male,married,none,none,28,61,Illinois,single,retail,17,29,45,early,0,time shifting
+912,female,single,professional,MA,29,28,West Virginia,single,web (ebay),34,88,46,early,6,programming/interactive features
+913,male,married,none,BA,46,40,Rhode Island,family,mass-consumer electronics,44,77,18,late,10,saving favorite shows to watch as a family
+914,female,married,none,PhD,47,53,Arizona,family,mass-consumer electronics,42,171,25,late,5,saving favorite shows to watch as a family
+915,female,married,none,none,33,64,New York,single,retail,19,86,10,early,1,schedule control
+916,female,married,professional,MA,51,28,Colorado,family,mass-consumer electronics,51,126,46,late,4,saving favorite shows to watch as a family
+917,female,married,professional,none,30,75,New Hampshire,family,discount,15,57,21,early,1,schedule control
+918,female,single,professional,MA,32,22,West Virginia,single,discount,33,75,20,early,5,programming/interactive features
+919,male,married,professional,none,31,33,Vermont,family,discount,20,64,32,early,1,time shifting
+920,female,married,none,none,32,65,New Jersey,single,discount,19,83,5,early,1,time shifting
+921,male,married,none,none,28,76,Idaho,single,discount,20,69,26,early,2,cool gadget
+922,male,single,professional,MA,27,20,Nevada,single,web (ebay),32,78,9,early,1,programming/interactive features
+923,male,married,professional,none,640,80,Connecticut,family,specialty stores,55,125,2,early,2,cool gadget
+924,male,married,professional,BA,44,36,Georgia,family,mass-consumer electronics,47,135,34,late,5,saving favorite shows to watch as a family
+925,male,married,none,none,27,25,Maine,single,retail,19,53,12,early,0,time shifting
+926,female,married,none,none,26,35,Connecticut,single,discount,12,31,17,early,1,time shifting
+927,female,single,professional,BA,29,26,Tennessee,single,web (ebay),36,118,33,early,6,programming/interactive features
+928,male,married,none,none,28,30,Rhode Island,family,retail,17,68,36,early,2,cool gadget
+929,female,married,professional,PhD,53,31,Maine,family,specialty stores,60,166,2,early,2,time shifting
+930,male,married,professional,none,33,60,Illinois,family,discount,19,53,6,early,1,cool gadget
+931,female,married,professional,none,35,78,Arizona,single,retail,18,29,19,early,2,time shifting
+932,female,single,professional,none,30,26,Utah,single,web (ebay),38,46,38,early,5,programming/interactive features
+933,male,married,none,PhD,51,70,Hawaii,family,mass-consumer electronics,40,90,17,late,1,saving favorite shows to watch as a family
+934,female,married,professional,none,29,76,Tennessee,single,discount,22,52,8,early,1,time shifting
+935,male,married,professional,none,30,59,Idaho,single,discount,11,41,15,early,0,schedule control
+936,male,married,professional,BA,50,56,Washington,family,mass-consumer electronics,45,218,45,late,4,saving favorite shows to watch as a family
+937,female,married,none,none,35,26,Massachusetts,family,discount,18,86,45,early,0,time shifting
+938,male,married,none,none,33,25,Pennsylvania,single,retail,21,61,47,early,0,time shifting
+939,female,married,professional,BA,30,67,Connecticut,family,discount,15,31,15,early,1,schedule control
+940,male,married,none,none,36,55,Colorado,family,retail,18,74,21,early,0,schedule control
+941,female,single,none,BA,33,38,Iowa,family,retail,20,82,19,early,0,time shifting
+942,female,married,professional,MA,55,37,Illinois,family,specialty stores,77,308,14,early,1,schedule control
+943,male,married,none,PhD,48,72,Delaware,family,mass-consumer electronics,37,149,23,late,7,saving favorite shows to watch as a family
+944,male,married,none,none,28,52,Nevada,family,discount,20,31,23,early,2,time shifting
+945,female,married,professional,none,32,75,Arizona,single,discount,16,61,35,early,0,schedule control
+946,female,single,professional,MA,35,29,Florida,single,retail,29,85,19,early,4,programming/interactive features
+947,male,married,none,BA,32,48,Hawaii,single,retail,16,31,26,early,0,time shifting
+948,male,married,professional,none,32,59,New Hampshire,family,discount,20,30,34,early,0,time shifting
+949,male,married,none,none,24,58,Indiana,family,retail,17,74,13,early,1,cool gadget
+950,male,single,none,none,48,40,South Dakota,single,mass-consumer electronics,45,81,33,late,7,saving favorite shows to watch as a family
+951,male,single,professional,PhD,34,29,Kansas,single,discount,32,56,39,early,2,programming/interactive features
+952,male,married,professional,none,31,71,Pennsylvania,family,discount,15,56,23,early,2,time shifting
+953,female,married,professional,MA,29,47,Rhode Island,single,discount,21,97,30,early,2,time shifting
+954,female,married,professional,none,34,79,Illinois,single,discount,20,63,31,early,2,schedule control
+955,female,married,professional,BA,48,38,Idaho,family,mass-consumer electronics,40,154,40,late,4,saving favorite shows to watch as a family
+956,male,single,professional,BA,29,27,New Hampshire,single,web (ebay),36,62,39,early,1,programming/interactive features
+957,male,married,none,none,36,43,Idaho,family,discount,21,102,13,early,0,schedule control
+958,male,married,none,none,26,70,Idaho,single,discount,19,61,10,early,2,schedule control
+959,male,single,professional,none,54,52,Delaware,single,specialty stores,69,259,2,early,1,time shifting
+960,male,married,none,none,29,52,New Jersey,single,retail,14,18,20,early,1,time shifting
+961,male,single,professional,none,27,20,Delaware,single,retail,34,145,37,early,4,programming/interactive features
+962,male,married,professional,none,24,22,Delaware,family,retail,17,69,8,early,0,time shifting
+963,male,married,professional,BA,54,42,Illinois,family,specialty stores,60,95,10,early,1,cool gadget
+964,male,married,professional,BA,54,42,New Jersey,family,specialty stores,36,114,10,early,2,time shifting
+965,male,single,professional,none,30,43,Nevada,family,discount,14,34,7,early,1,schedule control
+966,female,married,professional,none,32,73,Arizona,single,discount,13,43,35,early,1,schedule control
+967,female,married,professional,BA,30,19,Kansas,single,discount,44,117,39,early,3,programming/interactive features
+968,female,married,none,PhD,48,34,California,family,mass-consumer electronics,35,96,29,late,5,saving favorite shows to watch as a family
+969,female,single,professional,MA,28,25,Idaho,single,discount,32,58,20,early,3,programming/interactive features
+970,male,married,none,none,27,60,Rhode Island,family,retail,16,34,39,early,0,schedule control
+971,female,married,none,MA,53,49,New Jersey,family,mass-consumer electronics,38,45,43,late,5,saving favorite shows to watch as a family
+972,male,married,professional,PhD,53,37,Delaware,family,specialty stores,52,245,8,early,2,cool gadget
+973,male,married,none,BA,29,63,Vermont,family,discount,15,55,12,early,1,cool gadget
+974,male,married,none,none,30,61,Colorado,single,discount,12,57,26,early,0,cool gadget
+975,female,married,none,none,27,26,Nevada,single,discount,15,27,35,early,1,time shifting
+976,female,married,none,MA,46,60,Maryland,family,mass-consumer electronics,50,235,24,late,10,saving favorite shows to watch as a family
+977,female,married,none,PhD,47,32,Arizona,family,mass-consumer electronics,42,177,30,late,8,saving favorite shows to watch as a family
+978,male,married,professional,none,32,26,Colorado,single,discount,13,44,4,early,2,schedule control
+979,female,single,professional,MA,32,24,South Carolina,single,web (ebay),36,102,48,early,5,programming/interactive features
+980,male,single,none,none,31,45,Arkansas,single,discount,18,38,15,early,1,schedule control
+981,female,married,none,BA,30,74,Maryland,family,retail,13,53,4,early,2,schedule control
+982,female,married,professional,none,29,56,Vermont,family,retail,12,24,43,early,2,schedule control
+983,female,married,professional,none,31,23,Arizona,single,retail,20,28,47,early,0,time shifting
+984,male,married,none,none,25,44,New York,single,discount,12,50,27,early,0,time shifting
+985,male,married,none,none,26,33,Pennsylvania,family,discount,12,45,38,early,1,time shifting
+986,female,single,professional,none,31,49,Delaware,family,discount,15,59,24,early,1,schedule control
+987,male,married,none,BA,51,79,Florida,family,mass-consumer electronics,37,134,44,late,4,saving favorite shows to watch as a family
+988,male,single,professional,MA,25,22,Washington,single,discount,28,77,3,early,4,programming/interactive features
+989,male,married,none,MA,44,54,Vermont,family,mass-consumer electronics,43,113,25,late,14,saving favorite shows to watch as a family
+990,male,single,professional,none,26,32,New Hampshire,family,discount,16,69,3,early,2,cool gadget
+991,male,married,professional,none,34,42,Hawaii,family,retail,20,47,26,early,2,schedule control
+992,female,married,none,BA,29,50,Nevada,family,discount,19,82,20,early,2,schedule control
+993,female,single,professional,none,30,20,Florida,single,discount,36,151,47,early,2,programming/interactive features
+994,male,married,professional,none,31,79,New Hampshire,single,discount,12,54,38,early,1,time shifting
+995,male,married,professional,BA,53,38,Maryland,family,specialty stores,40,123,11,early,1,cool gadget
+996,female,single,professional,none,29,51,Florida,family,retail,15,54,21,early,2,schedule control
+997,male,married,professional,MA,32,73,Maine,single,retail,15,73,21,early,0,schedule control
+998,male,married,professional,none,28,65,Georgia,single,discount,10,29,11,early,1,schedule control
+999,male,married,none,BA,49,67,Maine,family,mass-consumer electronics,41,55,23,late,10,saving favorite shows to watch as a family
+1000,female,married,professional,none,33,58,Tennessee,single,retail,23,104,1,early,1,cool gadget
+,,,,,,,,,,,,,,,
+,,,,,21,18,,,,,,,,,
+,,,,,730,80,,,,,,,,,
