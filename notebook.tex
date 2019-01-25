@@ -1,0 +1,1398 @@
+
+% Default to the notebook output style
+
+    
+
+
+% Inherit from the specified cell style.
+
+
+
+
+    
+\documentclass[11pt]{article}
+
+    
+    
+    \usepackage[T1]{fontenc}
+    % Nicer default font (+ math font) than Computer Modern for most use cases
+    \usepackage{mathpazo}
+
+    % Basic figure setup, for now with no caption control since it's done
+    % automatically by Pandoc (which extracts ![](path) syntax from Markdown).
+    \usepackage{graphicx}
+    % We will generate all images so they have a width \maxwidth. This means
+    % that they will get their normal width if they fit onto the page, but
+    % are scaled down if they would overflow the margins.
+    \makeatletter
+    \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth
+    \else\Gin@nat@width\fi}
+    \makeatother
+    \let\Oldincludegraphics\includegraphics
+    % Set max figure width to be 80% of text width, for now hardcoded.
+    \renewcommand{\includegraphics}[1]{\Oldincludegraphics[width=.8\maxwidth]{#1}}
+    % Ensure that by default, figures have no caption (until we provide a
+    % proper Figure object with a Caption API and a way to capture that
+    % in the conversion process - todo).
+    \usepackage{caption}
+    \DeclareCaptionLabelFormat{nolabel}{}
+    \captionsetup{labelformat=nolabel}
+
+    \usepackage{adjustbox} % Used to constrain images to a maximum size 
+    \usepackage{xcolor} % Allow colors to be defined
+    \usepackage{enumerate} % Needed for markdown enumerations to work
+    \usepackage{geometry} % Used to adjust the document margins
+    \usepackage{amsmath} % Equations
+    \usepackage{amssymb} % Equations
+    \usepackage{textcomp} % defines textquotesingle
+    % Hack from http://tex.stackexchange.com/a/47451/13684:
+    \AtBeginDocument{%
+        \def\PYZsq{\textquotesingle}% Upright quotes in Pygmentized code
+    }
+    \usepackage{upquote} % Upright quotes for verbatim code
+    \usepackage{eurosym} % defines \euro
+    \usepackage[mathletters]{ucs} % Extended unicode (utf-8) support
+    \usepackage[utf8x]{inputenc} % Allow utf-8 characters in the tex document
+    \usepackage{fancyvrb} % verbatim replacement that allows latex
+    \usepackage{grffile} % extends the file name processing of package graphics 
+                         % to support a larger range 
+    % The hyperref package gives us a pdf with properly built
+    % internal navigation ('pdf bookmarks' for the table of contents,
+    % internal cross-reference links, web links for URLs, etc.)
+    \usepackage{hyperref}
+    \usepackage{longtable} % longtable support required by pandoc >1.10
+    \usepackage{booktabs}  % table support for pandoc > 1.12.2
+    \usepackage[inline]{enumitem} % IRkernel/repr support (it uses the enumerate* environment)
+    \usepackage[normalem]{ulem} % ulem is needed to support strikethroughs (\sout)
+                                % normalem makes italics be italics, not underlines
+    
+
+    
+    
+    % Colors for the hyperref package
+    \definecolor{urlcolor}{rgb}{0,.145,.698}
+    \definecolor{linkcolor}{rgb}{.71,0.21,0.01}
+    \definecolor{citecolor}{rgb}{.12,.54,.11}
+
+    % ANSI colors
+    \definecolor{ansi-black}{HTML}{3E424D}
+    \definecolor{ansi-black-intense}{HTML}{282C36}
+    \definecolor{ansi-red}{HTML}{E75C58}
+    \definecolor{ansi-red-intense}{HTML}{B22B31}
+    \definecolor{ansi-green}{HTML}{00A250}
+    \definecolor{ansi-green-intense}{HTML}{007427}
+    \definecolor{ansi-yellow}{HTML}{DDB62B}
+    \definecolor{ansi-yellow-intense}{HTML}{B27D12}
+    \definecolor{ansi-blue}{HTML}{208FFB}
+    \definecolor{ansi-blue-intense}{HTML}{0065CA}
+    \definecolor{ansi-magenta}{HTML}{D160C4}
+    \definecolor{ansi-magenta-intense}{HTML}{A03196}
+    \definecolor{ansi-cyan}{HTML}{60C6C8}
+    \definecolor{ansi-cyan-intense}{HTML}{258F8F}
+    \definecolor{ansi-white}{HTML}{C5C1B4}
+    \definecolor{ansi-white-intense}{HTML}{A1A6B2}
+
+    % commands and environments needed by pandoc snippets
+    % extracted from the output of `pandoc -s`
+    \providecommand{\tightlist}{%
+      \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+    \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+    % Add ',fontsize=\small' for more characters per line
+    \newenvironment{Shaded}{}{}
+    \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+    \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+    \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+    \newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+    \newcommand{\RegionMarkerTok}[1]{{#1}}
+    \newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\NormalTok}[1]{{#1}}
+    
+    % Additional commands for more recent versions of Pandoc
+    \newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
+    \newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
+    \newcommand{\ImportTok}[1]{{#1}}
+    \newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
+    \newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
+    \newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
+    \newcommand{\BuiltInTok}[1]{{#1}}
+    \newcommand{\ExtensionTok}[1]{{#1}}
+    \newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
+    \newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
+    \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    
+    
+    % Define a nice break command that doesn't care if a line doesn't already
+    % exist.
+    \def\br{\hspace*{\fill} \\* }
+    % Math Jax compatability definitions
+    \def\gt{>}
+    \def\lt{<}
+    % Document parameters
+    \title{MDI\_Data}
+    
+    
+    
+
+    % Pygments definitions
+    
+\makeatletter
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@fm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sa\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@dl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@mb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ch\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cpf\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZhy{\char`\-}
+\def\PYZsq{\char`\'}
+\def\PYZdq{\char`\"}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\makeatother
+
+
+    % Exact colors from NB
+    \definecolor{incolor}{rgb}{0.0, 0.0, 0.5}
+    \definecolor{outcolor}{rgb}{0.545, 0.0, 0.0}
+
+
+
+    
+    % Prevent overflowing lines due to hard-to-break entities
+    \sloppy 
+    % Setup hyperref package
+    \hypersetup{
+      breaklinks=true,  % so long urls are correctly broken across lines
+      colorlinks=true,
+      urlcolor=urlcolor,
+      linkcolor=linkcolor,
+      citecolor=citecolor,
+      }
+    % Slightly bigger margins than the latex defaults
+    
+    \geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+    
+    
+
+    \begin{document}
+    
+    
+    \maketitle
+    
+    
+
+    
+    \hypertarget{multilateral-development-institution-data}{%
+\section{Multilateral Development Institution
+Data}\label{multilateral-development-institution-data}}
+
+\hypertarget{loading-data-and-overview}{%
+\subsection{Loading Data and Overview}\label{loading-data-and-overview}}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}2}]:} \PY{n}{foo} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{read.csv}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{https://tinyurl.com/yb4phxx8\PYZdq{}}\PY{p}{)} \PY{c+c1}{\PYZsh{} read in the data}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}3}]:} \PY{c+c1}{\PYZsh{} column names}
+        \PY{n+nf}{names}\PY{p}{(}\PY{n}{foo}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{enumerate*}
+\item 'Number'
+\item 'Status'
+\item 'Cluster'
+\item 'Prefix'
+\item 'Type'
+\item 'Country'
+\item 'Dept'
+\item 'Division'
+\item 'LTAA'
+\item 'Loan'
+\item 'ApprovalDate'
+\item 'AgreementDate'
+\item 'Agreement'
+\item 'EffectivityDate'
+\item 'CancellationDate'
+\item 'FinancialCompletionDate'
+\item 'OriginalCompletionDate'
+\item 'RevisedCompletionDate'
+\item 'JSF'
+\item 'Fund'
+\item 'RevisedAmount'
+\item 'Rating'
+\item 'No'
+\item 'PCR'
+\item 'CirculationDate'
+\end{enumerate*}
+
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}4}]:} \PY{c+c1}{\PYZsh{} dimensions of the data set}
+        \PY{n+nf}{dim}\PY{p}{(}\PY{n}{foo}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{enumerate*}
+\item 9016
+\item 25
+\end{enumerate*}
+
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}5}]:} \PY{c+c1}{\PYZsh{} quick look at the data structure}
+        \PY{n+nf}{head}\PY{p}{(}\PY{n}{foo}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{tabular}{r|lllllllllllllllllllllllll}
+ Number & Status & Cluster & Prefix & Type & Country & Dept & Division & LTAA & Loan & ⋯ & FinancialCompletionDate & OriginalCompletionDate & RevisedCompletionDate & JSF & Fund & RevisedAmount & Rating & No & PCR & CirculationDate\\
+\hline
+	 5001                                                 & Financially Completed                                &                                                      & R                                                    & RETA                                                 & REG                                                  &                                                      &                                                      & Agriculture, natural resources and rural development & 0                                                    & ⋯                                                    & 1987-12-31                                           &                                                      & 1987-12-31                                           & NA                                                   & 2                                                    & 0.155                                                & NA                                                   &                                                      &                                                      &                                                     \\
+	    1                                                 & Financially Completed                                &                                                      &                                                      & ADTA                                                 & INO                                                  &                                                      &                                                      & Agriculture, natural resources and rural development & 0                                                    & ⋯                                                    & 1968-07-31                                           &                                                      & 1968-07-31                                           & NA                                                   & 2                                                    & 0.080                                                & NA                                                   &                                                      &                                                      &                                                     \\
+	    2                                                 & Financially Completed                                &                                                      &                                                      & ADTA                                                 & KOR                                                  &                                                      &                                                      & Agriculture, natural resources and rural development & 0                                                    & ⋯                                                    & 1969-10-31                                           &                                                      & 1969-10-31                                           & NA                                                   & 2                                                    & 0.067                                                & NA                                                   &                                                      &                                                      &                                                     \\
+	    3                                                 & Financially Completed                                &                                                      &                                                      & ADTA                                                 & PHI                                                  &                                                      &                                                      & Agriculture, natural resources and rural development & 0                                                    & ⋯                                                    & 1970-01-31                                           &                                                      & 1970-01-31                                           & NA                                                   & 2                                                    & 0.105                                                & NA                                                   &                                                      &                                                      &                                                     \\
+	    4                                                 & Financially Completed                                &                                                      &                                                      & ADTA                                                 & VIE                                                  &                                                      &                                                      & Finance                                              & 0                                                    & ⋯                                                    & 1972-08-31                                           &                                                      & 1972-08-31                                           & NA                                                   & 2                                                    & 0.115                                                & NA                                                   &                                                      &                                                      &                                                     \\
+	    5                                                 & Financially Completed                                &                                                      &                                                      & PPTA                                                 & PHI                                                  &                                                      &                                                      & Transport                                            & 0                                                    & ⋯                                                    & 1970-03-31                                           &                                                      & 1970-03-31                                           & NA                                                   & 2                                                    & 0.325                                                & NA                                                   &                                                      &                                                      &                                                     \\
+\end{tabular}
+
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}6}]:} \PY{c+c1}{\PYZsh{} one thing to be very careful with (in this data set) is the use of dates. 8 columns involve dates.}
+        
+        \PY{c+c1}{\PYZsh{} take note of the columns representing calendar dates}
+        \PY{n}{date.columns} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{c}\PY{p}{(}\PY{l+m}{11}\PY{p}{,} \PY{l+m}{12}\PY{p}{,} \PY{l+m}{14}\PY{p}{,} \PY{l+m}{15}\PY{p}{,} \PY{l+m}{16}\PY{p}{,} \PY{l+m}{17}\PY{p}{,} \PY{l+m}{18}\PY{p}{,} \PY{l+m}{25}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}7}]:} \PY{c+c1}{\PYZsh{} these columns need some tweaking\PYZhy{}\PYZhy{}I want to address missing values, calling the blank (empty) }
+        \PY{c+c1}{\PYZsh{} elements \PYZdq{}NA\PYZdq{} instead of leaving them blank, and I wish to tell R these are \PYZdq{}Date\PYZdq{} objects.}
+        
+        \PY{n+nf}{for}\PY{p}{(}\PY{n}{i} \PY{n}{in} \PY{n}{date.columns}\PY{p}{)}  \PY{c+c1}{\PYZsh{} this \PYZdq{}for loop\PYZdq{} only loops through the \PYZdq{}date.columns\PYZdq{} \PYZhy{}\PYZhy{} no other columns.}
+        
+          \PY{p}{\PYZob{}}
+          
+          \PY{c+c1}{\PYZsh{} identify which values are missing in the \PYZdq{}i\PYZdq{}th column of the foo data set}
+          \PY{n}{which\PYZus{}values\PYZus{}are\PYZus{}missing} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{which}\PY{p}{(}\PY{n+nf}{as.character}\PY{p}{(}\PY{n}{foo}\PY{n}{[}\PY{p}{,} \PY{n}{i}\PY{n}{]}\PY{p}{)} \PY{o}{==} \PY{l+s}{\PYZdq{}}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+          
+          \PY{c+c1}{\PYZsh{} those values that are missing (blank) in the \PYZdq{}i\PYZdq{}th column are replaced by \PYZlt{}NA\PYZgt{}}
+          \PY{c+c1}{\PYZsh{} because R knows how to handle \PYZdq{}NA\PYZdq{} \PYZhy{}\PYZhy{} NA means something special in R\PYZhy{}\PYZhy{}blanks are handled }
+          \PY{c+c1}{\PYZsh{} more unpredictably (which is bad).}
+          \PY{n}{foo}\PY{n}{[which\PYZus{}values\PYZus{}are\PYZus{}missing}\PY{p}{,} \PY{n}{i}\PY{n}{]} \PY{o}{\PYZlt{}\PYZhy{}} \PY{k+kc}{NA}
+          
+          \PY{c+c1}{\PYZsh{} last step\PYZhy{}\PYZhy{}replace each of these columns (which is structured as a column of \PYZdq{}factor\PYZdq{} values)}
+          \PY{c+c1}{\PYZsh{} as a column of dates\PYZhy{}\PYZhy{}i.e., convert them to an object of \PYZdq{}class\PYZdq{} = Date. They are dates, after all.}
+          \PY{c+c1}{\PYZsh{} And if you convert them to the Date class, R will know they are dates and you can manipulate }
+          \PY{c+c1}{\PYZsh{} dates in a simple, straightforward way. Otherwise, you won\PYZsq{}t be able to easily manipulate them}
+          \PY{c+c1}{\PYZsh{} arithmetically.  E.g., for simple Date operations, see lines 48\PYZhy{}58 below...}
+          \PY{c+c1}{\PYZsh{} **By the way, if you don\PYZsq{}t understand what a \PYZdq{}factor\PYZdq{} is in R, you should Google it.** }
+          \PY{n}{foo}\PY{n}{[}\PY{p}{,} \PY{n}{i}\PY{n}{]} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{as.Date}\PY{p}{(}\PY{n+nf}{as.character}\PY{p}{(}\PY{n}{foo}\PY{n}{[}\PY{p}{,} \PY{n}{i}\PY{n}{]}\PY{p}{)}\PY{p}{)}
+        
+          \PY{p}{\PYZcb{}}
+        
+        \PY{c+c1}{\PYZsh{} Now R knows that these columns are comprised of dates}
+        \PY{c+c1}{\PYZsh{} for example...  Replicate this yourself...}
+        
+        \PY{c+c1}{\PYZsh{} foo[3,12]}
+        \PY{c+c1}{\PYZsh{} [1] \PYZdq{}1968\PYZhy{}03\PYZhy{}13\PYZdq{}}
+        
+        \PY{c+c1}{\PYZsh{} foo[4,12]}
+        \PY{c+c1}{\PYZsh{} [1] \PYZdq{}1968\PYZhy{}07\PYZhy{}03\PYZdq{}}
+        
+        \PY{c+c1}{\PYZsh{} foo[3,12] \PYZhy{} foo[4,12]}
+        \PY{c+c1}{\PYZsh{} Time difference of \PYZhy{}112 days}
+        
+        \PY{c+c1}{\PYZsh{} Also, one additional helpful hint... How to eliminate rows with NAs...}
+        \PY{c+c1}{\PYZsh{} The \PYZdq{}is.na\PYZdq{} function\PYZhy{}\PYZhy{}for more info, Google it or type ?is.na at the R command prompt in the console.}
+        \PY{n}{which.have.NAs} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{which}\PY{p}{(}\PY{n+nf}{is.na}\PY{p}{(}\PY{n}{foo}\PY{o}{\PYZdl{}}\PY{n}{Rating} \PY{o}{==} \PY{k+kc}{TRUE}\PY{p}{)}\PY{p}{)} \PY{c+c1}{\PYZsh{} for which rows is the claim \PYZdq{}is.na\PYZdq{} a TRUE claim?}
+        
+        \PY{c+c1}{\PYZsh{} Then, if you wanted to, e.g., remove all those rows, retaining only the rows with ratings...}
+        \PY{n}{new\PYZus{}foo} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{foo}\PY{n}{[}\PY{o}{\PYZhy{}}\PY{n}{which.have.NAs}\PY{p}{,} \PY{n}{]}
+        \PY{c+c1}{\PYZsh{} Notice I called this tweaked data set \PYZdq{}new\PYZus{}foo\PYZdq{} instead of rewriting over the original data set...}
+        \PY{c+c1}{\PYZsh{} It\PYZsq{}s a bit safer to do this, in case I decide I want to quickly revert back to the original data set.}
+\end{Verbatim}
+
+
+    \hypertarget{assignment-1-you-may-want-to-read-all-the-questions-before-you-begin.}{%
+\section{ASSIGNMENT 1 -- You may want to read ALL the questions before
+you
+begin.}\label{assignment-1-you-may-want-to-read-all-the-questions-before-you-begin.}}
+
+NOTE: FOR ALL QUESTIONS BELOW, ONLY CONSIDER PROJECTS WITH non-missing
+``Circulation.Date'' \textgreater{}= 2008-01-01.\\
+EXCLUDE ALL OTHER PROJECTS FROM YOUR ANALYSIS.\\
+YOU MUST provide a link to your R code. ------ DON'T FORGET TO DO
+THIS!!!!!!!!!!!!\\
+Take note of the column names: i.e., you can type: names(foo)\\
+fyi: the column called ``Rating'' is the success rating at completion. 0
+= lowest, 3 = highest.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}8}]:} \PY{c+c1}{\PYZsh{} remove all projects without circulation date}
+        \PY{n}{foo.has.Circ.Date} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{foo}\PY{n}{[}\PY{o}{!}\PY{n+nf}{is.na}\PY{p}{(}\PY{n}{foo}\PY{o}{\PYZdl{}}\PY{n}{CirculationDate}\PY{p}{)}\PY{p}{,}\PY{n}{]}
+        
+        \PY{c+c1}{\PYZsh{} remove all projects w circ date before 2008\PYZhy{}01\PYZhy{}01}
+        \PY{n}{my\PYZus{}foo} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{foo.has.Circ.Date}\PY{n}{[foo.has.Circ.Date}\PY{o}{\PYZdl{}}\PY{n}{CirculationDate} \PY{o}{\PYZgt{}=} \PY{l+s}{\PYZsq{}}\PY{l+s}{2008\PYZhy{}01\PYZhy{}01\PYZsq{}}\PY{p}{,}\PY{n}{]}
+        
+        \PY{n+nf}{head}\PY{p}{(}\PY{n}{my\PYZus{}foo}\PY{p}{)}
+        \PY{n+nf}{dim}\PY{p}{(}\PY{n}{my\PYZus{}foo}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{tabular}{r|lllllllllllllllllllllllll}
+  & Number & Status & Cluster & Prefix & Type & Country & Dept & Division & LTAA & Loan & ⋯ & FinancialCompletionDate & OriginalCompletionDate & RevisedCompletionDate & JSF & Fund & RevisedAmount & Rating & No & PCR & CirculationDate\\
+\hline
+	2529 & 2001                     & Financially Completed    &                          &                          & ADTA                     & IND                      & IWD                      & IWTC                     & Transport                & 1274                     & ⋯                        & 1998-08-31               & NA                       & 1996-06-30               & NA                       & 2                        & 0.21                     & 2                        &                          & 13-08                    & 2008-01-17              \\
+	2530 & 2002                     & Financially Completed    &                          &                          & ADTA                     & IND                      & IWD                      & IWTC                     & Transport                & 1274                     & ⋯                        & 1998-05-31               & NA                       & 1995-11-30               & NA                       & 2                        & 0.24                     & 2                        &                          & 13-08                    & 2008-01-17              \\
+	2531 & 2003                     & Financially Completed    &                          &                          & ADTA                     & IND                      & IWD                      & IWTC                     & Transport                & 1274                     & ⋯                        & 1998-04-30               & NA                       & 1995-11-30               & NA                       & 2                        & 0.35                     & 2                        &                          & 13-08                    & 2008-01-17              \\
+	2754 & 5600                     & Financially Completed    &                          & R                        & RETA                     & REG                      & PPFD                     & COCS                     & Public sector management &    0                     & ⋯                        & 2004-10-29               & 2003-12-31               & 2003-12-31               & NA                       & 2                        & 0.12                     & 2                        & 20-10                    &                          & 2010-01-15              \\
+	2904 & 5624                     & Financially Completed    &                          & R                        & RETA                     & REG                      & PPFD                     & COPP                     & Public sector management &    0                     & ⋯                        & 2002-04-30               & NA                       & 1997-12-31               & NA                       & 2                        & 0.60                     & 3                        & 471-09                   &                          & 2009-12-29              \\
+	3059 & 2440                     & Financially Completed    &                          &                          & ADTA                     & MLD                      & SFSP-AUS                 & SAOC**                   & Public sector management &    0                     & ⋯                        & 2003-04-30               & NA                       & 1998-06-30               & NA                       & 2                        & 0.40                     & 2                        & 309-09                   &                          & 2009-10-30              \\
+\end{tabular}
+
+
+    
+    \begin{enumerate*}
+\item 1874
+\item 25
+\end{enumerate*}
+
+
+    
+    \hypertarget{question-1}{%
+\section{Question 1}\label{question-1}}
+
+When projects are approved, they are approved for a certain period of
+time (until the time of ``original completion date''). While projects
+are active, this ``original'' completion date is often pushed out
+(extended), and then there is a ``revised'' completion date.
+
+You have been told that project duration at approval is generally about
+2 years (24 months). In other words, (purportedly) when projects are
+approved, the difference between the original project completion date
+and the the approval date is (supposedly) approximately 24 months.
+
+    \hypertarget{a-is-this-claim-true-explain.}{%
+\paragraph{(a) Is this claim true?
+Explain.}\label{a-is-this-claim-true-explain.}}
+
+(Remember, for this ENTIRE assignment, only consider projects with
+Circulation.Date \textgreater{}= 2008-01-01. This will be your only
+reminder\ldots{})
+
+Has project duration at approval changed over time (consider projects
+circulated earlier and circulated later). Be sure to discuss mean
+durations, median durations, and the interquartile range of durations
+(using the ``quantile'' function).
+
+Approximate suggested length: 3-5 sentences
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}9}]:} \PY{c+c1}{\PYZsh{} duration time in months}
+        \PY{n}{my\PYZus{}foo}\PY{o}{\PYZdl{}}\PY{n}{duration} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{as.numeric}\PY{p}{(}\PY{p}{(}\PY{n}{my\PYZus{}foo}\PY{o}{\PYZdl{}}\PY{n}{OriginalCompletionDate} \PY{o}{\PYZhy{}} \PY{n}{my\PYZus{}foo}\PY{o}{\PYZdl{}}\PY{n}{ApprovalDate}\PY{p}{)}\PY{o}{/}\PY{l+m}{30}\PY{p}{)}
+        
+        \PY{c+c1}{\PYZsh{} 5 point summary}
+        \PY{n+nf}{summary}\PY{p}{(}\PY{n}{my\PYZus{}foo}\PY{o}{\PYZdl{}}\PY{n}{duration}\PY{p}{)}
+        \PY{n+nf}{library}\PY{p}{(}\PY{n}{ggplot2}\PY{p}{)}
+        \PY{n+nf}{ggplot}\PY{p}{(}\PY{n}{my\PYZus{}foo}\PY{p}{,} \PY{n+nf}{aes}\PY{p}{(}\PY{n}{x}\PY{o}{=}\PY{l+m}{1}\PY{p}{,}\PY{n}{y}\PY{o}{=}\PY{n}{duration}\PY{p}{)}\PY{p}{)} \PY{o}{+} \PY{n+nf}{geom\PYZus{}boxplot}\PY{p}{(}\PY{p}{)} \PY{o}{+} \PY{n+nf}{geom\PYZus{}point}\PY{p}{(}\PY{p}{)} \PY{o}{+} \PY{n+nf}{annotate}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{point\PYZdq{}}\PY{p}{,} \PY{n}{x} \PY{o}{=} \PY{l+m}{1}\PY{p}{,} \PY{n}{y} \PY{o}{=} \PY{l+m}{24}\PY{p}{,} \PY{n}{colour} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{red\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+
+
+    
+    \begin{verbatim}
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+   0.60   13.30   19.73   21.46   26.10  112.30      21 
+    \end{verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Warning message:
+“Removed 21 rows containing non-finite values (stat\_boxplot).”Warning message:
+“Removed 21 rows containing missing values (geom\_point).”
+    \end{Verbatim}
+
+    
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_11_3.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    The average project duration is approximately 21.46 months, slightly
+below the supposed duration of 2 years. Looking at the boxplot above, we
+can see that the project duration actually has a rather high range (from
+0.6 months to 111.7 months) but a relatively tight interquartile range
+(from 13.3 months to 26.10 months).
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}10}]:} \PY{c+c1}{\PYZsh{} change over time, based on Circulation Date}
+         \PY{n+nf}{ggplot}\PY{p}{(}\PY{n}{my\PYZus{}foo}\PY{p}{,} \PY{n+nf}{aes}\PY{p}{(}\PY{n}{x}\PY{o}{=}\PY{n}{CirculationDate}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{n}{duration}\PY{p}{)}\PY{p}{)} \PY{o}{+}
+             \PY{n+nf}{geom\PYZus{}point}\PY{p}{(}\PY{n}{shape}\PY{o}{=}\PY{l+m}{1}\PY{p}{)} \PY{o}{+}
+             \PY{n+nf}{geom\PYZus{}smooth}\PY{p}{(}\PY{n}{method}\PY{o}{=}\PY{n}{lm}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Warning message:
+“Removed 21 rows containing non-finite values (stat\_smooth).”Warning message:
+“Removed 21 rows containing missing values (geom\_point).”
+    \end{Verbatim}
+
+    
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_13_2.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}11}]:} \PY{c+c1}{\PYZsh{} split data by year}
+         \PY{n}{foo\PYZus{}08\PYZus{}to\PYZus{}10} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{my\PYZus{}foo}\PY{n}{[my\PYZus{}foo}\PY{o}{\PYZdl{}}\PY{n}{CirculationDate} \PY{o}{\PYZlt{}} \PY{l+s}{\PYZdq{}}\PY{l+s}{2010\PYZhy{}01\PYZhy{}01\PYZdq{}}\PY{p}{,}\PY{n}{]}
+         \PY{n}{foo\PYZus{}10\PYZus{}to\PYZus{}12} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{my\PYZus{}foo}\PY{n}{[my\PYZus{}foo}\PY{o}{\PYZdl{}}\PY{n}{CirculationDate} \PY{o}{\PYZgt{}=} \PY{l+s}{\PYZdq{}}\PY{l+s}{2010\PYZhy{}01\PYZhy{}01\PYZdq{}} \PY{o}{\PYZam{}} \PY{n}{my\PYZus{}foo}\PY{o}{\PYZdl{}}\PY{n}{CirculationDate} \PY{o}{\PYZlt{}} \PY{l+s}{\PYZdq{}}\PY{l+s}{2012\PYZhy{}01\PYZhy{}01\PYZdq{}}\PY{p}{,}\PY{n}{]}
+         \PY{n}{foo\PYZus{}12\PYZus{}to\PYZus{}14} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{my\PYZus{}foo}\PY{n}{[my\PYZus{}foo}\PY{o}{\PYZdl{}}\PY{n}{CirculationDate} \PY{o}{\PYZgt{}=} \PY{l+s}{\PYZdq{}}\PY{l+s}{2012\PYZhy{}01\PYZhy{}01\PYZdq{}} \PY{o}{\PYZam{}} \PY{n}{my\PYZus{}foo}\PY{o}{\PYZdl{}}\PY{n}{CirculationDate} \PY{o}{\PYZlt{}} \PY{l+s}{\PYZdq{}}\PY{l+s}{2014\PYZhy{}01\PYZhy{}01\PYZdq{}}\PY{p}{,}\PY{n}{]}
+         \PY{n}{foo\PYZus{}14\PYZus{}to\PYZus{}16} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{my\PYZus{}foo}\PY{n}{[my\PYZus{}foo}\PY{o}{\PYZdl{}}\PY{n}{CirculationDate} \PY{o}{\PYZgt{}=} \PY{l+s}{\PYZdq{}}\PY{l+s}{2014\PYZhy{}01\PYZhy{}01\PYZdq{}} \PY{o}{\PYZam{}} \PY{n}{my\PYZus{}foo}\PY{o}{\PYZdl{}}\PY{n}{CirculationDate} \PY{o}{\PYZlt{}} \PY{l+s}{\PYZdq{}}\PY{l+s}{2016\PYZhy{}01\PYZhy{}01\PYZdq{}}\PY{p}{,}\PY{n}{]}
+         \PY{n}{foo\PYZus{}16\PYZus{}to\PYZus{}inf} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{my\PYZus{}foo}\PY{n}{[my\PYZus{}foo}\PY{o}{\PYZdl{}}\PY{n}{CirculationDate} \PY{o}{\PYZgt{}=} \PY{l+s}{\PYZdq{}}\PY{l+s}{2016\PYZhy{}01\PYZhy{}01\PYZdq{}}\PY{p}{,} \PY{n}{]}
+         
+         \PY{c+c1}{\PYZsh{} exclude NA}
+         \PY{n}{foo\PYZus{}08\PYZus{}to\PYZus{}10.has.Dur} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{foo\PYZus{}08\PYZus{}to\PYZus{}10}\PY{n}{[}\PY{o}{!}\PY{n+nf}{is.na}\PY{p}{(}\PY{n}{foo\PYZus{}08\PYZus{}to\PYZus{}10}\PY{o}{\PYZdl{}}\PY{n}{duration}\PY{p}{)}\PY{p}{,}\PY{n}{]}
+         \PY{n}{foo\PYZus{}10\PYZus{}to\PYZus{}12.has.Dur} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{foo\PYZus{}10\PYZus{}to\PYZus{}12}\PY{n}{[}\PY{o}{!}\PY{n+nf}{is.na}\PY{p}{(}\PY{n}{foo\PYZus{}10\PYZus{}to\PYZus{}12}\PY{o}{\PYZdl{}}\PY{n}{duration}\PY{p}{)}\PY{p}{,}\PY{n}{]}
+         \PY{n}{foo\PYZus{}12\PYZus{}to\PYZus{}14.has.Dur} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{foo\PYZus{}12\PYZus{}to\PYZus{}14}\PY{n}{[}\PY{o}{!}\PY{n+nf}{is.na}\PY{p}{(}\PY{n}{foo\PYZus{}12\PYZus{}to\PYZus{}14}\PY{o}{\PYZdl{}}\PY{n}{duration}\PY{p}{)}\PY{p}{,}\PY{n}{]}
+         \PY{n}{foo\PYZus{}14\PYZus{}to\PYZus{}16.has.Dur} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{foo\PYZus{}14\PYZus{}to\PYZus{}16}\PY{n}{[}\PY{o}{!}\PY{n+nf}{is.na}\PY{p}{(}\PY{n}{foo\PYZus{}14\PYZus{}to\PYZus{}16}\PY{o}{\PYZdl{}}\PY{n}{duration}\PY{p}{)}\PY{p}{,}\PY{n}{]}
+         \PY{n}{foo\PYZus{}16\PYZus{}to\PYZus{}inf.has.Dur} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{foo\PYZus{}16\PYZus{}to\PYZus{}inf}\PY{n}{[}\PY{o}{!}\PY{n+nf}{is.na}\PY{p}{(}\PY{n}{foo\PYZus{}16\PYZus{}to\PYZus{}inf}\PY{o}{\PYZdl{}}\PY{n}{duration}\PY{p}{)}\PY{p}{,}\PY{n}{]}
+         
+         \PY{c+c1}{\PYZsh{} print number of exclusions}
+         \PY{n+nf}{print}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{Data points excluded due to NA\PYZsq{}}\PY{p}{)}
+         \PY{n+nf}{print}\PY{p}{(}\PY{n+nf}{paste0}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{     from \PYZsq{}08 to \PYZsq{}10:  \PYZdq{}}\PY{p}{,} \PY{n+nf}{nrow}\PY{p}{(}\PY{n}{foo\PYZus{}08\PYZus{}to\PYZus{}10}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{n+nf}{nrow}\PY{p}{(}\PY{n}{foo\PYZus{}08\PYZus{}to\PYZus{}10.has.Dur}\PY{p}{)}\PY{p}{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{ \PYZdq{}}\PY{p}{)}\PY{p}{)}
+         \PY{n+nf}{print}\PY{p}{(}\PY{n+nf}{paste0}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{     from \PYZsq{}10 to \PYZsq{}12:  \PYZdq{}}\PY{p}{,} \PY{n+nf}{nrow}\PY{p}{(}\PY{n}{foo\PYZus{}10\PYZus{}to\PYZus{}12}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{n+nf}{nrow}\PY{p}{(}\PY{n}{foo\PYZus{}10\PYZus{}to\PYZus{}12.has.Dur}\PY{p}{)}\PY{p}{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{  \PYZdq{}}\PY{p}{)}\PY{p}{)}
+         \PY{n+nf}{print}\PY{p}{(}\PY{n+nf}{paste0}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{     from \PYZsq{}12 to \PYZsq{}14:  \PYZdq{}}\PY{p}{,} \PY{n+nf}{nrow}\PY{p}{(}\PY{n}{foo\PYZus{}12\PYZus{}to\PYZus{}14}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{n+nf}{nrow}\PY{p}{(}\PY{n}{foo\PYZus{}12\PYZus{}to\PYZus{}14.has.Dur}\PY{p}{)}\PY{p}{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{  \PYZdq{}}\PY{p}{)}\PY{p}{)}
+         \PY{n+nf}{print}\PY{p}{(}\PY{n+nf}{paste0}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{     from \PYZsq{}14 to \PYZsq{}16:  \PYZdq{}}\PY{p}{,} \PY{n+nf}{nrow}\PY{p}{(}\PY{n}{foo\PYZus{}14\PYZus{}to\PYZus{}16}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{n+nf}{nrow}\PY{p}{(}\PY{n}{foo\PYZus{}14\PYZus{}to\PYZus{}16.has.Dur}\PY{p}{)}\PY{p}{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{  \PYZdq{}}\PY{p}{)}\PY{p}{)}
+         \PY{n+nf}{print}\PY{p}{(}\PY{n+nf}{paste0}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{     from \PYZsq{}08 to inf:  \PYZdq{}}\PY{p}{,} \PY{n+nf}{nrow}\PY{p}{(}\PY{n}{foo\PYZus{}16\PYZus{}to\PYZus{}inf}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{n+nf}{nrow}\PY{p}{(}\PY{n}{foo\PYZus{}16\PYZus{}to\PYZus{}inf.has.Dur}\PY{p}{)}\PY{p}{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{  \PYZdq{}}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+[1] "Data points excluded due to NA"
+[1] "     from '08 to '10:  19 "
+[1] "     from '10 to '12:  2  "
+[1] "     from '12 to '14:  0  "
+[1] "     from '14 to '16:  0  "
+[1] "     from '08 to inf:  0  "
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}12}]:} \PY{n}{duration\PYZus{}over\PYZus{}years} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{list}\PY{p}{(}\PY{p}{)}
+         \PY{n}{duration\PYZus{}over\PYZus{}years}\PY{n}{[}\PY{n}{[1}\PY{n}{]}\PY{n}{]} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{c}\PY{p}{(}\PY{n}{foo\PYZus{}08\PYZus{}to\PYZus{}10.has.Dur}\PY{o}{\PYZdl{}}\PY{n}{duration}\PY{p}{)}
+         \PY{n}{duration\PYZus{}over\PYZus{}years}\PY{n}{[}\PY{n}{[2}\PY{n}{]}\PY{n}{]} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{c}\PY{p}{(}\PY{n}{foo\PYZus{}10\PYZus{}to\PYZus{}12.has.Dur}\PY{o}{\PYZdl{}}\PY{n}{duration}\PY{p}{)}
+         \PY{n}{duration\PYZus{}over\PYZus{}years}\PY{n}{[}\PY{n}{[3}\PY{n}{]}\PY{n}{]} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{c}\PY{p}{(}\PY{n}{foo\PYZus{}12\PYZus{}to\PYZus{}14.has.Dur}\PY{o}{\PYZdl{}}\PY{n}{duration}\PY{p}{)}
+         \PY{n}{duration\PYZus{}over\PYZus{}years}\PY{n}{[}\PY{n}{[4}\PY{n}{]}\PY{n}{]} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{c}\PY{p}{(}\PY{n}{foo\PYZus{}14\PYZus{}to\PYZus{}16.has.Dur}\PY{o}{\PYZdl{}}\PY{n}{duration}\PY{p}{)}
+         \PY{n}{duration\PYZus{}over\PYZus{}years}\PY{n}{[}\PY{n}{[5}\PY{n}{]}\PY{n}{]} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{c}\PY{p}{(}\PY{n}{foo\PYZus{}16\PYZus{}to\PYZus{}inf.has.Dur}\PY{o}{\PYZdl{}}\PY{n}{duration}\PY{p}{)}
+         
+         \PY{n}{meanDur\PYZus{}over\PYZus{}years} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{unlist}\PY{p}{(}\PY{n+nf}{lapply}\PY{p}{(}\PY{n}{duration\PYZus{}over\PYZus{}years}\PY{p}{,}\PY{n}{mean}\PY{p}{)}\PY{p}{)}
+         \PY{n}{medDur\PYZus{}over\PYZus{}years} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{unlist}\PY{p}{(}\PY{n+nf}{lapply}\PY{p}{(}\PY{n}{duration\PYZus{}over\PYZus{}years}\PY{p}{,}\PY{n}{median}\PY{p}{)}\PY{p}{)}
+         \PY{n}{iqrDur\PYZus{}over\PYZus{}years} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{unlist}\PY{p}{(}\PY{n+nf}{lapply}\PY{p}{(}\PY{n}{duration\PYZus{}over\PYZus{}years}\PY{p}{,}\PY{n}{IQR}\PY{p}{)}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{} create data frame of summary vals by year}
+         \PY{n}{years} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{c}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{\PYZsq{}08\PYZhy{}\PYZsq{}10\PYZdq{}}\PY{p}{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{\PYZsq{}10\PYZhy{}\PYZsq{}12\PYZdq{}}\PY{p}{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{\PYZsq{}12\PYZhy{}\PYZsq{}14\PYZdq{}}\PY{p}{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{\PYZsq{}14\PYZhy{}\PYZsq{}16\PYZsq{}\PYZdq{}}\PY{p}{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{\PYZsq{}16\PYZhy{}inf\PYZdq{}}\PY{p}{)}
+         \PY{n}{summ\PYZus{}duration} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{data.frame}\PY{p}{(}\PY{n}{years}\PY{p}{)}
+         \PY{n}{summ\PYZus{}duration}\PY{o}{\PYZdl{}}\PY{n}{mean} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{meanDur\PYZus{}over\PYZus{}years}
+         \PY{n}{summ\PYZus{}duration}\PY{o}{\PYZdl{}}\PY{n}{median} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{medDur\PYZus{}over\PYZus{}years}
+         \PY{n}{summ\PYZus{}duration}\PY{o}{\PYZdl{}}\PY{n}{IQR} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{iqrDur\PYZus{}over\PYZus{}years}
+         
+         \PY{n+nf}{head}\PY{p}{(}\PY{n}{summ\PYZus{}duration}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{tabular}{r|llll}
+ years & mean & median & IQR\\
+\hline
+	 '08-'10  & 20.03621 & 18.48333 & 13.02500\\
+	 '10-'12  & 21.25578 & 18.41667 & 12.50833\\
+	 '12-'14  & 19.96728 & 18.76667 & 12.96667\\
+	 '14-'16' & 21.12036 & 19.66667 & 12.53333\\
+	 '16-inf  & 23.85481 & 23.00000 & 11.46667\\
+\end{tabular}
+
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}13}]:} \PY{n+nf}{ggplot}\PY{p}{(}\PY{n}{data} \PY{o}{=} \PY{n}{summ\PYZus{}duration}\PY{p}{,} \PY{n+nf}{aes}\PY{p}{(}\PY{n}{x} \PY{o}{=} \PY{n}{years}\PY{p}{,}\PY{n}{group}\PY{o}{=}\PY{l+m}{1}\PY{p}{)}\PY{p}{)} \PY{o}{+}
+           \PY{n+nf}{geom\PYZus{}line}\PY{p}{(}\PY{n+nf}{aes}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{n}{mean}\PY{p}{,} \PY{n}{colour} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{mean\PYZdq{}}\PY{p}{)}\PY{p}{)} \PY{o}{+}
+           \PY{n+nf}{geom\PYZus{}line}\PY{p}{(}\PY{n+nf}{aes}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{n}{median}\PY{p}{,} \PY{n}{colour} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{median\PYZdq{}}\PY{p}{)}\PY{p}{)} \PY{o}{+}
+           \PY{n+nf}{geom\PYZus{}line}\PY{p}{(}\PY{n+nf}{aes}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{n}{IQR}\PY{p}{,} \PY{n}{colour} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{IQR\PYZdq{}}\PY{p}{)}\PY{p}{)} \PY{o}{+}
+           \PY{n+nf}{scale\PYZus{}colour\PYZus{}manual}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{\PYZdq{}}\PY{p}{,} 
+                               \PY{n}{breaks} \PY{o}{=} \PY{n+nf}{c}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{mean\PYZdq{}}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{median\PYZdq{}}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{IQR\PYZdq{}}\PY{p}{)}\PY{p}{,}
+                               \PY{n}{values} \PY{o}{=} \PY{n+nf}{c}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{mean\PYZdq{}}\PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{green\PYZdq{}}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{median\PYZdq{}}\PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{red\PYZdq{}}\PY{p}{,} 
+                                          \PY{l+s}{\PYZdq{}}\PY{l+s}{IQR\PYZdq{}}\PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{blue\PYZdq{}}\PY{p}{)}\PY{p}{)} \PY{o}{+}
+           \PY{n+nf}{xlab}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{ \PYZdq{}}\PY{p}{)} \PY{o}{+}
+           \PY{n+nf}{scale\PYZus{}y\PYZus{}continuous}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Summary Statistic\PYZdq{}}\PY{p}{)} \PY{o}{+} 
+           \PY{n+nf}{labs}\PY{p}{(}\PY{n}{title}\PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{Change in Project Duration over Time\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+
+
+    
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_16_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    Both the mean and median of project durations have been increasing over
+time, indicating that later projects have are being approved for a
+longer duration. Additionally, the IQR has been decreasing over time,
+indicating that the vairance of the project duration approval has been
+decreasing. Overall, this shows that project durations are both
+increasing and becoming more consistent. The mean is consistently
+slightly higher than the median, showing that there is a slight left
+skew in project durations that have stayed consistent over time.
+
+    \hypertarget{b-how-does-original-planned-project-duration-differ-from-actual-duration}{%
+\paragraph{(b) How does original planned project duration differ from
+actual
+duration}\label{b-how-does-original-planned-project-duration-differ-from-actual-duration}}
+
+(if actual duration is measured as the duration between ``ApprovalDate''
+and ``RevisedCompletionDate''?) Once again, use means, medians, and
+interquartile ranges to explain your results.
+
+Approximate suggested length: 3-5 sentences
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}14}]:} \PY{c+c1}{\PYZsh{}overall delay}
+         
+         \PY{n}{my\PYZus{}foo}\PY{o}{\PYZdl{}}\PY{n}{delay} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{as.numeric}\PY{p}{(}\PY{p}{(}\PY{n}{my\PYZus{}foo}\PY{o}{\PYZdl{}}\PY{n}{RevisedCompletionDate} \PY{o}{\PYZhy{}} \PY{n}{my\PYZus{}foo}\PY{o}{\PYZdl{}}\PY{n}{OriginalCompletionDate}\PY{p}{)}\PY{o}{/}\PY{l+m}{30}\PY{p}{)}
+         \PY{n+nf}{summary}\PY{p}{(}\PY{n}{my\PYZus{}foo}\PY{o}{\PYZdl{}}\PY{n}{delay}\PY{p}{)}
+         \PY{n+nf}{ggplot}\PY{p}{(}\PY{n}{my\PYZus{}foo}\PY{p}{,} \PY{n+nf}{aes}\PY{p}{(}\PY{n}{x}\PY{o}{=}\PY{l+m}{1}\PY{p}{,}\PY{n}{y}\PY{o}{=}\PY{n}{delay}\PY{p}{)}\PY{p}{)} \PY{o}{+} 
+           \PY{n+nf}{geom\PYZus{}boxplot}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    
+    \begin{verbatim}
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+  0.000   8.167  16.167  19.118  25.400 127.900      21 
+    \end{verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+Warning message:
+“Removed 21 rows containing non-finite values (stat\_boxplot).”
+    \end{Verbatim}
+
+    
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_19_3.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}15}]:} \PY{c+c1}{\PYZsh{} general change over time}
+         
+         \PY{n+nf}{ggplot}\PY{p}{(}\PY{n}{my\PYZus{}foo}\PY{p}{,} \PY{n+nf}{aes}\PY{p}{(}\PY{n}{x}\PY{o}{=}\PY{n}{CirculationDate}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{n}{delay}\PY{p}{)}\PY{p}{)} \PY{o}{+}
+             \PY{n+nf}{geom\PYZus{}point}\PY{p}{(}\PY{n}{shape}\PY{o}{=}\PY{l+m}{1}\PY{p}{)} \PY{o}{+}
+             \PY{n+nf}{geom\PYZus{}smooth}\PY{p}{(}\PY{n}{method}\PY{o}{=}\PY{n}{lm}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Warning message:
+“Removed 21 rows containing non-finite values (stat\_smooth).”Warning message:
+“Removed 21 rows containing missing values (geom\_point).”
+    \end{Verbatim}
+
+    
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_20_2.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    There are many high outliers in delay, meaning that the delay of a
+project is fairly consistently between 8.16 and 25.4 months with a few
+outlier projects with long delays (max 129 months). There has been a
+general decrease in delay over time.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}16}]:} \PY{c+c1}{\PYZsh{} summary stats change over time}
+         \PY{n}{foo\PYZus{}08\PYZus{}to\PYZus{}10}\PY{o}{\PYZdl{}}\PY{n}{delay} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{as.numeric}\PY{p}{(}\PY{n}{foo\PYZus{}08\PYZus{}to\PYZus{}10}\PY{o}{\PYZdl{}}\PY{n}{RevisedCompletionDate} \PY{o}{\PYZhy{}} \PY{n}{foo\PYZus{}08\PYZus{}to\PYZus{}10}\PY{o}{\PYZdl{}}\PY{n}{OriginalCompletionDate}\PY{p}{)}
+         \PY{n}{foo\PYZus{}10\PYZus{}to\PYZus{}12}\PY{o}{\PYZdl{}}\PY{n}{delay} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{as.numeric}\PY{p}{(}\PY{n}{foo\PYZus{}10\PYZus{}to\PYZus{}12}\PY{o}{\PYZdl{}}\PY{n}{RevisedCompletionDate} \PY{o}{\PYZhy{}} \PY{n}{foo\PYZus{}10\PYZus{}to\PYZus{}12}\PY{o}{\PYZdl{}}\PY{n}{OriginalCompletionDate}\PY{p}{)}
+         \PY{n}{foo\PYZus{}12\PYZus{}to\PYZus{}14}\PY{o}{\PYZdl{}}\PY{n}{delay} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{as.numeric}\PY{p}{(}\PY{n}{foo\PYZus{}12\PYZus{}to\PYZus{}14}\PY{o}{\PYZdl{}}\PY{n}{RevisedCompletionDate} \PY{o}{\PYZhy{}} \PY{n}{foo\PYZus{}12\PYZus{}to\PYZus{}14}\PY{o}{\PYZdl{}}\PY{n}{OriginalCompletionDate}\PY{p}{)}
+         \PY{n}{foo\PYZus{}14\PYZus{}to\PYZus{}16}\PY{o}{\PYZdl{}}\PY{n}{delay} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{as.numeric}\PY{p}{(}\PY{n}{foo\PYZus{}14\PYZus{}to\PYZus{}16}\PY{o}{\PYZdl{}}\PY{n}{RevisedCompletionDate} \PY{o}{\PYZhy{}} \PY{n}{foo\PYZus{}14\PYZus{}to\PYZus{}16}\PY{o}{\PYZdl{}}\PY{n}{OriginalCompletionDate}\PY{p}{)}
+         \PY{n}{foo\PYZus{}16\PYZus{}to\PYZus{}inf}\PY{o}{\PYZdl{}}\PY{n}{delay} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{as.numeric}\PY{p}{(}\PY{n}{foo\PYZus{}16\PYZus{}to\PYZus{}inf}\PY{o}{\PYZdl{}}\PY{n}{RevisedCompletionDate} \PY{o}{\PYZhy{}} \PY{n}{foo\PYZus{}16\PYZus{}to\PYZus{}inf}\PY{o}{\PYZdl{}}\PY{n}{OriginalCompletionDate}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{} exclude NA}
+         \PY{n}{foo\PYZus{}08\PYZus{}to\PYZus{}10.has.Delay} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{foo\PYZus{}08\PYZus{}to\PYZus{}10}\PY{n}{[}\PY{o}{!}\PY{n+nf}{is.na}\PY{p}{(}\PY{n}{foo\PYZus{}08\PYZus{}to\PYZus{}10}\PY{o}{\PYZdl{}}\PY{n}{delay}\PY{p}{)}\PY{p}{,}\PY{n}{]}
+         \PY{n}{foo\PYZus{}10\PYZus{}to\PYZus{}12.has.Delay} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{foo\PYZus{}10\PYZus{}to\PYZus{}12}\PY{n}{[}\PY{o}{!}\PY{n+nf}{is.na}\PY{p}{(}\PY{n}{foo\PYZus{}10\PYZus{}to\PYZus{}12}\PY{o}{\PYZdl{}}\PY{n}{delay}\PY{p}{)}\PY{p}{,}\PY{n}{]}
+         \PY{n}{foo\PYZus{}12\PYZus{}to\PYZus{}14.has.Delay} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{foo\PYZus{}12\PYZus{}to\PYZus{}14}\PY{n}{[}\PY{o}{!}\PY{n+nf}{is.na}\PY{p}{(}\PY{n}{foo\PYZus{}12\PYZus{}to\PYZus{}14}\PY{o}{\PYZdl{}}\PY{n}{delay}\PY{p}{)}\PY{p}{,}\PY{n}{]}
+         \PY{n}{foo\PYZus{}14\PYZus{}to\PYZus{}16.has.Delay} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{foo\PYZus{}14\PYZus{}to\PYZus{}16}\PY{n}{[}\PY{o}{!}\PY{n+nf}{is.na}\PY{p}{(}\PY{n}{foo\PYZus{}14\PYZus{}to\PYZus{}16}\PY{o}{\PYZdl{}}\PY{n}{delay}\PY{p}{)}\PY{p}{,}\PY{n}{]}
+         \PY{n}{foo\PYZus{}16\PYZus{}to\PYZus{}inf.has.Delay} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{foo\PYZus{}16\PYZus{}to\PYZus{}inf}\PY{n}{[}\PY{o}{!}\PY{n+nf}{is.na}\PY{p}{(}\PY{n}{foo\PYZus{}16\PYZus{}to\PYZus{}inf}\PY{o}{\PYZdl{}}\PY{n}{delay}\PY{p}{)}\PY{p}{,}\PY{n}{]}
+         
+         \PY{c+c1}{\PYZsh{} print number of exclusions}
+         \PY{n+nf}{print}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{Data points excluded due to NA\PYZsq{}}\PY{p}{)}
+         \PY{n+nf}{print}\PY{p}{(}\PY{n+nf}{paste0}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{     from \PYZsq{}08 to \PYZsq{}10:  \PYZdq{}}\PY{p}{,} \PY{n+nf}{nrow}\PY{p}{(}\PY{n}{foo\PYZus{}08\PYZus{}to\PYZus{}10}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{n+nf}{nrow}\PY{p}{(}\PY{n}{foo\PYZus{}08\PYZus{}to\PYZus{}10.has.Delay}\PY{p}{)}\PY{p}{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{ \PYZdq{}}\PY{p}{)}\PY{p}{)}
+         \PY{n+nf}{print}\PY{p}{(}\PY{n+nf}{paste0}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{     from \PYZsq{}10 to \PYZsq{}12:  \PYZdq{}}\PY{p}{,} \PY{n+nf}{nrow}\PY{p}{(}\PY{n}{foo\PYZus{}10\PYZus{}to\PYZus{}12}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{n+nf}{nrow}\PY{p}{(}\PY{n}{foo\PYZus{}10\PYZus{}to\PYZus{}12.has.Delay}\PY{p}{)}\PY{p}{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{  \PYZdq{}}\PY{p}{)}\PY{p}{)}
+         \PY{n+nf}{print}\PY{p}{(}\PY{n+nf}{paste0}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{     from \PYZsq{}12 to \PYZsq{}14:  \PYZdq{}}\PY{p}{,} \PY{n+nf}{nrow}\PY{p}{(}\PY{n}{foo\PYZus{}12\PYZus{}to\PYZus{}14}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{n+nf}{nrow}\PY{p}{(}\PY{n}{foo\PYZus{}12\PYZus{}to\PYZus{}14.has.Delay}\PY{p}{)}\PY{p}{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{  \PYZdq{}}\PY{p}{)}\PY{p}{)}
+         \PY{n+nf}{print}\PY{p}{(}\PY{n+nf}{paste0}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{     from \PYZsq{}14 to \PYZsq{}16:  \PYZdq{}}\PY{p}{,} \PY{n+nf}{nrow}\PY{p}{(}\PY{n}{foo\PYZus{}14\PYZus{}to\PYZus{}16}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{n+nf}{nrow}\PY{p}{(}\PY{n}{foo\PYZus{}14\PYZus{}to\PYZus{}16.has.Delay}\PY{p}{)}\PY{p}{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{  \PYZdq{}}\PY{p}{)}\PY{p}{)}
+         \PY{n+nf}{print}\PY{p}{(}\PY{n+nf}{paste0}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{     from \PYZsq{}08 to inf:  \PYZdq{}}\PY{p}{,} \PY{n+nf}{nrow}\PY{p}{(}\PY{n}{foo\PYZus{}16\PYZus{}to\PYZus{}inf}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{n+nf}{nrow}\PY{p}{(}\PY{n}{foo\PYZus{}16\PYZus{}to\PYZus{}inf.has.Delay}\PY{p}{)}\PY{p}{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{  \PYZdq{}}\PY{p}{)}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{} create df of summ stats for delay}
+         \PY{n}{delay\PYZus{}over\PYZus{}years} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{list}\PY{p}{(}\PY{p}{)}
+         \PY{n}{delay\PYZus{}over\PYZus{}years}\PY{n}{[}\PY{n}{[1}\PY{n}{]}\PY{n}{]} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{c}\PY{p}{(}\PY{n}{foo\PYZus{}08\PYZus{}to\PYZus{}10.has.Delay}\PY{o}{\PYZdl{}}\PY{n}{delay}\PY{p}{)}
+         \PY{n}{delay\PYZus{}over\PYZus{}years}\PY{n}{[}\PY{n}{[2}\PY{n}{]}\PY{n}{]} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{c}\PY{p}{(}\PY{n}{foo\PYZus{}10\PYZus{}to\PYZus{}12.has.Delay}\PY{o}{\PYZdl{}}\PY{n}{delay}\PY{p}{)}
+         \PY{n}{delay\PYZus{}over\PYZus{}years}\PY{n}{[}\PY{n}{[3}\PY{n}{]}\PY{n}{]} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{c}\PY{p}{(}\PY{n}{foo\PYZus{}12\PYZus{}to\PYZus{}14.has.Delay}\PY{o}{\PYZdl{}}\PY{n}{delay}\PY{p}{)}
+         \PY{n}{delay\PYZus{}over\PYZus{}years}\PY{n}{[}\PY{n}{[4}\PY{n}{]}\PY{n}{]} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{c}\PY{p}{(}\PY{n}{foo\PYZus{}14\PYZus{}to\PYZus{}16.has.Delay}\PY{o}{\PYZdl{}}\PY{n}{delay}\PY{p}{)}
+         \PY{n}{delay\PYZus{}over\PYZus{}years}\PY{n}{[}\PY{n}{[5}\PY{n}{]}\PY{n}{]} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{c}\PY{p}{(}\PY{n}{foo\PYZus{}16\PYZus{}to\PYZus{}inf.has.Delay}\PY{o}{\PYZdl{}}\PY{n}{delay}\PY{p}{)}
+         
+         \PY{n}{meanDelay\PYZus{}over\PYZus{}years} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{unlist}\PY{p}{(}\PY{n+nf}{lapply}\PY{p}{(}\PY{n}{delay\PYZus{}over\PYZus{}years}\PY{p}{,}\PY{n}{mean}\PY{p}{)}\PY{p}{)}
+         \PY{n}{medDelay\PYZus{}over\PYZus{}years} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{unlist}\PY{p}{(}\PY{n+nf}{lapply}\PY{p}{(}\PY{n}{delay\PYZus{}over\PYZus{}years}\PY{p}{,}\PY{n}{median}\PY{p}{)}\PY{p}{)}
+         \PY{n}{iqrDelay\PYZus{}over\PYZus{}years} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{unlist}\PY{p}{(}\PY{n+nf}{lapply}\PY{p}{(}\PY{n}{delay\PYZus{}over\PYZus{}years}\PY{p}{,}\PY{n}{IQR}\PY{p}{)}\PY{p}{)}
+         
+         \PY{n}{years} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{c}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{\PYZsq{}08\PYZhy{}\PYZsq{}10\PYZdq{}}\PY{p}{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{\PYZsq{}10\PYZhy{}\PYZsq{}12\PYZdq{}}\PY{p}{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{\PYZsq{}12\PYZhy{}\PYZsq{}14\PYZdq{}}\PY{p}{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{\PYZsq{}14\PYZhy{}\PYZsq{}16\PYZsq{}\PYZdq{}}\PY{p}{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{\PYZsq{}16\PYZhy{}inf\PYZdq{}}\PY{p}{)}
+         \PY{n}{summ\PYZus{}delay} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{data.frame}\PY{p}{(}\PY{n}{years}\PY{p}{)}
+         \PY{n}{summ\PYZus{}delay}\PY{o}{\PYZdl{}}\PY{n}{mean} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{meanDelay\PYZus{}over\PYZus{}years}
+         \PY{n}{summ\PYZus{}delay}\PY{o}{\PYZdl{}}\PY{n}{median} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{medDelay\PYZus{}over\PYZus{}years}
+         \PY{n}{summ\PYZus{}delay}\PY{o}{\PYZdl{}}\PY{n}{IQR} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{iqrDelay\PYZus{}over\PYZus{}years}
+         \PY{n+nf}{head}\PY{p}{(}\PY{n}{summ\PYZus{}delay}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+[1] "Data points excluded due to NA"
+[1] "     from '08 to '10:  19 "
+[1] "     from '10 to '12:  2  "
+[1] "     from '12 to '14:  0  "
+[1] "     from '14 to '16:  0  "
+[1] "     from '08 to inf:  0  "
+
+    \end{Verbatim}
+
+    \begin{tabular}{r|llll}
+ years & mean & median & IQR\\
+\hline
+	 '08-'10  & 633.3401 & 563.5    & 577.0   \\
+	 '10-'12  & 608.7245 & 495.0    & 548.0   \\
+	 '12-'14  & 520.4373 & 456.0    & 471.5   \\
+	 '14-'16' & 575.9058 & 457.0    & 546.0   \\
+	 '16-inf  & 539.4754 & 366.0    & 517.0   \\
+\end{tabular}
+
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}17}]:} \PY{c+c1}{\PYZsh{} plot summary stats of delay over years}
+         \PY{n+nf}{ggplot}\PY{p}{(}\PY{n}{data} \PY{o}{=} \PY{n}{summ\PYZus{}delay}\PY{p}{,} \PY{n+nf}{aes}\PY{p}{(}\PY{n}{x} \PY{o}{=} \PY{n}{years}\PY{p}{,}\PY{n}{group}\PY{o}{=}\PY{l+m}{1}\PY{p}{)}\PY{p}{)} \PY{o}{+}
+           \PY{n+nf}{geom\PYZus{}line}\PY{p}{(}\PY{n+nf}{aes}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{n}{mean}\PY{p}{,} \PY{n}{colour} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{mean\PYZdq{}}\PY{p}{)}\PY{p}{)} \PY{o}{+}
+           \PY{n+nf}{geom\PYZus{}line}\PY{p}{(}\PY{n+nf}{aes}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{n}{median}\PY{p}{,} \PY{n}{colour} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{median\PYZdq{}}\PY{p}{)}\PY{p}{)} \PY{o}{+}
+           \PY{n+nf}{geom\PYZus{}line}\PY{p}{(}\PY{n+nf}{aes}\PY{p}{(}\PY{n}{y} \PY{o}{=} \PY{n}{IQR}\PY{p}{,} \PY{n}{colour} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{IQR\PYZdq{}}\PY{p}{)}\PY{p}{)} \PY{o}{+}
+           \PY{n+nf}{scale\PYZus{}colour\PYZus{}manual}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{\PYZdq{}}\PY{p}{,} 
+                               \PY{n}{breaks} \PY{o}{=} \PY{n+nf}{c}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{mean\PYZdq{}}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{median\PYZdq{}}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{IQR\PYZdq{}}\PY{p}{)}\PY{p}{,}
+                               \PY{n}{values} \PY{o}{=} \PY{n+nf}{c}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{mean\PYZdq{}}\PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{green\PYZdq{}}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{median\PYZdq{}}\PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{red\PYZdq{}}\PY{p}{,} 
+                                          \PY{l+s}{\PYZdq{}}\PY{l+s}{IQR\PYZdq{}}\PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{blue\PYZdq{}}\PY{p}{)}\PY{p}{)} \PY{o}{+}
+           \PY{n+nf}{xlab}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{ \PYZdq{}}\PY{p}{)} \PY{o}{+}
+           \PY{n+nf}{scale\PYZus{}y\PYZus{}continuous}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Summary Statistic\PYZdq{}}\PY{p}{)} \PY{o}{+} 
+           \PY{n+nf}{labs}\PY{p}{(}\PY{n}{title}\PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{Change in Project Delay over Time\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+
+
+    
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_23_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    Generally all statistics are decreasing, indicating a general decrease
+in delay over time. There has been a steady decrease in median over time
+(excluding '12 to '16 where it was relatively constant). However, the
+mean and IQR have much slower decreases, with a significant increase
+between '12 and '16. Additionally, the mean is higher than the median
+and the difference is increasing over time. Overall, this indicates that
+the general decrease in delay over time is mostly driven by a few
+projects in recent years with drastically lower delays. However, the
+mean duration has not decreased as significantly. This indicates that
+there is a strong left skew in the distribution of project delays that
+has increased over time.
+
+    \hypertarget{question-2}{%
+\section{Question 2}\label{question-2}}
+
+What \% of projects that have ratings were rated 0?\\
+What \% were rated 1? What \% were rated 2? What \% were rated 3?
+
+Answer these questions using a table or a figure. Provide a title AND an
+explanatory sentence or two that provides the numerical \% results
+rounded to the nearest percentage-point.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}18}]:} \PY{n}{multi.fun} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{function}\PY{p}{(}\PY{n}{x}\PY{p}{)} \PY{p}{\PYZob{}}\PY{n+nf}{cbind}\PY{p}{(}\PY{n}{percentage} \PY{o}{=} \PY{n+nf}{prop.table}\PY{p}{(}\PY{n+nf}{table}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{p}{)}\PY{o}{*}\PY{l+m}{100}\PY{p}{,}\PY{n}{freq} \PY{o}{=} \PY{n+nf}{table}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{p}{)}\PY{p}{\PYZcb{}}
+         \PY{n+nf}{multi.fun}\PY{p}{(}\PY{n}{my\PYZus{}foo}\PY{o}{\PYZdl{}}\PY{n}{Rating}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{tabular}{r|ll}
+  & percentage & freq\\
+\hline
+	0 &  2.675227 &   50     \\
+	1 & 15.890851 &  297     \\
+	2 & 68.271803 & 1276     \\
+	3 & 13.162119 &  246     \\
+\end{tabular}
+
+
+    
+    The large majority (68\%) of projects are rated 2/3, a significant
+amount are rated 1 (16\%) and 3 (13\%). Very few projects are rated 0
+(3\%). Thus, it can likely be loosely inferred that the majority of
+projects are satisfactory with a slight left skew.
+
+    \hypertarget{question-3}{%
+\section{Question 3}\label{question-3}}
+
+Repeat problem 2, but this time exclude all PPTA projects.
+
+PPTA projects are more prone to negative ratings, because after a
+certain point in time only the low-rated PPTA projects required ratings.
+PPTA stands for ``Project Preparatory Technical Assistance'' and it is
+basically a project intended to set up a loan (often a very large
+multi-million-dollar loan). Only PPTAs that fail to ``eventuate'' to a
+loan are rated, which is why they are usually rated negatively.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}19}]:} \PY{n+nf}{multi.fun}\PY{p}{(}\PY{n}{my\PYZus{}foo}\PY{n}{[my\PYZus{}foo}\PY{o}{\PYZdl{}}\PY{n}{Type}\PY{o}{!=}\PY{l+s}{\PYZsq{}}\PY{l+s}{PPTA\PYZsq{}}\PY{p}{,}\PY{n}{]}\PY{o}{\PYZdl{}}\PY{n}{Rating}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{tabular}{r|ll}
+  & percentage & freq\\
+\hline
+	0 &  1.992032 &   35     \\
+	1 & 14.058054 &  247     \\
+	2 & 70.233352 & 1234     \\
+	3 & 13.716562 &  241     \\
+\end{tabular}
+
+
+    
+    Now a slightly larger majority (70\%) of projects are rated 2/3, a
+significant amount are still rated 1 (14\%) and 3 (134). Very few
+projects are rated 0 (2\%). Thus, it can likely be loosely inferred that
+the majority of projects are satisfactory with a very slight left skew.
+Since the left skew is less significant, it can also be inferred that
+PPTA projects tend to drag the average ratings down.
+
+    \hypertarget{question-4}{%
+\section{Question 4}\label{question-4}}
+
+Identify the top 25\% of projects by ``Revised.Amount'' and the bottom
+25\% of projects by ``RevisedAmount''. (``RevisedAmount'' shows the
+final project budget.)
+
+Compare the ratings of these projects. Can you draw a causal conclusion
+about the effect of budget size on ratings? Why or why not?
+
+Hint: Compare the characteristics of the two project groupings, e.g.,
+``Dept'', ``Division'', ``Cluster'', ``Country''
+
+Approximate suggested length: 3-5 sentences.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}20}]:} \PY{n+nf}{names}\PY{p}{(}\PY{n}{my\PYZus{}foo}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{enumerate*}
+\item 'Number'
+\item 'Status'
+\item 'Cluster'
+\item 'Prefix'
+\item 'Type'
+\item 'Country'
+\item 'Dept'
+\item 'Division'
+\item 'LTAA'
+\item 'Loan'
+\item 'ApprovalDate'
+\item 'AgreementDate'
+\item 'Agreement'
+\item 'EffectivityDate'
+\item 'CancellationDate'
+\item 'FinancialCompletionDate'
+\item 'OriginalCompletionDate'
+\item 'RevisedCompletionDate'
+\item 'JSF'
+\item 'Fund'
+\item 'RevisedAmount'
+\item 'Rating'
+\item 'No'
+\item 'PCR'
+\item 'CirculationDate'
+\item 'duration'
+\item 'delay'
+\end{enumerate*}
+
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}51}]:} \PY{c+c1}{\PYZsh{} make df w a column indicating high or low RA}
+         \PY{n}{high\PYZus{}low\PYZus{}RA} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n}{my\PYZus{}foo}\PY{n}{[my\PYZus{}foo}\PY{o}{\PYZdl{}}\PY{n}{RevisedAmount} \PY{o}{\PYZlt{}=} \PY{l+m}{0.4} \PY{o}{|} \PY{n}{my\PYZus{}foo}\PY{o}{\PYZdl{}}\PY{n}{RevisedAmount} \PY{o}{\PYZgt{}=} \PY{l+m}{1}\PY{p}{,}\PY{n}{]}
+         \PY{c+c1}{\PYZsh{}high\PYZus{}low\PYZus{}RA \PYZlt{}\PYZhy{} data.frame(lapply(my\PYZus{}foo, as.character), stringsAsFactors=FALSE)}
+         \PY{n}{high\PYZus{}low\PYZus{}RA}\PY{o}{\PYZdl{}}\PY{n}{highLow} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{ifelse}\PY{p}{(}\PY{n}{high\PYZus{}low\PYZus{}RA}\PY{o}{\PYZdl{}}\PY{n}{RevisedAmount} \PY{o}{\PYZlt{}=} \PY{l+m}{0.4}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{LOW\PYZdq{}}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{HIGH\PYZdq{}}\PY{p}{)}
+         \PY{n+nf}{head}\PY{p}{(}\PY{n}{high\PYZus{}low\PYZus{}RA}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{tabular}{r|llllllllllllllllllllllllllll}
+  & Number & Status & Cluster & Prefix & Type & Country & Dept & Division & LTAA & Loan & ⋯ & JSF & Fund & RevisedAmount & Rating & No & PCR & CirculationDate & duration & delay & highLow\\
+\hline
+	2529 & 2001                     & Financially Completed    &                          &                          & ADTA                     & IND                      & IWD                      & IWTC                     & Transport                & 1274                     & ⋯                        & NA                       & 2                        & 0.21                     & 2                        &                          & 13-08                    & 2008-01-17               &        NA                &       NA                 & LOW                     \\
+	2530 & 2002                     & Financially Completed    &                          &                          & ADTA                     & IND                      & IWD                      & IWTC                     & Transport                & 1274                     & ⋯                        & NA                       & 2                        & 0.24                     & 2                        &                          & 13-08                    & 2008-01-17               &        NA                &       NA                 & LOW                     \\
+	2531 & 2003                     & Financially Completed    &                          &                          & ADTA                     & IND                      & IWD                      & IWTC                     & Transport                & 1274                     & ⋯                        & NA                       & 2                        & 0.35                     & 2                        &                          & 13-08                    & 2008-01-17               &        NA                &       NA                 & LOW                     \\
+	2754 & 5600                     & Financially Completed    &                          & R                        & RETA                     & REG                      & PPFD                     & COCS                     & Public sector management &    0                     & ⋯                        & NA                       & 2                        & 0.12                     & 2                        & 20-10                    &                          & 2010-01-15               & 112.30000                &  0.00000                 & LOW                     \\
+	3059 & 2440                     & Financially Completed    &                          &                          & ADTA                     & MLD                      & SFSP-AUS                 & SAOC**                   & Public sector management &    0                     & ⋯                        & NA                       & 2                        & 0.40                     & 2                        & 309-09                   &                          & 2009-10-30               &        NA                &       NA                 & LOW                     \\
+	3722 & 5773                     & Financially Completed    &                          & R                        & RETA                     & REG                      & OGC                      & OGC                      & Finance                  &    0                     & ⋯                        & NA                       & 2                        & 0.38                     & 2                        & 351-09                   &                          & 2009-11-27               &  10.93333                & 50.73333                 & LOW                     \\
+\end{tabular}
+
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}49}]:} \PY{n+nf}{summary}\PY{p}{(}\PY{n}{high\PYZus{}low\PYZus{}RA}\PY{n}{[high\PYZus{}low\PYZus{}RA}\PY{o}{\PYZdl{}}\PY{n}{highLow}\PY{o}{==}\PY{l+s}{\PYZdq{}}\PY{l+s}{LOW\PYZdq{}}\PY{p}{,}\PY{n}{]}\PY{p}{)}
+\end{Verbatim}
+
+
+    
+    \begin{verbatim}
+     Number                       Status       Cluster        Prefix   
+ Min.   :2001   Active               :  0          :523          :205  
+ 1st Qu.:4975   Cancelled            :  0   C003   :  8   S      :139  
+ Median :7518   Financially Completed:533   C006   :  1   RS     :121  
+ Mean   :6916                               C009   :  1   R      : 58  
+ 3rd Qu.:8218                               14     :  0   CsS    :  5  
+ Max.   :9087                               15     :  0   Cs     :  3  
+                                            (Other):  0   (Other):  2  
+      Type        Country         Dept        Division  
+ CDTA   :154   REG    :181   SARD   : 96   PAHQ   : 17  
+ ADTA   :151   PRC    : 78   SERD   : 95   SEPF   : 17  
+ PATA   :106   IND    : 28   EARD   : 82   EAER   : 16  
+ RETA   : 56   NEP    : 21   CWRD   : 54   EASS   : 16  
+ RDTA   : 42   BAN    : 17   PARD   : 50   CWPF   : 15  
+ PPTA   : 24   PAK    : 17   SDCC   : 49   EATC   : 15  
+ (Other):  0   (Other):191   (Other):107   (Other):437  
+                                                   LTAA          Loan     
+ Public sector management                            :167   Min.   :   0  
+ Finance                                             : 61   1st Qu.:   0  
+ Transport                                           : 58   Median :   0  
+ Multisector                                         : 56   Mean   :  67  
+ Energy                                              : 51   3rd Qu.:   0  
+ Agriculture, natural resources and rural development: 45   Max.   :2479  
+ (Other)                                             : 95                 
+  ApprovalDate        AgreementDate        Agreement EffectivityDate     
+ Min.   :1993-11-29   Min.   :1994-07-12    :  0     Min.   :1994-07-12  
+ 1st Qu.:2005-12-19   1st Qu.:2005-02-04   N:319     1st Qu.:2006-03-08  
+ Median :2010-03-24   Median :2006-07-21   Y:214     Median :2010-03-24  
+ Mean   :2009-06-17   Mean   :2007-08-18             Mean   :2009-07-17  
+ 3rd Qu.:2012-11-19   3rd Qu.:2011-02-01             3rd Qu.:2012-12-03  
+ Max.   :2016-03-22   Max.   :2015-12-01             Max.   :2016-03-22  
+                      NA's   :317                                        
+ CancellationDate FinancialCompletionDate OriginalCompletionDate
+ Min.   :NA       Min.   :1998-04-30      Min.   :1998-11-30    
+ 1st Qu.:NA       1st Qu.:2009-09-17      1st Qu.:2007-12-31    
+ Median :NA       Median :2012-10-17      Median :2011-06-30    
+ Mean   :NA       Mean   :2012-06-01      Mean   :2010-12-30    
+ 3rd Qu.:NA       3rd Qu.:2015-03-31      3rd Qu.:2013-12-31    
+ Max.   :NA       Max.   :2018-03-15      Max.   :2017-06-30    
+ NA's   :533                              NA's   :8             
+ RevisedCompletionDate      JSF              Fund     RevisedAmount   
+ Min.   :1995-11-30    Min.   : 1.000   2      :391   Min.   :0.0060  
+ 1st Qu.:2008-12-31    1st Qu.: 1.000   4      : 31   1st Qu.:0.2250  
+ Median :2012-06-30    Median : 1.000   68     : 11   Median :0.2250  
+ Mean   :2011-12-22    Mean   : 2.344   63     : 10   Mean   :0.2713  
+ 3rd Qu.:2014-12-31    3rd Qu.: 1.000   35     :  6   3rd Qu.:0.3500  
+ Max.   :2017-12-31    Max.   :20.000   89     :  6   Max.   :0.4000  
+                       NA's   :501      (Other): 78                   
+     Rating            No           PCR      CirculationDate     
+ Min.   :0.000          : 17          :516   Min.   :2008-01-07  
+ 1st Qu.:2.000   376-16 :  8   13-08  :  3   1st Qu.:2010-08-11  
+ Median :2.000   03-08  :  1   179-12 :  2   Median :2013-07-01  
+ Mean   :1.955   05-08  :  1   131-11 :  1   Mean   :2013-04-24  
+ 3rd Qu.:2.000   1-18   :  1   144-11 :  1   3rd Qu.:2015-09-15  
+ Max.   :3.000   100-13 :  1   146-12 :  1   Max.   :2018-06-29  
+ NA's   :3       (Other):504   (Other):  9                       
+    duration          delay         highLow         
+ Min.   :  0.60   Min.   : 0.00   Length:533        
+ 1st Qu.: 10.50   1st Qu.: 5.00   Class :character  
+ Median : 13.93   Median :12.13   Mode  :character  
+ Mean   : 16.44   Mean   :14.19                     
+ 3rd Qu.: 19.93   3rd Qu.:19.30                     
+ Max.   :112.30   Max.   :92.30                     
+ NA's   :8        NA's   :8                         
+    \end{verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}68}]:} \PY{n+nf}{summary}\PY{p}{(}\PY{n}{high\PYZus{}low\PYZus{}RA}\PY{n}{[high\PYZus{}low\PYZus{}RA}\PY{o}{\PYZdl{}}\PY{n}{highLow}\PY{o}{==}\PY{l+s}{\PYZdq{}}\PY{l+s}{HIGH\PYZdq{}}\PY{p}{,}\PY{n}{]}\PY{p}{)}
+\end{Verbatim}
+
+
+    
+    \begin{verbatim}
+     Number                       Status       Cluster        Prefix   
+ Min.   :3128   Active               :  1          :525          :281  
+ 1st Qu.:6290   Cancelled            :  0   C003   :  6   R      :244  
+ Median :7305   Financially Completed:542   C006   :  5   RCs    : 12  
+ Mean   :6854                               C009   :  4   Cs     :  6  
+ 3rd Qu.:7870                               C002   :  2   CsS    :  0  
+ Max.   :9024                               C011   :  1   RCsS   :  0  
+                                            (Other):  0   (Other):  0  
+      Type        Country         Dept        Division  
+ CDTA   :155   REG    :256   SERD   :162   SEPF   : 34  
+ ADTA   :123   IND    : 41   SDCC   : 89   SEER   : 26  
+ RETA   :117   INO    : 28   SARD   : 73   SDSC   : 20  
+ PATA   : 74   PRC    : 28   CWRD   : 67   SEEN   : 19  
+ RDTA   : 37   PHI    : 25   EARD   : 47   INRM   : 18  
+ PPTA   : 35   VIE    : 21   PARD   : 45   PAUS   : 15  
+ (Other):  2   (Other):144   (Other): 60   (Other):411  
+                                                   LTAA          Loan       
+ Public sector management                            :137   Min.   :   0.0  
+ Energy                                              : 73   1st Qu.:   0.0  
+ Agriculture, natural resources and rural development: 72   Median :   0.0  
+ Multisector                                         : 67   Mean   : 106.9  
+ Finance                                             : 57   3rd Qu.:   0.0  
+ Transport                                           : 48   Max.   :2840.0  
+ (Other)                                             : 89                   
+  ApprovalDate        AgreementDate        Agreement EffectivityDate     
+ Min.   :1998-12-16   Min.   :1999-02-26    :  0     Min.   :1999-02-26  
+ 1st Qu.:2006-12-09   1st Qu.:2006-10-09   N:245     1st Qu.:2006-12-27  
+ Median :2009-07-01   Median :2009-06-01   Y:298     Median :2009-07-27  
+ Mean   :2009-02-11   Mean   :2009-02-18             Mean   :2009-03-29  
+ 3rd Qu.:2011-09-24   3rd Qu.:2012-01-10             3rd Qu.:2011-11-05  
+ Max.   :2015-12-11   Max.   :2015-09-10             Max.   :2015-12-11  
+                      NA's   :245                                        
+ CancellationDate FinancialCompletionDate OriginalCompletionDate
+ Min.   :NA       Min.   :2006-08-22      Min.   :2001-04-30    
+ 1st Qu.:NA       1st Qu.:2011-08-31      1st Qu.:2009-01-15    
+ Median :NA       Median :2014-05-25      Median :2011-09-30    
+ Mean   :NA       Mean   :2013-10-28      Mean   :2011-04-19    
+ 3rd Qu.:NA       3rd Qu.:2016-03-31      3rd Qu.:2013-12-31    
+ Max.   :NA       Max.   :2018-04-13      Max.   :2017-12-31    
+ NA's   :543      NA's   :1                                     
+ RevisedCompletionDate      JSF              Fund     RevisedAmount   
+ Min.   :2005-12-30    Min.   : 1.000   2      :178   Min.   : 1.000  
+ 1st Qu.:2010-12-15    1st Qu.: 1.000   46     : 55   1st Qu.: 1.000  
+ Median :2013-10-31    Median : 1.000   4      : 46   Median : 1.500  
+ Mean   :2013-04-08    Mean   : 1.609   63     : 13   Mean   : 2.185  
+ 3rd Qu.:2015-11-30    3rd Qu.: 1.000   02,35  : 11   3rd Qu.: 2.000  
+ Max.   :2018-10-31    Max.   :20.000   7      :  9   Max.   :29.860  
+                       NA's   :474      (Other):231                   
+     Rating            No           PCR      CirculationDate     
+ Min.   :0.000          : 34          :509   Min.   :2008-01-07  
+ 1st Qu.:2.000   376-16 :  8   185-17 :  2   1st Qu.:2011-12-25  
+ Median :2.000   147-17 :  5   190-15 :  2   Median :2014-10-23  
+ Mean   :1.937   355-17 :  4   221-16 :  2   Mean   :2014-05-23  
+ 3rd Qu.:2.000   193-14 :  2   287-08 :  2   3rd Qu.:2016-09-19  
+ Max.   :3.000   04-08  :  1   122-17 :  1   Max.   :2018-06-29  
+                 (Other):489   (Other): 25                       
+    duration          delay          highLow         
+ Min.   : 5.267   Min.   :  0.00   Length:543        
+ 1st Qu.:18.867   1st Qu.: 12.17   Class :character  
+ Median :25.000   Median : 21.27   Mode  :character  
+ Mean   :26.556   Mean   : 23.99                     
+ 3rd Qu.:33.650   3rd Qu.: 31.45                     
+ Max.   :85.300   Max.   :127.90                     
+                                                     
+    \end{verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}101}]:} \PY{l+s}{\PYZdq{}}
+          \PY{l+s}{\PYZsh{}\PYZus{}\PYZus{}\PYZus{}\PYZus{}\PYZus{}\PYZus{}\PYZus{}I GIVE UP\PYZus{}\PYZus{}\PYZus{}\PYZus{}\PYZus{}\PYZus{}\PYZus{}\PYZus{}\PYZus{}\PYZus{}\PYZus{}\PYZus{}\PYZus{}\PYZus{}\PYZus{}\PYZus{}\PYZsh{}}
+          \PY{l+s}{count = 1}
+          \PY{l+s}{for(i in high\PYZus{}low\PYZus{}RA)\PYZob{}}
+          \PY{l+s}{    nam \PYZlt{}\PYZhy{} paste(\PYZdq{}}\PY{n}{p}\PY{l+s}{\PYZdq{}}\PY{l+s}{, count, sep = \PYZdq{}}\PY{l+s}{\PYZdq{}}\PY{l+s}{)}
+          \PY{l+s}{    assign(nam, recordPlot(ggplot(high\PYZus{}low\PYZus{}RA, aes(x = highLow, y = i ,color=highLow)) + }
+          \PY{l+s}{    geom\PYZus{}point(position = position\PYZus{}dodge(width = 0.4))))}
+          \PY{l+s}{    count \PYZlt{}\PYZhy{} count + 1}
+          \PY{l+s}{\PYZcb{}}
+          
+          \PY{l+s}{p3}
+          \PY{l+s}{\PYZdq{}}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+
+        Error in parse(text = x, srcfile = src): <text>:5:19: unexpected symbol
+    4: for(i in high\_low\_RA)\{
+    5:     nam <- paste("p
+                         \^{}
+    Traceback:
+
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}104}]:} \PY{n+nf}{ggplot}\PY{p}{(}\PY{n}{high\PYZus{}low\PYZus{}RA}\PY{p}{,} \PY{n+nf}{aes}\PY{p}{(}\PY{n}{x} \PY{o}{=} \PY{n}{highLow}\PY{p}{,} \PY{n}{y} \PY{o}{=} \PY{n}{Cluster}\PY{p}{,}\PY{n}{color}\PY{o}{=}\PY{n}{highLow}\PY{p}{)}\PY{p}{)} \PY{o}{+} 
+              \PY{n+nf}{geom\PYZus{}point}\PY{p}{(}\PY{n}{position} \PY{o}{=} \PY{n+nf}{position\PYZus{}dodge}\PY{p}{(}\PY{n}{width} \PY{o}{=} \PY{l+m}{0.4}\PY{p}{)}\PY{p}{)}
+          
+          \PY{n+nf}{ggplot}\PY{p}{(}\PY{n}{high\PYZus{}low\PYZus{}RA}\PY{p}{,} \PY{n+nf}{aes}\PY{p}{(}\PY{n}{x} \PY{o}{=} \PY{n}{highLow}\PY{p}{,} \PY{n}{y} \PY{o}{=} \PY{n}{Type}\PY{p}{,}\PY{n}{color}\PY{o}{=}\PY{n}{highLow}\PY{p}{)}\PY{p}{)} \PY{o}{+} 
+              \PY{n+nf}{geom\PYZus{}point}\PY{p}{(}\PY{n}{position} \PY{o}{=} \PY{n+nf}{position\PYZus{}dodge}\PY{p}{(}\PY{n}{width} \PY{o}{=} \PY{l+m}{0.4}\PY{p}{)}\PY{p}{)}
+          
+          \PY{n+nf}{ggplot}\PY{p}{(}\PY{n}{high\PYZus{}low\PYZus{}RA}\PY{p}{,} \PY{n+nf}{aes}\PY{p}{(}\PY{n}{x} \PY{o}{=} \PY{n}{highLow}\PY{p}{,} \PY{n}{y} \PY{o}{=} \PY{n}{Country}\PY{p}{,}\PY{n}{color}\PY{o}{=}\PY{n}{highLow}\PY{p}{)}\PY{p}{)} \PY{o}{+} 
+              \PY{n+nf}{geom\PYZus{}point}\PY{p}{(}\PY{n}{position} \PY{o}{=} \PY{n+nf}{position\PYZus{}dodge}\PY{p}{(}\PY{n}{width} \PY{o}{=} \PY{l+m}{0.4}\PY{p}{)}\PY{p}{)}
+          
+          \PY{n+nf}{ggplot}\PY{p}{(}\PY{n}{high\PYZus{}low\PYZus{}RA}\PY{p}{,} \PY{n+nf}{aes}\PY{p}{(}\PY{n}{x} \PY{o}{=} \PY{n}{highLow}\PY{p}{,} \PY{n}{y} \PY{o}{=} \PY{n}{Dept}\PY{p}{,}\PY{n}{color}\PY{o}{=}\PY{n}{highLow}\PY{p}{)}\PY{p}{)} \PY{o}{+} 
+              \PY{n+nf}{geom\PYZus{}point}\PY{p}{(}\PY{n}{position} \PY{o}{=} \PY{n+nf}{position\PYZus{}dodge}\PY{p}{(}\PY{n}{width} \PY{o}{=} \PY{l+m}{0.4}\PY{p}{)}\PY{p}{)}
+          
+          \PY{n+nf}{ggplot}\PY{p}{(}\PY{n}{high\PYZus{}low\PYZus{}RA}\PY{p}{,} \PY{n+nf}{aes}\PY{p}{(}\PY{n}{x} \PY{o}{=} \PY{n}{highLow}\PY{p}{,} \PY{n}{y} \PY{o}{=} \PY{n}{Division}\PY{p}{,}\PY{n}{color}\PY{o}{=}\PY{n}{highLow}\PY{p}{)}\PY{p}{)} \PY{o}{+} 
+              \PY{n+nf}{geom\PYZus{}point}\PY{p}{(}\PY{n}{position} \PY{o}{=} \PY{n+nf}{position\PYZus{}dodge}\PY{p}{(}\PY{n}{width} \PY{o}{=} \PY{l+m}{0.4}\PY{p}{)}\PY{p}{)}
+          
+          \PY{c+c1}{\PYZsh{}\PYZsq{}Number\PYZsq{} \PYZsq{}Status\PYZsq{} \PYZsq{}Cluster\PYZsq{} \PYZsq{}Prefix\PYZsq{} \PYZsq{}Type\PYZsq{} \PYZsq{}Country\PYZsq{} \PYZsq{}Dept\PYZsq{} \PYZsq{}Division\PYZsq{} \PYZsq{}LTAA\PYZsq{} \PYZsq{}Loan\PYZsq{} \PYZsq{}ApprovalDate\PYZsq{} \PYZsq{}AgreementDate\PYZsq{} \PYZsq{}Agreement\PYZsq{} \PYZsq{}EffectivityDate\PYZsq{} \PYZsq{}CancellationDate\PYZsq{} \PYZsq{}FinancialCompletionDate\PYZsq{} \PYZsq{}OriginalCompletionDate\PYZsq{} \PYZsq{}RevisedCompletionDate\PYZsq{} \PYZsq{}JSF\PYZsq{} \PYZsq{}Fund\PYZsq{} \PYZsq{}RevisedAmount\PYZsq{} \PYZsq{}Rating\PYZsq{} \PYZsq{}No\PYZsq{} \PYZsq{}PCR\PYZsq{} \PYZsq{}CirculationDate\PYZsq{} \PYZsq{}duration\PYZsq{} \PYZsq{}delay\PYZsq{}}
+\end{Verbatim}
+
+
+    
+    
+    
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_37_2.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_37_4.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_37_6.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_37_8.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_37_9.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}62}]:} \PY{n+nf}{summary}\PY{p}{(}\PY{n}{high\PYZus{}low\PYZus{}RA}\PY{n}{[high\PYZus{}low\PYZus{}RA}\PY{o}{\PYZdl{}}\PY{n}{highLow}\PY{o}{==}\PY{l+s}{\PYZdq{}}\PY{l+s}{HIGH\PYZdq{}}\PY{p}{,}\PY{n}{]}\PY{p}{)}
+\end{Verbatim}
+
+
+    
+    \begin{verbatim}
+     Number                       Status       Cluster        Prefix   
+ Min.   :3128   Active               :  1          :525          :281  
+ 1st Qu.:6290   Cancelled            :  0   C003   :  6   R      :244  
+ Median :7305   Financially Completed:542   C006   :  5   RCs    : 12  
+ Mean   :6854                               C009   :  4   Cs     :  6  
+ 3rd Qu.:7870                               C002   :  2   CsS    :  0  
+ Max.   :9024                               C011   :  1   RCsS   :  0  
+                                            (Other):  0   (Other):  0  
+      Type        Country         Dept        Division  
+ CDTA   :155   REG    :256   SERD   :162   SEPF   : 34  
+ ADTA   :123   IND    : 41   SDCC   : 89   SEER   : 26  
+ RETA   :117   INO    : 28   SARD   : 73   SDSC   : 20  
+ PATA   : 74   PRC    : 28   CWRD   : 67   SEEN   : 19  
+ RDTA   : 37   PHI    : 25   EARD   : 47   INRM   : 18  
+ PPTA   : 35   VIE    : 21   PARD   : 45   PAUS   : 15  
+ (Other):  2   (Other):144   (Other): 60   (Other):411  
+                                                   LTAA          Loan       
+ Public sector management                            :137   Min.   :   0.0  
+ Energy                                              : 73   1st Qu.:   0.0  
+ Agriculture, natural resources and rural development: 72   Median :   0.0  
+ Multisector                                         : 67   Mean   : 106.9  
+ Finance                                             : 57   3rd Qu.:   0.0  
+ Transport                                           : 48   Max.   :2840.0  
+ (Other)                                             : 89                   
+  ApprovalDate        AgreementDate        Agreement EffectivityDate     
+ Min.   :1998-12-16   Min.   :1999-02-26    :  0     Min.   :1999-02-26  
+ 1st Qu.:2006-12-09   1st Qu.:2006-10-09   N:245     1st Qu.:2006-12-27  
+ Median :2009-07-01   Median :2009-06-01   Y:298     Median :2009-07-27  
+ Mean   :2009-02-11   Mean   :2009-02-18             Mean   :2009-03-29  
+ 3rd Qu.:2011-09-24   3rd Qu.:2012-01-10             3rd Qu.:2011-11-05  
+ Max.   :2015-12-11   Max.   :2015-09-10             Max.   :2015-12-11  
+                      NA's   :245                                        
+ CancellationDate FinancialCompletionDate OriginalCompletionDate
+ Min.   :NA       Min.   :2006-08-22      Min.   :2001-04-30    
+ 1st Qu.:NA       1st Qu.:2011-08-31      1st Qu.:2009-01-15    
+ Median :NA       Median :2014-05-25      Median :2011-09-30    
+ Mean   :NA       Mean   :2013-10-28      Mean   :2011-04-19    
+ 3rd Qu.:NA       3rd Qu.:2016-03-31      3rd Qu.:2013-12-31    
+ Max.   :NA       Max.   :2018-04-13      Max.   :2017-12-31    
+ NA's   :543      NA's   :1                                     
+ RevisedCompletionDate      JSF              Fund     RevisedAmount   
+ Min.   :2005-12-30    Min.   : 1.000   2      :178   Min.   : 1.000  
+ 1st Qu.:2010-12-15    1st Qu.: 1.000   46     : 55   1st Qu.: 1.000  
+ Median :2013-10-31    Median : 1.000   4      : 46   Median : 1.500  
+ Mean   :2013-04-08    Mean   : 1.609   63     : 13   Mean   : 2.185  
+ 3rd Qu.:2015-11-30    3rd Qu.: 1.000   02,35  : 11   3rd Qu.: 2.000  
+ Max.   :2018-10-31    Max.   :20.000   7      :  9   Max.   :29.860  
+                       NA's   :474      (Other):231                   
+     Rating            No           PCR      CirculationDate     
+ Min.   :0.000          : 34          :509   Min.   :2008-01-07  
+ 1st Qu.:2.000   376-16 :  8   185-17 :  2   1st Qu.:2011-12-25  
+ Median :2.000   147-17 :  5   190-15 :  2   Median :2014-10-23  
+ Mean   :1.937   355-17 :  4   221-16 :  2   Mean   :2014-05-23  
+ 3rd Qu.:2.000   193-14 :  2   287-08 :  2   3rd Qu.:2016-09-19  
+ Max.   :3.000   04-08  :  1   122-17 :  1   Max.   :2018-06-29  
+                 (Other):489   (Other): 25                       
+    duration          delay          highLow         
+ Min.   : 5.267   Min.   :  0.00   Length:543        
+ 1st Qu.:18.867   1st Qu.: 12.17   Class :character  
+ Median :25.000   Median : 21.27   Mode  :character  
+ Mean   :26.556   Mean   : 23.99                     
+ 3rd Qu.:33.650   3rd Qu.: 31.45                     
+ Max.   :85.300   Max.   :127.90                     
+                                                     
+    \end{verbatim}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}48}]:} \PY{n+nf}{library}\PY{p}{(}\PY{n}{GGally}\PY{p}{)}
+         \PY{n+nf}{ggpairs}\PY{p}{(}\PY{n}{high\PYZus{}low\PYZus{}RA}\PY{n}{[}\PY{p}{,}\PY{p}{(}\PY{n+nf}{colnames}\PY{p}{(}\PY{n}{high\PYZus{}low\PYZus{}RA}\PY{p}{)} \PY{o}{\PYZpc{}in\PYZpc{}} \PY{n+nf}{c}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Cluster\PYZdq{}}\PY{p}{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{Dept\PYZdq{}}\PY{p}{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{Division\PYZdq{}}\PY{p}{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{Country\PYZdq{}}\PY{p}{)}\PY{p}{)}\PY{n}{]}\PY{p}{,} \PY{n+nf}{aes}\PY{p}{(}\PY{n}{colour} \PY{o}{=} \PY{n}{high\PYZus{}low\PYZus{}RA}\PY{o}{\PYZdl{}}\PY{n}{highLow}\PY{p}{,} \PY{n}{alpha} \PY{o}{=} \PY{l+m}{0.4}\PY{p}{)}\PY{p}{,}\PY{n}{cardinality\PYZus{}threshold}\PY{o}{=}\PY{l+m}{500}\PY{p}{)}
+\end{Verbatim}
+
+
+    
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_39_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    No, because there is a large discreptancy in the other column values.
+Thus, there are many confounding vNo, because there is a large
+discrepancy in the other column values. Thus, there are many confounding
+variables that are not accounted for that is likely to cause selection
+bias.
+
+For example,\\
+Projects with the following characteristics can be more frequently found
+in the bottom 25\% of projects:\\
+Country: NEP, BAN, PAK\\
+Dept: SARD, EARD\\
+Division: PAHQ, EAER, CWPF, EATC\\
+LTAA: Transport\\
+Duration: Median 14; Mean 16
+
+Projects with the following characteristics can be more frequently found
+in the top 25\% of projects:\\
+Country: VNM, PHI, INO\\
+Dept: SERD, SDCC\\
+Division: ISEER, SDSC, SEEN, NRM, PAUS\\
+LTAA: Agriculture, Energy\\
+Duration: Median 25; Mean 26
+
+Since budget amounts are not the only significant differences between
+these two groups, it cannot be assumed that it accounts for all of the
+difference in ratings.
+
+    \hypertarget{question-5}{%
+\section{Question 5}\label{question-5}}
+
+Imagine your manager asks you to apply Jeremy Howard's drivetrain model
+to the problem of optimal budget-setting to maximize project success
+(i.e., ``Rating'').
+
+In such a situation, what would be the:\\
+(a) decision problem or objective?\\
+(b) lever or levers?\\
+(c) ideal RCT design?\\
+(d) dependent variable(s) and independent variable(s) in the modeler\\
+(e) And---Why would running RCTs and modeling/optimizing over RCT
+results be preferable to using (observational, non-RCT) ``foo'' data?
+
+Approximate suggested length: 1-3 sentences for each sub-question.
+
+    \begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\item
+  maximizing project success (rating)
+\item
+  Levers:
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Loan
+\item
+  Type
+\item
+  Country
+\item
+  Dept
+\item
+  Division
+\item
+  LTAA
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{2}
+\item
+  For projects over the next year, randomly allocate funds regardles of
+  the project features. This randomization allows the generation of
+  unbiased data, allowing us to truly analyze causal inference.
+\item
+  Dependent Variable: Rating; Independent Variables: same as levers,
+  namely\\
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Loan
+\item
+  Type
+\item
+  Country
+\item
+  Dept
+\item
+  Division
+\item
+  LTAA
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Optimizing based on models created from randomized data eliminates
+  bias, allowing us to more accurately model causal relationships.
+  Within foo, there may be selection biases based on counfounded
+  assignments of the independent variables, which introduces confounding
+  variables into our data. Since we cannot observe counterfactual data,
+  this means that we cannot know if there is selection bias which means
+  we cannot establish what differences in the dependent variable is
+  truly caused by the independent variable.
+\end{enumerate}
+
+    Link to R code:
+https://github.com/michlee1337/DataScience/blob/master/Multilateral\%20Development\%20Institution\%20Data.ipynb
+
+
+    % Add a bibliography block to the postdoc
+    
+    
+    
+    \end{document}
