@@ -1,0 +1,199 @@
+---
+title: "Trees"
+output: html_notebook
+---
+```{r}
+# downloading libraries
+
+install.packages("tree")
+install.packages("ISLR")
+```
+
+```{r}
+# set up dataset
+
+library(tree)
+library(ISLR)
+
+head(data)
+#High=ifelse(Sales <=8,"No","Yes")
+#Carseats =data.frame(data ,High)
+#head(Carseats)
+```
+```{r}
+# run model fit
+tree.carseats =tree(High ~ .-Sales ,Carseats )
+summary(tree.carseats)
+```
+```{r}
+# plot
+
+plot(tree.carseats)
+text(tree.carseats,pretty=0)
+```
+```{r}
+# actually test
+
+# randomly split
+set.seed(2)
+train=sample(1:nrow(Carseats),200)
+
+# test data
+Carseats.test = Carseats[-train,]
+High.test = High[-train]
+
+# train
+tree.carseats = tree(High ~ .-Sales, Carseats, subset=train)
+
+# test
+tree.pred = predict(tree.carseats, Carseats.test, type="class")
+
+
+# results
+table(tree.pred,High.test)
+```
+```{r}
+# accuracy
+(86+57)/200
+```
+```{r}
+set.seed(3)
+# use classification error rate to guide cross validatino and pruning
+cv.carseats = cv.tree(tree.carseats, FUN=prune.misclass)
+names(cv.carseats)
+cv.carseats
+
+```
+```{r}
+# plot error
+par(mfrow=c(1,2))
+plot(cv.carseats$size ,cv.carseats$dev ,type="b")
+plot(cv.carseats$k ,cv.carseats$dev ,type="b")
+```
+```{r}
+# get the minimum cross validation error tree (9)
+
+prune.carseats=prune.misclass(tree.carseats,best=9)
+plot(prune.carseats )
+text(prune.carseats,pretty=0)
+
+```
+
+```{r}
+# check performance of pruned tree
+tree.pred=predict(prune.carseats,Carseats.test,type="class")
+table(tree.pred ,High.test)
+```
+```{r}
+# accuracy
+(94+60) /200
+```
+
+Regression Trees
+```{r}
+library(MASS)
+library(tree)
+set.seed(1)
+train = sample(1:nrow(Boston),nrow(Boston)/2)
+tree.boston = tree(medv~., Boston, subset=train)
+summary(tree.boston)
+```
+Plot Tree
+```{r}
+plot(tree.boston)
+text(tree.boston, pretty=0)
+```
+Check pruning: Cross validate
+```{r}
+cv.boston = cv.tree(tree.boston)
+plot(cv.boston$size,cv.boston$dev,type='b')
+
+```
+Best is complex tree, no pruning
+
+Make predictions
+```{r}
+yhat = predict(tree.boston, newdata=Boston[-train,])
+boston.test = Boston[-train,"medv"]
+plot(yhat,boston.test)
+abline(0,1)
+mean((yhat-boston.test)^2)
+```
+
+
+
+```{r}
+install.packages('Matching')
+```
+
+
+```{r}
+# lalonde now
+library(Matching)
+data = data.frame(lalonde)
+p;p
+Lalonde = data.frame(data,Unemployed)
+names(Lalonde)
+dim(Lalonde)
+```
+
+```{r}
+# randomly split
+set.seed(2)
+Lalonde_train=sample(1:nrow(Lalonde),200)
+
+# test data
+Lalonde.test =Lalonde[-Lalonde_train,]
+Unemployed.test = Lalonde$Unemployed[-Lalonde_train]
+
+# train
+tree.Lalonde = tree(Unemployed ~ age + educ + black + hisp + married + nodegr + re74 + re75 + u74 + treat,Lalonde, subset=Lalonde_train)
+summary(tree.Lalonde)
+
+# test
+Lalonde.pred = predict(tree.Lalonde, Lalonde.test, type="class")
+
+
+# results
+table(Lalonde.pred,Unemployed.test)
+
+plot(tree.Lalonde)
+text(tree.Lalonde,pretty =0)
+```
+
+```{r}
+# randomly split
+set.seed(2)
+Lalonde_train=sample(1:nrow(Lalonde),200)
+
+# test data
+Lalonde.test =Lalonde[-Lalonde_train,]
+Unemployed.test = Lalonde$Unemployed[-Lalonde_train]
+
+# train
+tree2.Lalonde = tree(Unemployed ~ age + educ + black + hisp + married + nodegr + u74 + treat,Lalonde, subset=Lalonde_train)
+summary(tree2.Lalonde)
+
+# test
+Lalonde.pred = predict(tree2.Lalonde, Lalonde.test, type="class")
+
+
+# results
+table(Lalonde.pred,Unemployed.test)
+
+plot(tree2.Lalonde)
+text(tree2.Lalonde,pretty =0)
+```
+
+```{r}
+print('hi')
+set.seed(3)
+cv.lalonde =cv.tree(tree2.Lalonde,FUN=prune.misclass )
+names(cv.lalonde )
+cv.lalonde
+cv.tree()
+```
+
+
+
+
