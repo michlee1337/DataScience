@@ -120,6 +120,32 @@ abline(0,1)
 mean((yhat-boston.test)^2)
 ```
 
+Bagging
+```{r}
+library(randomForest)
+set.seed(1)
+bag.boston = randomForest(medv~., data=Boston, subset = train, mtry=13, importance=TRUE)
+bag.boston
+```
+Test
+```{r}
+yhat.bag = predict(bag.boston, newdata=Boston[-train,])
+plot(yhat.bag,boston.test)
+abline(0,1)
+mean((yhat.bag-boston.test)^2)
+```
+Random Forrest
+```{r}
+set.seed(1)
+rf.boston = randomForest(medv~., data=Boston, subset=train, mtry=6, importance=TRUE)
+yhat.rf = predict(rf.boston,newdata=Boston[-train,])
+mean((yhat.rf-boston.test)^2)
+```
+Check importance of vars
+```{r}
+importance(rf.boston)
+varImpPlot(rf.boston)
+```
 
 
 ```{r}
