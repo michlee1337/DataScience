@@ -7,9 +7,9 @@ fprintf('Global Interpolation \n');
 %% x = x'
 %% y = y'
 
-x = [0;1;4;5]
-y = [-1;3;1;-3]
-disp(ployInt(x,y));
+x = [0;1;2]
+y = [0;1;3]
+disp(polyInt(x,y));
 
 fprintf('Piecewise Cubic Interpolation \n');
 x1 = [0;1;4]
