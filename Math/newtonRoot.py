@@ -11,10 +11,10 @@ def newtons_method(f, df, x0, e):
     print('f(x) at root is: ', f(x0))
 
 def f(x):
-    return(1+(1.382)/x**2)*(x-0.0319)-(0.08205746*25)
+    return(1+(1.382/x**2)-((0.08205746*25)/(x-0.0319)**2))
 
 def df(x):
-    return(1-((1+0.0319)/x**2))
+    return(-((2*1.382)/x**3)+((0.08205746*25)/(x-0.0319)**2))
 
 if __name__=="__main__":
     newtons_method(f, df, 0.1, 0.5)
