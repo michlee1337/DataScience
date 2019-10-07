@@ -9,21 +9,21 @@ def gradDescent(f, vars, initial):
     start = starting point
     '''
 
+    # get direction vector
+
     direction = []
     for v in vars.keys:
         dfdv = f.diff(v)
+        dfdv_val = dfdv
         for val in initial:
             # get numerical value
-            dfdv_val = dfdv.subs(v,val)
-        direction.append(f).diff(v).sub
-
-    for v in vars:
-        df.subs(v.key, v.val)
+            dfdv_val = dfdv_val.subs(v,val)
+        direction.append(dfdv_val)
 
     # find optimum step size
     ## using bisection (binary search)
-    alpha = 1
-    if math.abs(f(start + df*alpha) - 0) < 0.5:
+    alpha = [1] * 
+    if math.abs(f(start + direction.*alpha) - 0) < 0.5:
         return(alpha)
     elif:
         (f(start + df*alpha) - 0) < 0.5:
